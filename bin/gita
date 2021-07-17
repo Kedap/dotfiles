@@ -1,0 +1,7 @@
+#!/bin/bash
+git config --local credential.helper cache
+git add .
+echo "agrege el mensaje del commit"
+read mensaje
+git commit -S -m "$mensaje"
+git push

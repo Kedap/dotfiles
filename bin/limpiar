@@ -1,0 +1,13 @@
+#!/bin/bash
+
+if [ "$(id -u)" != '0' ]; then
+  echo "No sos admin :("
+  exit 1
+else
+  pacman -Sc
+  paru -Sc
+  yay -Sc
+  clear
+  echo "Paquetes obsoletos como tu"
+  pacman -Qtd
+fi

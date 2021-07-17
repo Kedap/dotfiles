@@ -1,0 +1,12 @@
+[Exec]
+Boot=true
+Capability=CAP_NET_ADMIN
+PrivateUsers=false
+
+[Files]
+Bind=/run/user/1000/pulse/native:/tmp/pulse_server
+Bind=/etc/systemd/nspawn/20-machines-profile.sh:/etc/profile.d/20-machines-profile.sh
+BindReadOnly=/tmp/.X11-unix
+
+[Network]
+VirtualEthernet=false
