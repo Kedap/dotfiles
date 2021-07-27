@@ -10,4 +10,5 @@ else
   clear
   echo "Paquetes obsoletos como tu"
   pacman -Qtd
+  echo "Puede quitarlo con 'pacman -Rns $(pacman -Qtdq)'"
 fi

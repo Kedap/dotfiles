@@ -1,0 +1,9 @@
+#!/bin/bash
+echo "Iniciando la instalacion de cosas que debe de estar actualizadas xd"
+echo "Actualizando rust"
+rustup update
+echo "Actualizando paquetes con pacman"
+sudo pacman -Syu
+echo "Actualizando paquetes de AUR (Recuerda actualizar paquetes que tienes en krep0)"
+paru -Syu
+echo "Actualizacion completa, te recomiendo ejecutar 'limpiar' para limpiar xd"
