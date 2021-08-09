@@ -25,10 +25,10 @@ call plug#begin ('~/.local/share/nvim/pluged')
 "Temas xd
 "https://vimcolorschemes.com/ es un buen lugar para conseguir temas
 Plug 'morhetz/gruvbox'
-Plug 'sonph/onehalf', { 'rtp': 'vim' } "vscode
 Plug 'mhartington/oceanic-next' "solarizado
-Plug 'liuchengxu/space-vim-dark' "el de los comentarios chidos
 Plug 'sainnhe/sonokai' "el andromeda
+Plug 'dunstontc/vim-vscode-theme' "El tema de vscode
+Plug 'arcticicestudio/nord-vim' "nord
 
 "Plugins
 Plug 'vim-airline/vim-airline'
@@ -38,7 +38,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdtree'
 Plug 'ddollar/nerdcommenter'
 Plug 'jiangmiao/auto-pairs'
-Plug 'honza/vim-snippets'
+Plug 'honza/vim-snippets' "Instala coc-snippets para que funcionen estos snippets
 Plug 'easymotion/vim-easymotion'
 Plug 'christoomey/vim-tmux-navigator'
 
@@ -63,35 +63,30 @@ call plug#end()
 
 "configuracion de gruvbox
 "set background=dark
-"let g:gruvbox="hard"
+"let g:gruvbox="medium"
 "colorscheme gruvbox
 
-"configuracion para onehalf (vscode)
-"set t_Co=256
-"set background=dark
-"colorscheme onehalfdark
+"Tema de nord
+colorscheme nord
 
 "configuracion para oceanic (solarizado)
 "colorscheme OceanicNext
 
-"confugracion para space vim
-"colorscheme space-vim-dark
-"hi Comment cterm=italic
-"hi Normal     ctermbg=NONE guibg=NONE
-"hi LineNr     ctermbg=NONE guibg=NONE
-"hi SignColumn ctermbg=NONE guibg=NONE
-"hi LineNr ctermbg=NONE guibg=NONE
-
 "confugracion para sonokai
-let g:sonokai_style = 'andromeda'
-let g:sonokai_enable_italic = 1
-colorscheme sonokai
+"let g:sonokai_style = 'andromeda'
+"let g:sonokai_enable_italic = 1
+"colorscheme sonokai
+
+"Configuracion para el tema de vscode
+"colorscheme dark_plus
 
 "configuraciones para la airline
 "se necesita de powerline-fonts package
-"let g:airline_theme='bubblegum'
+"let g:airline_theme='gruvbox'
+let g:airline_theme='nord'
+"let g:airline_theme='behelit'
 "let g:airline_theme='oceanicnext'
-let g:airline_theme='deus'
+"let g:airline_theme='deus'
 
 
 let g:airline_powerline_fonts = 1
