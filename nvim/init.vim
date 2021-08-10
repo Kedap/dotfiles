@@ -41,6 +41,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'honza/vim-snippets' "Instala coc-snippets para que funcionen estos snippets
 Plug 'easymotion/vim-easymotion'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 
 "Integracion con git
 Plug 'mhinz/vim-signify'
@@ -85,7 +86,6 @@ colorscheme nord
 "let g:airline_theme='gruvbox'
 let g:airline_theme='nord'
 "let g:airline_theme='behelit'
-"let g:airline_theme='oceanicnext'
 "let g:airline_theme='deus'
 
 
@@ -100,6 +100,7 @@ nmap <leader>w :w<CR>
 nmap <leader>s :wq!<CR>
 nmap <leader>q :q!<CR>
 nmap <leader>n :NERDTreeToggle<CR>
+nmap <leader>u :FZF<CR>
 "no se te olvide que con leader cc comentas xd
 nmap <leader>p :PlugInstall<CR>
 nmap <leader>r o<Esc>
