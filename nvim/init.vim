@@ -42,6 +42,7 @@ Plug 'honza/vim-snippets' "Instala coc-snippets para que funcionen estos snippet
 Plug 'easymotion/vim-easymotion'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'editorconfig/editorconfig-vim'
 
 "Integracion con git
 Plug 'mhinz/vim-signify'
