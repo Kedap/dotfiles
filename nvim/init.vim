@@ -53,6 +53,7 @@ Plug 'junegunn/gv.vim'
 "Codigo
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'rust-lang/rust.vim'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 "de pana
 Plug 'alec-gibson/nvim-tetris'
@@ -103,7 +104,7 @@ nmap <leader>s :wq!<CR>
 nmap <leader>q :q!<CR>
 nmap <leader>n :NERDTreeToggle<CR>
 nmap <leader>u :FZF<CR>
-nmap <leader>d :FloatermNew<CR>
+nmap <leader>g :FloatermNew<CR>
 "no se te olvide que con leader cc comentas xd
 nmap <leader>p :PlugInstall<CR>
 nmap <leader>r o<Esc>
@@ -115,6 +116,9 @@ source ~/.config/nvim/coc.vim
 
 " rust fmt
 let g:rustfmt_autosave =  1
+
+"go fmt
+let g:go_fmt_command = "goimports"
 
 "Integracion con gita
 " Change these if you want
