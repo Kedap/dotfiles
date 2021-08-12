@@ -57,6 +57,7 @@ Plug 'rust-lang/rust.vim'
 Plug 'alec-gibson/nvim-tetris'
 Plug 'gregsexton/vimcalc'
 Plug 'Yggdroot/indentLine'
+Plug 'voldikss/vim-floaterm'
 
 call plug#end()
 
@@ -101,6 +102,7 @@ nmap <leader>s :wq!<CR>
 nmap <leader>q :q!<CR>
 nmap <leader>n :NERDTreeToggle<CR>
 nmap <leader>u :FZF<CR>
+nmap <leader>d :FloatermNew<CR>
 "no se te olvide que con leader cc comentas xd
 nmap <leader>p :PlugInstall<CR>
 nmap <leader>r o<Esc>
