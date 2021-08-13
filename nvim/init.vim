@@ -72,6 +72,11 @@ call plug#end()
 
 "Tema de nord
 colorscheme nord
+hi Comment gui=italic
+hi Comment cterm=italic
+hi Type    gui=italic
+hi Type    cterm=italic
+let g:nord_italic = 1
 
 "configuracion para oceanic (solarizado)
 "colorscheme OceanicNext
