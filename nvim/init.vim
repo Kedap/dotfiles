@@ -40,7 +40,6 @@ Plug 'ddollar/nerdcommenter'
 Plug 'jiangmiao/auto-pairs'
 Plug 'honza/vim-snippets' "Instala coc-snippets para que funcionen estos snippets
 Plug 'gillescastel/latex-snippets'
-Plug 'lervag/vimtex'
 Plug 'easymotion/vim-easymotion'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -55,6 +54,7 @@ Plug 'junegunn/gv.vim'
 "Codigo
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'rust-lang/rust.vim'
+Plug 'lervag/vimtex'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 "de pana
@@ -126,6 +126,12 @@ let g:rustfmt_autosave =  1
 
 "go fmt
 let g:go_fmt_command = "goimports"
+
+" vimtex
+let g:vimtex_view_general_viewer = 'atril'
+let g:vimtex_view_general_options
+    \ = '-reuse-instance -forward-search @tex @line @pdf'
+let g:vimtex_view_general_options_latexmk = '-reuse-instance'
 
 "Integracion con gita
 " Change these if you want
