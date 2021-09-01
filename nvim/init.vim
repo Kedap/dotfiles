@@ -39,6 +39,8 @@ Plug 'scrooloose/nerdtree'
 Plug 'ddollar/nerdcommenter'
 Plug 'jiangmiao/auto-pairs'
 Plug 'honza/vim-snippets' "Instala coc-snippets para que funcionen estos snippets
+Plug 'gillescastel/latex-snippets'
+Plug 'lervag/vimtex'
 Plug 'easymotion/vim-easymotion'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
