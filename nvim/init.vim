@@ -42,8 +42,10 @@ Plug 'honza/vim-snippets' "Instala coc-snippets para que funcionen estos snippet
 Plug 'gillescastel/latex-snippets'
 Plug 'easymotion/vim-easymotion'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'Yggdroot/indentLine'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'editorconfig/editorconfig-vim'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 
 "Integracion con git
 Plug 'mhinz/vim-signify'
@@ -60,8 +62,8 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 "de pana
 Plug 'alec-gibson/nvim-tetris'
 Plug 'gregsexton/vimcalc'
-Plug 'Yggdroot/indentLine'
 Plug 'voldikss/vim-floaterm'
+Plug 'mhinz/vim-startify'
 
 call plug#end()
 
