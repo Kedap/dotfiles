@@ -36,7 +36,7 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'lilydjwg/colorizer'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdtree'
-Plug 'ddollar/nerdcommenter'
+Plug 'preservim/nerdcommenter'
 Plug 'jiangmiao/auto-pairs'
 Plug 'honza/vim-snippets' "Instala coc-snippets para que funcionen estos snippets
 Plug 'gillescastel/latex-snippets'
