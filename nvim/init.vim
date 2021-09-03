@@ -150,3 +150,28 @@ let g:signify_sign_show_text = 1
 highlight SignifySignAdd                  ctermbg=green                guibg=#00ff00
 highlight SignifySignDelete ctermfg=black ctermbg=red    guifg=#ffffff guibg=#ff0000
 highlight SignifySignChange ctermfg=black ctermbg=yellow guifg=#000000 guibg=#ffff00
+
+"Configuracion de startify
+let g:startify_custom_header = [
+\ ' _   _       _                 _             _               ',
+\ '| \ | |_   _(_)_ __ ___       | |_   _  __ _| | _____ _ __   ',
+\ '|  \| \ \ / / | `_ ` _ \   _  | | | | |/ _` | |/ / _ \ !__|  ',
+\ '| |\  |\ V /| | | | | | | | |_| | |_| | (_| |   <  __/ |     ',
+\ '|_| \_| \_/ |_|_| |_| |_|  \___/ \__,_|\__,_|_|\_\___|_|     ',
+\ '',
+\ '',
+\ ]
+let g:startify_bookmarks = [
+            \ '~/Documentos/repos',
+            \ '~/Documentos/repos/syncre',
+            \ '~/Documentos/repos/shashi',
+            \ { 'c': '~/.config/nvim/init.vim' },
+            \ '~/tempo',
+            \ { 'z': '~/.zshrc' },
+            \ ]
+let g:startify_lists = [
+          \ { 'type': 'bookmarks', 'header': ['   Marcadores']      },
+          \ { 'type': 'files',     'header': ['   Archivos Recientes']            },
+          \ { 'type': 'dir',       'header': ['   Archivos de '. getcwd()] },
+          \ { 'type': 'sessions',  'header': ['   Sessions']       },
+          \ ]
