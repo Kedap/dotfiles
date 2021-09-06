@@ -165,6 +165,7 @@ let g:startify_bookmarks = [
             \ '~/Documentos/repos',
             \ '~/Documentos/repos/syncre',
             \ '~/Documentos/repos/shashi',
+            \ '~/Documentos/repos/apmpkg',
             \ { 'c': '~/.config/nvim/init.vim' },
             \ '~/tempo',
             \ { 'z': '~/.zshrc' },
