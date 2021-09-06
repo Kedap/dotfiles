@@ -46,6 +46,9 @@ Plug 'Yggdroot/indentLine'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'editorconfig/editorconfig-vim'
 Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'rbgrouleff/bclose.vim'
+Plug 'francoiscabrol/ranger.vim'
+Plug 'vimwiki/vimwiki'
 
 "Integracion con git
 Plug 'mhinz/vim-signify'
