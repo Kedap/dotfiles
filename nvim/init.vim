@@ -29,6 +29,7 @@ Plug 'mhartington/oceanic-next' "solarizado
 Plug 'sainnhe/sonokai' "el andromeda
 Plug 'dunstontc/vim-vscode-theme' "El tema de vscode
 Plug 'arcticicestudio/nord-vim' "nord
+Plug 'drewtempelmeyer/palenight.vim'
 
 "Plugins
 Plug 'vim-airline/vim-airline'
@@ -78,12 +79,12 @@ call plug#end()
 "colorscheme gruvbox
 
 "Tema de nord
-colorscheme nord
-hi Comment gui=italic
-hi Comment cterm=italic
-hi Type    gui=italic
-hi Type    cterm=italic
-let g:nord_italic = 1
+"colorscheme nord
+"hi Comment gui=italic
+"hi Comment cterm=italic
+"hi Type    gui=italic
+"hi Type    cterm=italic
+"let g:nord_italic = 1
 
 "configuracion para oceanic (solarizado)
 "colorscheme OceanicNext
@@ -96,13 +97,18 @@ let g:nord_italic = 1
 "Configuracion para el tema de vscode
 "colorscheme dark_plus
 
+"Configuracion de palenight
+let g:palenight_terminal_italics=1
+set background=dark
+colorscheme palenight
+
 "configuraciones para la airline
 "se necesita de powerline-fonts package
 "let g:airline_theme='gruvbox'
-let g:airline_theme='nord'
+"let g:airline_theme='nord'
+let g:airline_theme = "palenight"
 "let g:airline_theme='behelit'
 "let g:airline_theme='deus'
-
 
 let g:airline_powerline_fonts = 1
 let g:indentLine_char = '▏' "Lineas para brackets
