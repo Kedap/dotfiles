@@ -39,7 +39,6 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdtree'
 Plug 'preservim/nerdcommenter'
 Plug 'jiangmiao/auto-pairs'
-Plug 'honza/vim-snippets' "Instala coc-snippets para que funcionen estos snippets
 Plug 'gillescastel/latex-snippets'
 Plug 'easymotion/vim-easymotion'
 Plug 'christoomey/vim-tmux-navigator'
@@ -47,8 +46,7 @@ Plug 'Yggdroot/indentLine'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'editorconfig/editorconfig-vim'
 Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'rbgrouleff/bclose.vim'
-Plug 'francoiscabrol/ranger.vim'
+"Plug 'rbgrouleff/bclose.vim'
 Plug 'vimwiki/vimwiki'
 
 "Integracion con git
@@ -58,6 +56,8 @@ Plug 'tpope/vim-rhubarb'
 Plug 'junegunn/gv.vim'
 
 "Codigo
+Plug 'sheerun/vim-polyglot'
+Plug 'honza/vim-snippets' "Instala coc-snippets para que funcionen estos snippets
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'rust-lang/rust.vim'
 Plug 'lervag/vimtex'
@@ -127,6 +127,7 @@ nmap <leader>g :FloatermNew<CR>
 nmap <leader>p :PlugInstall<CR>
 nmap <leader>r o<Esc>
 nmap <leader>t <Plug>(easymotion-s2)
+"Cambiame por algo mas util
 nmap <leader><F5> :source ~/.config/nvim/init.vim<CR>
 
 "Atajos del codigo
