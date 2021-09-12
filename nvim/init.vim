@@ -44,6 +44,7 @@ Plug 'easymotion/vim-easymotion'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'Yggdroot/indentLine'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 "Plug 'rbgrouleff/bclose.vim'
@@ -112,6 +113,7 @@ let g:airline_theme = "palenight"
 
 let g:airline_powerline_fonts = 1
 let g:indentLine_char = '▏' "Lineas para brackets
+let NERDTreeShowHidden=1
 "confugracion de la barra de arriba
 let g:airline#extensions#tabline#enabled = 1
 
@@ -121,14 +123,16 @@ nmap <leader>w :w<CR>
 nmap <leader>s :wq!<CR>
 nmap <leader>q :q!<CR>
 nmap <leader>n :NERDTreeToggle<CR>
-nmap <leader>u :FZF<CR>
-nmap <leader>g :FloatermNew<CR>
+nmap <leader>fz :FZF<CR>
+nmap <leader>tt :FloatermNew<CR>
+nmap <leader>fs :%s/
 "no se te olvide que con leader cc comentas xd
-nmap <leader>p :PlugInstall<CR>
+nmap <leader>pi :PlugInstall<CR>
+nmap <leader>pc :PlugClean<CR>
 nmap <leader>r o<Esc>
-nmap <leader>t <Plug>(easymotion-s2)
+nmap <leader>tm <Plug>(easymotion-s2)
 "Cambiame por algo mas util
-nmap <leader><F5> :source ~/.config/nvim/init.vim<CR>
+"nmap <leader><F5> :source ~/.config/nvim/init.vim<CR>
 
 "Atajos del codigo
 source ~/.config/nvim/coc.vim
