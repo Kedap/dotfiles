@@ -28,8 +28,8 @@ source ~/.config/nvim/temas.vim
 "configuracion de los plugins
 source ~/.config/nvim/plugins-config.vim
 
-"cargando atajos
-source ~/.config/nvim/atajos.vim
-
 "Atajos del coc
 source ~/.config/nvim/coc.vim
+
+"cargando atajos
+source ~/.config/nvim/atajos.vim
