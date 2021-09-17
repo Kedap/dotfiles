@@ -1,0 +1,5 @@
+#!/bin/bash
+
+xhost si:localuser:root
+sudo key-mapper-gtk
+xhost -si:localuser:root

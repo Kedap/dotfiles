@@ -1,6 +1,6 @@
 #!/bin/sh
 
 setxkbmap -layout es 
-feh -z --bg-fill ~/Wallpapers/fondo.png
+feh -z --bg-fill ~/Wallpapers/fondo.jpg
 sudo key-mapper-gtk
 setxkbmap -layout es
