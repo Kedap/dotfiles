@@ -80,12 +80,14 @@ let g:startify_custom_header =  [
 
 let g:startify_bookmarks = [
             \ { 'a': '~/Documentos/repos/apmpkg' },
+            \ { 'd': '~/Documentos/repos/devmode' },
             \ { 'r': '~/Documentos/repos' },
             \ { 'c': '~/.config/nvim' },
             \ { 'z': '~/.zshrc' },
             \ { 't': '~/tempo' },
             \ '~/Documentos/repos/syncre',
             \ '~/Documentos/repos/shashi',
+            \ '~/.config',
             \ ]
 let g:startify_lists = [
           \ { 'type': 'bookmarks', 'header': ['   Marcadores']      },

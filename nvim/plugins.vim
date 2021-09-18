@@ -50,9 +50,13 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'preservim/nerdcommenter'
 Plug 'jiangmiao/auto-pairs'
 Plug 'gillescastel/latex-snippets'
+Plug 'jceb/vim-orgmode'
+
+"terminal
+Plug 'voldikss/vim-floaterm'
+Plug 'akinsho/toggleterm.nvim'
 
 "de pana
-Plug 'voldikss/vim-floaterm'
 Plug 'mhinz/vim-startify'
 
 call plug#end()

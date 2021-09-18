@@ -15,7 +15,6 @@ set cursorline
 set termguicolors
 set colorcolumn=110
 set nobackup
-set showmatch
 filetype plugin indent on
 highlight ColoColumn ctermbg=0 guibg=lightgrey
 
