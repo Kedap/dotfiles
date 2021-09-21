@@ -35,10 +35,13 @@ output * bg /home/sno0bwy/Wallpapers/fondo.jpg fill
 #
 # Example configuration:
 #
-# exec swayidle -w \
-#          timeout 300 'swaylock -f -c 000000' \
-#          timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-#          before-sleep 'swaylock -f -c 000000'
+set $lock swaylock --clock --indicator --screenshots --effect-scale 0.4 --effect-vignette 0.2:0.5 --effect-blur 4x2 --datestr "%a %e.%m.%Y" --timestr "%k:%M"
+
+exec swayidle -w \
+    timeout 600 $lock \
+    timeout 570 'swaymsg "output * dpms off"' \
+    resume 'swaymsg "output * dpms on"' \
+    before-sleep $lock
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
@@ -123,6 +126,10 @@ bindsym XF86AudioPrev exec playerctl previous
     bindsym $mod+Shift+Down move down
     bindsym $mod+Shift+Up move up
     bindsym $mod+Shift+Right move right
+
+    default_border pixel 2
+    gaps inner 8
+    gaps outer 8
 #
 # Workspaces:
 #
@@ -183,6 +190,10 @@ bindsym XF86AudioPrev exec playerctl previous
 
     # Move the currently focused window to the scratchpad
     bindsym $mod+Shift+minus move scratchpad
+
+    #lockman
+    set $lockman exec bash ~/.config/sway/lockman.sh
+    bindsym $mod+Shift+o exec $lockman
 
     # Show the next scratchpad window or hide the focused scratchpad window.
     # If there are multiple scratchpad windows, this command cycles through them.
