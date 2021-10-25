@@ -18,7 +18,8 @@ set $term kitty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu rofi -show run
+#set $menu rofi -show run
+set $menu sirula
 
 ### Output configuration
 #
@@ -129,7 +130,7 @@ bindsym XF86AudioPrev exec playerctl previous
 
     default_border pixel 2
     gaps inner 8
-    gaps outer 8
+    #gaps outer 8
 #
 # Workspaces:
 #
