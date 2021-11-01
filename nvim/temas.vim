@@ -33,4 +33,3 @@ colorscheme palenight
 "let g:airline_theme='nord'
 let g:airline_theme = "palenight"
 "let g:airline_theme='behelit'
-"let g:airline_theme='deus'

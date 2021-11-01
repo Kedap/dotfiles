@@ -10,6 +10,9 @@ let g:rustfmt_autosave =  1
 "go fmt
 let g:go_fmt_command = "goimports"
 
+"configuracion de vinspector
+let g:vimspector_enable_mappings = 'HUMAN'
+
 " vimtex
 let g:vimtex_view_general_viewer = 'atril'
 let g:vimtex_view_general_options
@@ -85,9 +88,9 @@ let g:startify_bookmarks = [
             \ { 'c': '~/.config/nvim' },
             \ { 'z': '~/.zshrc' },
             \ { 't': '~/tempo' },
+            \ '~/etc/agenda.org',
             \ '~/Documentos/repos/syncre',
             \ '~/Documentos/repos/shashi',
-            \ '~/.config',
             \ ]
 let g:startify_lists = [
           \ { 'type': 'bookmarks', 'header': ['   Marcadores']      },

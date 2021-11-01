@@ -22,6 +22,5 @@ nmap <leader>pu :PlugUpdate<CR>
 "atajos terminal
 nmap <leader>tf :FloatermNew<CR>
 nmap <leader>tt :ToggleTerm<CR>
-nmap <leader>tl :ToggleTermCloseAll<CR>
 
 nmap <leader>n :NERDTreeToggle<CR>

@@ -1,12 +1,13 @@
 "inicio de la lista de plugins
 call plug#begin ('~/.local/share/nvim/pluged')
 "temas
-"
+
 Plug 'morhetz/gruvbox'
 Plug 'sainnhe/sonokai' "el andromeda
 Plug 'dunstontc/vim-vscode-theme' "El tema de vscode
 Plug 'arcticicestudio/nord-vim' "nord
-Plug 'drewtempelmeyer/palenight.vim'
+Plug 'drewtempelmeyer/palenight.vim' "El chilo
+
 
 "Iconos
 Plug 'ryanoasis/vim-devicons'
@@ -20,12 +21,11 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'lilydjwg/colorizer'
 Plug 'Yggdroot/indentLine'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'vimwiki/vimwiki'
+"Plug 'vimwiki/vimwiki'
 
 "movimiento
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-"Plug 'yuki-yano/fzf-preview.vim', { 'branch': 'release/rpc' }
 Plug 'easymotion/vim-easymotion'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'tpope/vim-repeat'
@@ -51,6 +51,7 @@ Plug 'preservim/nerdcommenter'
 Plug 'jiangmiao/auto-pairs'
 Plug 'gillescastel/latex-snippets'
 Plug 'jceb/vim-orgmode'
+Plug 'puremourning/vimspector'
 
 "terminal
 Plug 'voldikss/vim-floaterm'

@@ -123,3 +123,5 @@ nnoremap <silent><nowait> <space>o  :<C-u>CocList outline<cr>
 nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 " Do default action for previous item.
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
+" Show debug info
+nmap <silent><nowait> <space>g <Plug>(coc-codelens-action)
