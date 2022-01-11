@@ -2,9 +2,14 @@
 
 #Lo que se pide como argumento es el nombre de dicho repositorio
 
+echo "Borrando base de datos anterior de $1..."
+rm $1.*
 echo "Creando y/o modificando el repositorio $1..."
-repo-add $1.db.tar.gz *.pkg.tar.*
-rm $1.db $1.files
-mv $1.db.* $1.db
-mv $1.files.* $1.files
+repo-add $1.db.tar.gz --verify --sign --key 32E2B086D3EBBC0A470C28792C26004F6EC24023 *.pkg.tar.zst
 echo "Se a terminado de crear/actualizar el repositorio $1!"
+if [[ "$2" == "--git" ]]; then
+  mv $1.db.tar.gz $1.db
+  mv $1.db.tar.gz.sig $1.db.sig
+  mv $1.files.tar.gz $1.files
+  mv $1.files.tar.gz.sig $1.files.sig
+fi
