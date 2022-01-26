@@ -32,4 +32,3 @@ nmap <leader>n :NERDTreeToggle<CR>
 nnoremap <leader>ñfr :FlutterRun<CR>
 nnoremap <leader>ñfh :FlutterHotReload<CR>
 nnoremap <leader>ñfd :FlutterVSplit<CR>
-"nnoremap <leader>ñfd :FlutterSplit<CR>
