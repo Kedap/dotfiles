@@ -23,4 +23,13 @@ nmap <leader>pu :PlugUpdate<CR>
 nmap <leader>tf :FloatermNew<CR>
 nmap <leader>tt :ToggleTerm<CR>
 
+"Atajos de sistema
 nmap <leader>n :NERDTreeToggle<CR>
+
+
+" Atajos de lenguajes
+" Dart
+nnoremap <leader>ñfr :FlutterRun<CR>
+nnoremap <leader>ñfh :FlutterHotReload<CR>
+nnoremap <leader>ñfd :FlutterVSplit<CR>
+"nnoremap <leader>ñfd :FlutterSplit<CR>

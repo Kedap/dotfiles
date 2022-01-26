@@ -8,16 +8,16 @@ let NERDTreeShowHidden=1
 let g:rustfmt_autosave =  1
 
 "go fmt
-let g:go_fmt_command = "goimports"
-
-"configuracion de vinspector
-let g:vimspector_enable_mappings = 'HUMAN'
+"let g:go_fmt_command = "goimports"
 
 " vimtex
 let g:vimtex_view_general_viewer = 'atril'
 let g:vimtex_view_general_options
     \ = '-reuse-instance -forward-search @tex @line @pdf'
 let g:vimtex_view_general_options_latexmk = '-reuse-instance'
+
+" Arcoiris
+autocmd Filetype * if &ft!="nerdtree"|call rainbow#load()|endif
 
 "fzf
 "let g:fzf_preview_use_dev_icons = 1
@@ -82,15 +82,10 @@ let g:startify_custom_header =  [
 \ ]
 
 let g:startify_bookmarks = [
-            \ { 'a': '~/Documentos/repos/apmpkg' },
-            \ { 'd': '~/Documentos/repos/devmode' },
             \ { 'r': '~/Documentos/repos' },
             \ { 'c': '~/.config/nvim' },
             \ { 'z': '~/.zshrc' },
             \ { 't': '~/tempo' },
-            \ '~/etc/agenda.org',
-            \ '~/Documentos/repos/syncre',
-            \ '~/Documentos/repos/shashi',
             \ ]
 let g:startify_lists = [
           \ { 'type': 'bookmarks', 'header': ['   Marcadores']      },

@@ -8,7 +8,6 @@ Plug 'dunstontc/vim-vscode-theme' "El tema de vscode
 Plug 'arcticicestudio/nord-vim' "nord
 Plug 'drewtempelmeyer/palenight.vim' "El chilo
 
-
 "Iconos
 Plug 'ryanoasis/vim-devicons'
 Plug 'kyazdani42/nvim-web-devicons'
@@ -46,12 +45,13 @@ Plug 'honza/vim-snippets' "Instala coc-snippets para que funcionen estos snippet
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'rust-lang/rust.vim'
 Plug 'lervag/vimtex'
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+"Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'preservim/nerdcommenter'
 Plug 'jiangmiao/auto-pairs'
 Plug 'gillescastel/latex-snippets'
-Plug 'jceb/vim-orgmode'
-Plug 'puremourning/vimspector'
+Plug 'natebosch/dartlang-snippets'
+Plug 'dart-lang/dart-vim-plugin'
+Plug 'thosakwe/vim-flutter'
 
 "terminal
 Plug 'voldikss/vim-floaterm'
@@ -59,5 +59,6 @@ Plug 'akinsho/toggleterm.nvim'
 
 "de pana
 Plug 'mhinz/vim-startify'
+Plug 'frazrepo/vim-rainbow'
 
 call plug#end()

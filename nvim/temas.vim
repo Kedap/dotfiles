@@ -29,7 +29,8 @@ colorscheme palenight
 
 "configuraciones para la airline
 "se necesita de powerline-fonts package
+
 "let g:airline_theme='gruvbox'
 "let g:airline_theme='nord'
-let g:airline_theme = "palenight"
+let g:airline_theme = 'palenight'
 "let g:airline_theme='behelit'
