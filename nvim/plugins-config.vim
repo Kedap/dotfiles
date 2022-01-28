@@ -17,7 +17,10 @@ let g:vimtex_view_general_options
 let g:vimtex_view_general_options_latexmk = '-reuse-instance'
 
 " Arcoiris
-autocmd Filetype * if &ft!="nerdtree"|call rainbow#load()|endif
+"let g:rainbow_active = 1
+let not_rainbow = ["nerdtree", "toggleterm", "floaterm"]
+au Filetype * if index(not_rainbow, &ft) < 0|call rainbow#load()|endif
+"au Filetype nerdtree,floaterm,toggleterm call rainbow#inactivate()
 
 "fzf
 "let g:fzf_preview_use_dev_icons = 1
