@@ -35,5 +35,6 @@
     "typescriptreact"
   ],
   "prettier.eslintIntegration": true,
-  "prettier.tslintIntegration": true
+  "prettier.tslintIntegration": true,
+  "npm.binPath": "yarn --emoji true"
 }
