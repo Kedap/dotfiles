@@ -3,8 +3,6 @@ call plug#begin ('~/.local/share/nvim/pluged')
 "temas
 
 Plug 'morhetz/gruvbox'
-Plug 'sainnhe/sonokai' "el andromeda
-Plug 'dunstontc/vim-vscode-theme' "El tema de vscode
 Plug 'arcticicestudio/nord-vim' "nord
 Plug 'drewtempelmeyer/palenight.vim' "El chilo
 
@@ -52,6 +50,11 @@ Plug 'gillescastel/latex-snippets'
 Plug 'natebosch/dartlang-snippets'
 Plug 'dart-lang/dart-vim-plugin'
 Plug 'thosakwe/vim-flutter'
+"Para el codigo typescript/javascript
+Plug 'ianks/vim-tsx'
+Plug 'leafgarland/typescript-vim'
+Plug 'mxw/vim-jsx'
+Plug 'pangloss/vim-javascript'
 
 "terminal
 Plug 'voldikss/vim-floaterm'
@@ -59,6 +62,6 @@ Plug 'akinsho/toggleterm.nvim'
 
 "de pana
 Plug 'mhinz/vim-startify'
-Plug 'frazrepo/vim-rainbow'
+"Plug 'frazrepo/vim-rainbow'
 
 call plug#end()

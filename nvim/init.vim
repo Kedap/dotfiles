@@ -30,5 +30,5 @@ source ~/.config/nvim/plugins-config.vim
 "Atajos del coc
 source ~/.config/nvim/coc.vim
 
-"cargando atajos
+"Cargando atajos
 source ~/.config/nvim/atajos.vim

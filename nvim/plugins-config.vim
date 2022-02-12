@@ -18,8 +18,8 @@ let g:vimtex_view_general_options_latexmk = '-reuse-instance'
 
 " Arcoiris
 "let g:rainbow_active = 1
-let not_rainbow = ["nerdtree", "toggleterm", "floaterm"]
-au Filetype * if index(not_rainbow, &ft) < 0|call rainbow#load()|endif
+"let not_rainbow = ["nerdtree", "toggleterm", "floaterm"]
+"au Filetype * if index(not_rainbow, &ft) < 0|call rainbow#load()|endif
 "au Filetype nerdtree,floaterm,toggleterm call rainbow#inactivate()
 
 "fzf
@@ -34,6 +34,11 @@ command! -bang -nargs=? -complete=dir GFiles
 command! -bang -nargs=* Ag
   \ call fzf#vim#ag(<q-args>, fzf#vim#with_preview(), <bang>0)
 
+
+"configuracion para trabajar con typescript y js
+"au BufNewFile,BufRead *.ts setlocal filetype=typescript
+"au BufNewFile,BufRead *.tsx setlocal filetype=typescript.tsx
+
 "Integracion con gita
 " Change these if you want
 let g:signify_sign_add               = '+'
@@ -46,9 +51,9 @@ let g:signify_sign_show_count = 0
 let g:signify_sign_show_text = 1
 
 " If you like colors instead
-highlight SignifySignAdd                  ctermbg=green                guibg=#00ff00
-highlight SignifySignDelete ctermfg=black ctermbg=red    guifg=#ffffff guibg=#ff0000
-highlight SignifySignChange ctermfg=black ctermbg=yellow guifg=#000000 guibg=#ffff00
+highlight SignifySignAdd                  ctermbg=green  guifg=#000000 guibg=#4caf50
+highlight SignifySignDelete ctermfg=black ctermbg=red    guifg=#000000 guibg=#b71c1c
+highlight SignifySignChange ctermfg=black ctermbg=yellow guifg=#000000 guibg=#ffa000
 
 "Configuracion de startify
 "let g:startify_custom_header = [

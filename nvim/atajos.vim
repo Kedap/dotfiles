@@ -3,7 +3,7 @@ let mapleader = ' '
 
 "atajos importantes
 nmap <leader>w :w<CR>
-nmap <leader>s :wq!<CR>
+nmap <leader>s :x!<CR>
 nmap <leader>q :q!<CR>
 nmap <leader>r o<Esc>
 nmap <leader>f :Files<CR>
@@ -12,6 +12,7 @@ nmap <leader>f :Files<CR>
 nmap <leader>h :History<CR>
 nmap <leader>a :Ag<CR>
 nmap <leader>l <Plug>(easymotion-s2)
+noremap gb :buffers<CR>:buffer<Space> 
 "nmap <leader>fs :%s/
 
 "plugin (vimplug)
