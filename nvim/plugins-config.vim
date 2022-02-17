@@ -11,7 +11,7 @@ let g:rustfmt_autosave =  1
 "let g:go_fmt_command = "goimports"
 
 " vimtex
-let g:vimtex_view_general_viewer = 'atril'
+let g:vimtex_view_general_viewer = 'evince'
 let g:vimtex_view_general_options
     \ = '-reuse-instance -forward-search @tex @line @pdf'
 let g:vimtex_view_general_options_latexmk = '-reuse-instance'
@@ -38,6 +38,11 @@ command! -bang -nargs=* Ag
 "configuracion para trabajar con typescript y js
 "au BufNewFile,BufRead *.ts setlocal filetype=typescript
 "au BufNewFile,BufRead *.tsx setlocal filetype=typescript.tsx
+
+augroup highlight_yank
+  autocmd!
+  au TextYankPost * silent! lua vim.highlight.on_yank{higroup="IncSearch", timeout=250}
+augroup end
 
 "Integracion con gita
 " Change these if you want

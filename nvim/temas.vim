@@ -20,10 +20,19 @@ colorscheme gruvbox
 "configuraciones para la airline
 "se necesita de powerline-fonts package
 
-"let g:airline_theme='gruvbox'
+"Configuracion de Ayu
+"let ayucolor="dark"
+"colorscheme ayu
+
+"Configuracion de one dark
+"let g:one_allow_italics = 1
+"set background=dark
+"colorscheme one
+
 "let g:airline_theme='deus'
 "let g:airline_theme='wombat'
 let g:airline_theme='bubblegum'
 "let g:airline_theme='nord'
 "let g:airline_theme = 'palenight'
-"let g:airline_theme='behelit'
+"let g:airline_theme='ayu'
+"let g:airline_theme='one'

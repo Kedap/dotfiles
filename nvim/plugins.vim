@@ -5,6 +5,8 @@ call plug#begin ('~/.local/share/nvim/pluged')
 Plug 'morhetz/gruvbox'
 Plug 'arcticicestudio/nord-vim' "nord
 Plug 'drewtempelmeyer/palenight.vim' "El chilo
+Plug 'ayu-theme/ayu-vim'
+Plug 'rakr/vim-one'
 
 "Iconos
 Plug 'ryanoasis/vim-devicons'
