@@ -1,7 +1,9 @@
 "Configuracion de los plugins
-let g:airline_powerline_fonts = 1
 let g:indentLine_char = '▏' "Lineas para brackets
+"Configuracion para airline
 let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
+"Configuracion para nerdtree
 let NERDTreeShowHidden=1
 
 " rust fmt

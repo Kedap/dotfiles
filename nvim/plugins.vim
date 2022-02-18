@@ -8,10 +8,6 @@ Plug 'drewtempelmeyer/palenight.vim' "El chilo
 Plug 'ayu-theme/ayu-vim'
 Plug 'rakr/vim-one'
 
-"Iconos
-Plug 'ryanoasis/vim-devicons'
-Plug 'kyazdani42/nvim-web-devicons'
-
 "line
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -65,5 +61,9 @@ Plug 'akinsho/toggleterm.nvim'
 "de pana
 Plug 'mhinz/vim-startify'
 "Plug 'frazrepo/vim-rainbow'
+
+"Iconos
+Plug 'kyazdani42/nvim-web-devicons'
+Plug 'ryanoasis/vim-devicons'
 
 call plug#end()

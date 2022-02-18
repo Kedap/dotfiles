@@ -1,5 +1,7 @@
 syntax on
+set nocompatible
 set number
+set fileencoding=utf-8
 set mouse=a
 set noerrorbells
 set sw=2
@@ -15,6 +17,8 @@ set cursorline
 set termguicolors
 set colorcolumn=110
 set nobackup
+set guifont=Cascadia\ Code\ 10
+set spelllang=es
 filetype plugin indent on
 highlight ColoColumn ctermbg=0 guibg=lightgrey
 
@@ -24,11 +28,11 @@ source ~/.config/nvim/plugins.vim
 "Configuracion de los temas
 source ~/.config/nvim/temas.vim
 
-"configuracion de los plugins
-source ~/.config/nvim/plugins-config.vim
-
 "Atajos del coc
 source ~/.config/nvim/coc.vim
+
+"configuracion de los plugins
+source ~/.config/nvim/plugins-config.vim
 
 "Cargando atajos
 source ~/.config/nvim/atajos.vim
