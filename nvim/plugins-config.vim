@@ -46,21 +46,9 @@ augroup highlight_yank
   au TextYankPost * silent! lua vim.highlight.on_yank{higroup="IncSearch", timeout=250}
 augroup end
 
-"Integracion con gita
-" Change these if you want
-let g:signify_sign_add               = '+'
-let g:signify_sign_delete            = '_'
-let g:signify_sign_delete_first_line = '‾'
-let g:signify_sign_change            = '~'
-
-" I find the numbers disctracting
-let g:signify_sign_show_count = 0
-let g:signify_sign_show_text = 1
-
-" If you like colors instead
-highlight SignifySignAdd                  ctermbg=green  guifg=#000000 guibg=#4caf50
-highlight SignifySignDelete ctermfg=black ctermbg=red    guifg=#000000 guibg=#b71c1c
-highlight SignifySignChange ctermfg=black ctermbg=yellow guifg=#000000 guibg=#ffa000
+lua << EOF
+require('gitsigns').setup()
+EOF
 
 "Configuracion de startify
 "let g:startify_custom_header = [

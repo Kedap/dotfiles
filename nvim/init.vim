@@ -19,6 +19,7 @@ set colorcolumn=110
 set nobackup
 set guifont=Cascadia\ Code\ 10
 set spelllang=es
+set nolazyredraw
 filetype plugin indent on
 highlight ColoColumn ctermbg=0 guibg=lightgrey
 
