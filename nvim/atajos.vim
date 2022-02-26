@@ -6,6 +6,7 @@ nmap <leader>w :w<CR>
 nmap <leader>s :x!<CR>
 nmap <leader>q :q!<CR>
 nmap <leader>r o<Esc>
+nmap <leader>R i<CR><Esc>
 nmap <leader>f :Files<CR>
 
 "find

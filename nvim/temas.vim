@@ -5,12 +5,12 @@
 "colorscheme gruvbox
 
 "Tema de nord
-colorscheme nord
-hi Comment gui=italic
-hi Comment cterm=italic
-hi Type    gui=italic
-hi Type    cterm=italic
-let g:nord_italic = 1
+"colorscheme nord
+"hi Comment gui=italic
+"hi Comment cterm=italic
+"hi Type    gui=italic
+"hi Type    cterm=italic
+"let g:nord_italic = 1
 
 "Configuracion de palenight
 "let g:palenight_terminal_italics=1
@@ -26,13 +26,21 @@ let g:nord_italic = 1
 "set background=dark
 "colorscheme one
 
+"Configuracion para catppuccin
+lua << EOF
+local catppuccin = require("catppuccin")
+catppuccin.setup()
+EOF
+colorscheme catppuccin
+
 "configuraciones para la airline
 "se necesita de powerline-fonts package
 
 "let g:airline_theme='deus'
+let g:airline_theme='tomorrow'
 "let g:airline_theme='wombat'
 "let g:airline_theme='bubblegum'
-let g:airline_theme='nord'
+"let g:airline_theme='nord'
 "let g:airline_theme = 'palenight'
 "let g:airline_theme='ayu'
 "let g:airline_theme='one'

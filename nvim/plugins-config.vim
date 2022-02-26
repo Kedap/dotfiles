@@ -13,9 +13,9 @@ let g:rustfmt_autosave =  1
 "let g:go_fmt_command = "goimports"
 
 " vimtex
-let g:vimtex_view_general_viewer = 'evince'
-let g:vimtex_view_general_options
-    \ = '-reuse-instance -forward-search @tex @line @pdf'
+let g:vimtex_view_general_viewer = 'zathura'
+"let g:vimtex_view_general_options
+    "\ = '-reuse-instance -forward-search @tex @line @pdf'
 let g:vimtex_view_general_options_latexmk = '-reuse-instance'
 
 " Arcoiris

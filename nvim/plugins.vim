@@ -7,6 +7,7 @@ Plug 'arcticicestudio/nord-vim' "nord
 Plug 'drewtempelmeyer/palenight.vim' "El chilo
 Plug 'ayu-theme/ayu-vim'
 Plug 'rakr/vim-one'
+Plug 'catppuccin/nvim', {'as': 'catppuccin'}
 
 "line
 Plug 'vim-airline/vim-airline'
@@ -36,7 +37,7 @@ Plug 'tpope/vim-rhubarb'
 Plug 'junegunn/gv.vim'
 
 "Codigo
-Plug 'sheerun/vim-polyglot'
+"Plug 'sheerun/vim-polyglot'
 Plug 'honza/vim-snippets' "Instala coc-snippets para que funcionen estos snippets
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'rust-lang/rust.vim'
