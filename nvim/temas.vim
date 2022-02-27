@@ -17,10 +17,6 @@
 "set background=dark
 "colorscheme palenight
 
-"Configuracion de Ayu
-"let ayucolor="mirage"
-"colorscheme ayu
-
 "Configuracion de one dark
 "let g:one_allow_italics = 1
 "set background=dark
@@ -33,6 +29,9 @@ catppuccin.setup()
 EOF
 colorscheme catppuccin
 
+"nightfox
+"colorscheme duskfox
+
 "configuraciones para la airline
 "se necesita de powerline-fonts package
 
@@ -42,5 +41,4 @@ let g:airline_theme='tomorrow'
 "let g:airline_theme='bubblegum'
 "let g:airline_theme='nord'
 "let g:airline_theme = 'palenight'
-"let g:airline_theme='ayu'
 "let g:airline_theme='one'

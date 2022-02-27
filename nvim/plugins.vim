@@ -1,23 +1,23 @@
 "inicio de la lista de plugins
 call plug#begin ('~/.local/share/nvim/pluged')
-"temas
 
+"temas
 Plug 'morhetz/gruvbox'
 Plug 'arcticicestudio/nord-vim' "nord
 Plug 'drewtempelmeyer/palenight.vim' "El chilo
-Plug 'ayu-theme/ayu-vim'
 Plug 'rakr/vim-one'
 Plug 'catppuccin/nvim', {'as': 'catppuccin'}
+Plug 'EdenEast/nightfox.nvim'
 
 "line
+Plug 'akinsho/bufferline.nvim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 "Plugins
 Plug 'lilydjwg/colorizer'
-Plug 'Yggdroot/indentLine'
+Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'editorconfig/editorconfig-vim'
-"Plug 'vimwiki/vimwiki'
 
 "movimiento
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -29,6 +29,7 @@ Plug 'tpope/vim-repeat'
 "nerdtree
 Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 "Integracion con git
 Plug 'nvim-lua/plenary.nvim'
@@ -37,19 +38,19 @@ Plug 'tpope/vim-fugitive'
 Plug 'junegunn/gv.vim'
 
 "Codigo
-"Plug 'sheerun/vim-polyglot'
+"Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'honza/vim-snippets' "Instala coc-snippets para que funcionen estos snippets
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'rust-lang/rust.vim'
-Plug 'lervag/vimtex'
+Plug 'lukas-reineke/format.nvim'
+"Plug 'lervag/vimtex'
 "Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'preservim/nerdcommenter'
 Plug 'jiangmiao/auto-pairs'
-Plug 'gillescastel/latex-snippets'
+"Plug 'gillescastel/latex-snippets'
 Plug 'natebosch/dartlang-snippets'
 Plug 'dart-lang/dart-vim-plugin'
 Plug 'thosakwe/vim-flutter'
-"Para el codigo typescript/javascript
 Plug 'ianks/vim-tsx'
 Plug 'leafgarland/typescript-vim'
 Plug 'mxw/vim-jsx'
@@ -61,7 +62,6 @@ Plug 'akinsho/toggleterm.nvim'
 
 "de pana
 Plug 'mhinz/vim-startify'
-"Plug 'frazrepo/vim-rainbow'
 
 "Iconos
 Plug 'kyazdani42/nvim-web-devicons'

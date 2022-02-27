@@ -13,7 +13,8 @@ nmap <leader>f :Files<CR>
 nmap <leader>h :History<CR>
 nmap <leader>a :Ag<CR>
 nmap <leader>l <Plug>(easymotion-s2)
-noremap gb :buffers<CR>:buffer<Space> 
+noremap <silent>gbn :BufferLineCycleNext<CR>
+noremap <silent>gbp :BufferLineCyclePrev<CR>
 "nmap <leader>fs :%s/
 
 "plugin (vimplug)

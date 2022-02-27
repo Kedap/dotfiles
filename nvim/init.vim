@@ -35,5 +35,8 @@ source ~/.config/nvim/coc.vim
 "configuracion de los plugins
 source ~/.config/nvim/plugins-config.vim
 
+"Configuracion que se encuentra en lua
+source ~/.config/nvim/lua.vim
+
 "Cargando atajos
 source ~/.config/nvim/atajos.vim
