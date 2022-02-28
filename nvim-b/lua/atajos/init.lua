@@ -35,6 +35,7 @@ map("n", "K", "<cmd>Lspsaga hover_doc<CR>", opts)
 map("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
 map("n", "<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
 map("n", "gr", "<cmd>Lspsaga rename<CR>", opts)
+map("n", "<leader>d", "<cmd>Lspsaga show_line_diagnostics<CR>", opts)
 
 --Codigos
 map("n", "<leader>ñnf", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)

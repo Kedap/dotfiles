@@ -4,6 +4,11 @@ return require("packer").startup(function()
 
   -- Temas
   use("arcticicestudio/nord-vim")
+  use("morhetz/gruvbox")
+  use("drewtempelmeyer/palenight.vim")
+  use({ "catppuccin/nvim", as = "catppuccin" })
+  use("EdenEast/nightfox.nvim")
+
   use({
     "vim-airline/vim-airline-themes",
     requires = { "vim-airline/vim-airline", "ryanoasis/vim-devicons" },
