@@ -1,0 +1,48 @@
+-- Configuracion de aplicaciones no escritos en lua
+vim.g.airline_powerline_fonts = 1
+vim.g.WebDevIconsDisableDefaultFolderSymbolColorFromNERDTreeDir = 1
+vim.g.WebDevIconsDisableDefaultFileSymbolColorFromNERDTreeFile = 1
+
+-- Configuracion de Startify
+vim.cmd([[
+let g:startify_custom_header =  [
+  \ '   -{ Bienvenido sempai }-',
+  \ '',
+  \ '   ⠄⠄⠄⠄ ⠄⠄⠄⠄⠄   ⠄⠄⠄⠄⠄⠄',
+  \ '   ⠄⠄⡔⠙⠢⡀⠄⠄⠄⢀⠼⠅⠈⢂⠄⠄⠄⠄⠄',
+  \ '   ⠄⠄⡌⠄⢰⠉⢙⢗⣲⡖⡋⢐⡺⡄⠈⢆⠄⠄⠄',
+  \ '   ⠄⡜⠄⢀⠆⢠⣿⣿⣿⣿⢡⢣⢿⡱⡀⠈⠆⠄⠄',
+  \ '   ⠄⠧⠤⠂⠄⣼⢧⢻⣿⣿⣞⢸⣮⠳⣕⢤⡆⠄⠄',
+  \ '   ⢺⣿⣿⣶⣦⡇⡌⣰⣍⠚⢿⠄⢩⣧⠉⢷⡇⠄⠄',
+  \ '   ⠘⣿⣿⣯⡙⣧⢎⢨⣶⣶⣶⣶⢸⣼⡻⡎⡇⠄⠄',
+  \ '   ⠄⠘⣿⣿⣷⡀⠎⡮⡙⠶⠟⣫⣶⠛⠧⠁⠄⠄⠄',
+  \ '   ⠄⠄⠘⣿⣿⣿⣦⣤⡀⢿⣿⣿⣿⣄⠄⠄⠄⠄⠄',
+  \ '   ⠄⠄⠄⠈⢿⣿⣿⣿⣿⣷⣯⣿⣿⣷⣾⣿⣷⡄⠄',
+  \ '   ⠄⠄⠄⠄⠄⢻⠏⣼⣿⣿⣿⣿⡿⣿⣿⣏⢾⠇⠄',
+  \ '   ⠄⠄⠄⠄⠄⠈⡼⠿⠿⢿⣿⣦⡝⣿⣿⣿⠷⢀⠄',
+  \ '   ⠄⠄⠄⠄⠄⠄⡇⠄⠄⠄⠈⠻⠇⠿⠋⠄⠄⢘⡆',
+  \ '   ⠄⠄⠄⠄⠄⠄⠱⣀⠄⠄⠄⣀⢼⡀⠄⢀⣀⡜⠄',
+  \ '   ⠄⠄⠄⠄⠄⠄⠄⢸⣉⠉⠉⠄⢀⠈⠉⢏⠁⠄⠄',
+  \ '   ⠄⠄⠄⠄⠄⠄⡰⠃⠄⠄⠄⠄⢸⠄⠄⢸⣧⠄⠄',
+  \ '   ⠄⠄⠄⠄⠄⣼⣧⠄⠄⠄⠄⠄⣼⠄⠄⡘⣿⡆⠄',
+  \ '   ⠄⠄⠄⢀⣼⣿⡙⣷⡄⠄⠄⠄⠃⠄⢠⣿⢸⣿⡀',
+  \ '   ⠄⠄⢀⣾⣿⣿⣷⣝⠿⡀⠄⠄⠄⢀⡞⢍⣼⣿⠇',
+  \ '   ⠄⠄⣼⣿⣿⣿⣿⣿⣷⣄⠄⠄⠠⡊⠴⠋⠹⡜⠄',
+  \ '   ⠄⠄⣿⣿⣿⣿⣿⣿⣿⣿⡆⣤⣾⣿⣿⣧⠹⠄⠄',
+\ '',
+\ '',
+\ ]
+
+let g:startify_bookmarks = [
+            \ { 'r': '~/Documentos/repos' },
+            \ { 'c': '~/.config/nvim' },
+            \ { 'z': '~/.zshrc' },
+            \ { 't': '~/tempo' },
+            \ ]
+let g:startify_lists = [
+          \ { 'type': 'bookmarks', 'header': ['   Marcadores']      },
+          \ { 'type': 'files',     'header': ['   Archivos Recientes']            },
+          \ { 'type': 'dir',       'header': ['   Archivos de '. getcwd()] },
+          \ { 'type': 'sessions',  'header': ['   Sessions']       },
+          \ ]
+]])
