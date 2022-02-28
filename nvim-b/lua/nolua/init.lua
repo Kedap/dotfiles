@@ -1,5 +1,4 @@
 -- Configuracion de aplicaciones no escritos en lua
-vim.g.airline_powerline_fonts = 1
 vim.g.WebDevIconsDisableDefaultFolderSymbolColorFromNERDTreeDir = 1
 vim.g.WebDevIconsDisableDefaultFileSymbolColorFromNERDTreeFile = 1
 

@@ -13,7 +13,6 @@ map("n", "<leader>s", ":x!<CR>", opts)
 map("n", "<leader>q", ":q!<CR>", opts)
 map("n", "<leader>r", "o<Esc>", opts)
 map("n", "<leader>R", "i<CR><Esc>", opts)
-map("n", "<leader>n", ":NERDTreeToggle<CR>", opts)
 
 -- Plugin manager
 map("n", "<leader>pi", ":PackerInstall<CR>", opts)
@@ -21,23 +20,27 @@ map("n", "<leader>pc", ":PackerClean<CR>", opts)
 map("n", "<leader>pu", ":PackerSync<CR>", opts)
 
 --Terminal
-map("n", "tf", "<cmd>FloatermNew<CR>", opts)
-map("n", "tt", "<cmd>ToggleTerm<CR>", opts)
+map("n", "<leader>tf", "<cmd>FloatermNew<CR>", opts)
+map("n", "<leader>tt", "<cmd>ToggleTerm<CR>", opts)
 
 -- Find
 map("n", "<leader>f", ":Files<CR>", opts)
 map("n", "<leader>a", ":Ag<CR>", opts)
+map("n", "<leader>n", ":NERDTreeToggle<CR>", opts)
+vim.cmd([[
+nmap <leader>l <Plug>(easymotion-s2)
+]])
 
 -- LSP mapeos
 map("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
 map("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
-map("n", "K", "<cmd>Lspsaga hover_doc<CR>", opts)
-map("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
-map("n", "<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
+map("n", "gh", "<cmd>Lspsaga lsp_finder<CR>", opts)
 map("n", "gr", "<cmd>Lspsaga rename<CR>", opts)
+map("n", "ga", "<cmd>Lspsaga code_action<CR>", opts)
+map("n", "K", "<cmd>Lspsaga hover_doc<CR>", opts)
 map("n", "<leader>d", "<cmd>Lspsaga show_line_diagnostics<CR>", opts)
 
---Codigos
+--Codigo
 map("n", "<leader>ñnf", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
 map("n", "<leader>ñfr", ":FlutterRun<CR>", opts)
 map("n", "<leader>ñfh", ":FlutterHotReload<CR>", opts)

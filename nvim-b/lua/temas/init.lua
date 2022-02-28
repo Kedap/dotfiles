@@ -1,6 +1,6 @@
 --Nord
 --vim.cmd([[colorscheme nord]])
---vim.g.airline_theme = "nord"
+--local lualine = "nord"
 
 --Gruvbox
 --vim.cmd([[
@@ -9,7 +9,16 @@
 --let g:gruvbox_italic = 1
 --colorscheme gruvbox
 --]])
---vim.g.airline_theme = "deus"
+--local lualine = "gruvbox"
+
+--Gruvbox Material
+--vim.cmd([[
+--set background=dark
+--let g:gruvbox_material_background = 'medium'
+--let g:grubox_material_enable_italic = 1
+--colorscheme gruvbox-material
+--]])
+--local lualine = "gruvbox"
 
 --Palenight
 --vim.cmd([[
@@ -17,15 +26,15 @@
 --set background=dark
 --colorscheme palenight
 --]])
---vim.g.airline_theme = "palenight"
+--local lualine = "palenight"
 
 -- catppuccin
 --local catppuccin = require("catppuccin")
 --catppuccin.setup()
 --vim.cmd[[colorscheme catppuccin]]
---vim.g.airline_theme = "tomorrow"
+--local lualine = "catppuccin"
 
--- nightfox
+--nightfox
 local nightfox = require("nightfox")
 nightfox.setup({
   fox = "duskfox",
@@ -48,4 +57,6 @@ nightfox.setup({
   },
 })
 nightfox.load()
-vim.g.airline_theme = "tomorrow"
+local lualine = "nightfox"
+
+return lualine

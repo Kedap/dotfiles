@@ -3,16 +3,13 @@ return require("packer").startup(function()
   use("wbthomason/packer.nvim")
 
   -- Temas
-  use("arcticicestudio/nord-vim")
+  use("shaunsingh/nord.nvim")
   use("morhetz/gruvbox")
+  use("sainnhe/gruvbox-material")
   use("drewtempelmeyer/palenight.vim")
   use({ "catppuccin/nvim", as = "catppuccin" })
   use("EdenEast/nightfox.nvim")
-
-  use({
-    "vim-airline/vim-airline-themes",
-    requires = { "vim-airline/vim-airline", "ryanoasis/vim-devicons" },
-  })
+  use({ "nvim-lualine/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons" } })
 
   -- Utilizadades
   use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
@@ -24,6 +21,7 @@ return require("packer").startup(function()
       "Xuyuanp/nerdtree-git-plugin",
       "kyazdani42/nvim-web-devicons",
       "tiagofumo/vim-nerdtree-syntax-highlight",
+      "ryanoasis/vim-devicons",
     },
   })
   use("windwp/nvim-ts-autotag")
@@ -53,7 +51,15 @@ return require("packer").startup(function()
   use("lukas-reineke/indent-blankline.nvim")
 
   -- Git
-  use({ "lewis6991/gitsigns.nvim", requires = "nvim-lua/plenary.nvim" })
+  use({
+    "lewis6991/gitsigns.nvim",
+    requires = {
+      "nvim-lua/plenary.nvim",
+    },
+    config = function()
+      require("gitsigns").setup()
+    end,
+  })
   use("tpope/vim-fugitive")
   use("junegunn/gv.vim")
 
@@ -71,4 +77,5 @@ return require("packer").startup(function()
   -- Terminales
   use("voldikss/vim-floaterm")
   use("akinsho/toggleterm.nvim")
+  use("easymotion/vim-easymotion")
 end)
