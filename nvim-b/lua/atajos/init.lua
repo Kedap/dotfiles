@@ -27,9 +27,7 @@ map("n", "<leader>tt", "<cmd>ToggleTerm<CR>", opts)
 map("n", "<leader>f", ":Files<CR>", opts)
 map("n", "<leader>a", ":Ag<CR>", opts)
 map("n", "<leader>n", ":NERDTreeToggle<CR>", opts)
-vim.cmd([[
-nmap <leader>l <Plug>(easymotion-s2)
-]])
+map("n", "<leader>l", ":HopChar2<CR>", opts)
 
 -- LSP mapeos
 map("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)

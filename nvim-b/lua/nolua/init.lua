@@ -2,6 +2,9 @@
 vim.g.WebDevIconsDisableDefaultFolderSymbolColorFromNERDTreeDir = 1
 vim.g.WebDevIconsDisableDefaultFileSymbolColorFromNERDTreeFile = 1
 
+-- Configuracion para git-blame
+vim.cmd([[let g:gitblame_message_template = '<author> (<date>): <summary>']])
+
 -- Configuracion de Startify
 vim.cmd([[
 let g:startify_custom_header =  [
