@@ -7,10 +7,6 @@ map("n", "<C-j>", "<C-w>j", opts)
 map("n", "<C-k>", "<C-w>k", opts)
 map("n", "<C-l>", "<C-w>l", opts)
 
--- Scroll fast
-map("n", "<C-J>", "50j", opts)
-map("n", "<C-K>", "50k", opts)
-
 -- De cajon
 map("n", "<leader>w", ":w<CR>", opts)
 map("n", "<leader>s", ":x!<CR>", opts)
@@ -48,3 +44,6 @@ map("n", "<C-d>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(1, 
 map("n", "<leader>ñfr", ":FlutterRun<CR>", opts)
 map("n", "<leader>ñfh", ":FlutterHotReload<CR>", opts)
 map("n", "<leader>ñfd", ":FlutterVSplit<CR>", opts)
+map("n", "<leader>ñlc", ":VimtexCompile<CR>", opts)
+map("n", "<leader>ñmp", ":MarkdownPreview<CR>", opts)
+map("n", "<leader>ñms", ":MarkdownPreviewStop<CR>", opts)

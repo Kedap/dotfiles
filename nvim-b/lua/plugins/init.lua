@@ -5,11 +5,11 @@ return require("packer").startup(function()
   -- Temas
   use("shaunsingh/nord.nvim")
   use("morhetz/gruvbox")
-  use("sainnhe/gruvbox-material")
   use({ "catppuccin/nvim", as = "catppuccin" })
   use("EdenEast/nightfox.nvim")
   use("folke/tokyonight.nvim")
-  use("savq/melange")
+  use("Kedap/vim-nightfly-guicolors")
+  use("https://github.com/overcache/NeoSolarized")
   use({ "nvim-lualine/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons" } })
 
   -- Utilizadades
@@ -83,8 +83,10 @@ return require("packer").startup(function()
   use({ "tami5/lspsaga.nvim", requires = "neovim/nvim-lspconfig" })
   use({ "williamboman/nvim-lsp-installer", requires = "neovim/nvim-lspconfig" })
   use("preservim/nerdcommenter")
-  use({ "thosakwe/vim-flutter", requires = "Nash0x7E2/awesome-flutter-snippets" })
   use("rust-lang/rust.vim")
+  use({ "thosakwe/vim-flutter", requires = "Nash0x7E2/awesome-flutter-snippets" })
+  use("lervag/vimtex")
+  use({ "iamcco/markdown-preview.nvim", run = "cd app && yarn install" })
 
   -- Terminales
   use("voldikss/vim-floaterm")

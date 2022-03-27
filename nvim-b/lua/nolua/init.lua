@@ -2,8 +2,14 @@
 vim.g.WebDevIconsDisableDefaultFolderSymbolColorFromNERDTreeDir = 1
 vim.g.WebDevIconsDisableDefaultFileSymbolColorFromNERDTreeFile = 1
 
+-- Configuracion para vimtex
+vim.g.vimtex_view_method = "zathura"
+
 -- Configuracion para git-blame
 vim.cmd([[let g:gitblame_message_template = '<author> (<date>): <summary>']])
+
+-- Configuracion para markdown preview
+vim.g.mkdp_browser = "firefox"
 
 -- Configuracion de Startify
 vim.cmd([[
