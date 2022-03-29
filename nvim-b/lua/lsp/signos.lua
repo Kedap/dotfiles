@@ -14,8 +14,6 @@ vim.diagnostic.config({
   serverty_sort = false,
 })
 
---vim.diagnostic.spacing = 4
-
 vim.cmd([[
   hi LspDiagnosticsVirtualTextError guifg=red gui=bold,italic,underline
   hi LspDiagnosticsVirtualTextWarning guifg=orange gui=bold,italic,underline

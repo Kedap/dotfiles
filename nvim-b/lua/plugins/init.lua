@@ -9,7 +9,7 @@ return require("packer").startup(function()
   use("EdenEast/nightfox.nvim")
   use("folke/tokyonight.nvim")
   use("Kedap/vim-nightfly-guicolors")
-  use("https://github.com/overcache/NeoSolarized")
+  use("overcache/NeoSolarized")
   use({ "nvim-lualine/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons" } })
 
   -- Utilizadades
