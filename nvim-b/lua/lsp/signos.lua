@@ -13,10 +13,3 @@ vim.diagnostic.config({
   update_in_insert = true,
   serverty_sort = false,
 })
-
-vim.cmd([[
-  hi LspDiagnosticsVirtualTextError guifg=red gui=bold,italic,underline
-  hi LspDiagnosticsVirtualTextWarning guifg=orange gui=bold,italic,underline
-  hi LspDiagnosticsVirtualTextInformation guifg=yellow gui=bold,italic,underline
-  hi LspDiagnosticsVirtualTextHint guifg=green gui=bold,italic,underline
-]])
