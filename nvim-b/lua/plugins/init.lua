@@ -3,7 +3,6 @@ return require("packer").startup(function()
   use("wbthomason/packer.nvim")
 
   -- Temas
-  use("shaunsingh/nord.nvim")
   use("morhetz/gruvbox")
   use({ "catppuccin/nvim", as = "catppuccin" })
   use("EdenEast/nightfox.nvim")
@@ -11,6 +10,7 @@ return require("packer").startup(function()
   use("Kedap/vim-nightfly-guicolors")
   use("overcache/NeoSolarized")
   use("olimorris/onedarkpro.nvim")
+  use({ "rose-pine/neovim", as = "rose-pine" })
   use({ "nvim-lualine/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons" } })
 
   -- Utilizadades
@@ -18,40 +18,16 @@ return require("packer").startup(function()
   use({ "akinsho/bufferline.nvim", requires = "kyazdani42/nvim-web-devicons" })
   use("windwp/nvim-autopairs")
   use({
-    "preservim/nerdtree",
+    "kyazdani42/nvim-tree.lua",
     requires = {
-      "Xuyuanp/nerdtree-git-plugin",
       "kyazdani42/nvim-web-devicons",
-      "tiagofumo/vim-nerdtree-syntax-highlight",
-      "ryanoasis/vim-devicons",
     },
   })
   use("windwp/nvim-ts-autotag")
   use({
-    "junegunn/fzf.vim",
-    requires = "junegunn/fzf",
-    run = function()
-      vim.fn["fzf#install"]()
-    end,
+    "nvim-telescope/telescope.nvim",
+    requires = { "nvim-lua/plenary.nvim", "nvim-telescope/telescope-fzf-native.nvim" },
   })
-  use({
-    "hrsh7th/nvim-cmp",
-    requires = {
-      "neovim/nvim-lspconfig",
-      "hrsh7th/cmp-nvim-lsp",
-      "hrsh7th/cmp-buffer",
-      "hrsh7th/cmp-path",
-      "hrsh7th/cmp-calc",
-      "hrsh7th/cmp-cmdline",
-      "hrsh7th/nvim-cmp",
-      "hrsh7th/cmp-vsnip",
-      "hrsh7th/vim-vsnip",
-      "hrsh7th/vim-vsnip-integ",
-    },
-  })
-  use("onsails/lspkind-nvim")
-  use("rafamadriz/friendly-snippets")
-  use("norcalli/nvim-colorizer.lua")
   use("lukas-reineke/indent-blankline.nvim")
   use({
     "phaazon/hop.nvim",
@@ -59,6 +35,7 @@ return require("packer").startup(function()
       require("hop").setup({ keys = "etovxqpdygfblzhckisuran" })
     end,
   })
+  use("karb94/neoscroll.nvim")
 
   -- Git
   use({
@@ -79,12 +56,36 @@ return require("packer").startup(function()
   use({ "p00f/nvim-ts-rainbow", requires = "nvim-treesitter/nvim-treesitter" })
 
   -- Codigo
+  use({
+    "hrsh7th/nvim-cmp",
+    requires = {
+      "neovim/nvim-lspconfig",
+      "hrsh7th/cmp-nvim-lsp",
+      "hrsh7th/cmp-buffer",
+      "hrsh7th/cmp-path",
+      "hrsh7th/cmp-calc",
+      "hrsh7th/cmp-cmdline",
+      "hrsh7th/nvim-cmp",
+      "hrsh7th/cmp-vsnip",
+      "hrsh7th/vim-vsnip",
+      "hrsh7th/vim-vsnip-integ",
+    },
+  })
+  use("onsails/lspkind-nvim")
+  use("rafamadriz/friendly-snippets")
+  use("norcalli/nvim-colorizer.lua")
   use("editorconfig/editorconfig-vim")
   use("mhartington/formatter.nvim")
   use({ "tami5/lspsaga.nvim", requires = "neovim/nvim-lspconfig" })
   use({ "williamboman/nvim-lsp-installer", requires = "neovim/nvim-lspconfig" })
   use("preservim/nerdcommenter")
-  use("rust-lang/rust.vim")
+
+  -- Lenguajes
+  use("simrat39/rust-tools.nvim")
+  use({
+    "saecki/crates.nvim",
+    requires = { "nvim-lua/plenary.nvim" },
+  })
   use({ "thosakwe/vim-flutter", requires = "Nash0x7E2/awesome-flutter-snippets" })
   use("lervag/vimtex")
   use({ "iamcco/markdown-preview.nvim", run = "cd app && yarn install" })

@@ -276,7 +276,7 @@ elseif opciones.estilo == "burbuja" then
       lualine_y = {},
       lualine_z = {},
     },
-    extensions = { "nerdtree", "fzf", "toggleterm", "fugitive" },
+    extensions = { "nvim-tree", "toggleterm", "fugitive" },
   })
 else
   require("lualine").setup({})

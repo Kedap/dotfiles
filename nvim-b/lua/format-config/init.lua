@@ -103,11 +103,21 @@ require("formatter").setup({
       end,
     },
     sh = {
-      -- Shell Script Formatter
+      -- Shell Script Formato
       function()
         return {
           exe = "shfmt",
           args = { "-i", 2 },
+          stdin = true,
+        }
+      end,
+    },
+    tex = {
+      -- Para LaTeX
+      function()
+        return {
+          exe = "latexindent",
+          args = { "-" },
           stdin = true,
         }
       end,

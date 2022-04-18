@@ -56,6 +56,8 @@ cmp.setup({
     { name = "path" },
     { name = "nvim_lsp" },
     { name = "vsnip" }, -- For vsnip users.
+    { name = "crates" },
+    { name = "calc" },
     -- { name = 'luasnip' }, -- For luasnip users.
     -- { name = 'ultisnips' }, -- For ultisnips users.
     -- { name = 'snippy' }, -- For snippy users.

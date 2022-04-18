@@ -18,6 +18,7 @@ vim.o.colorcolumn = "110"
 vim.o.backup = false
 vim.o.spelllang = "es"
 vim.o.lazyredraw = false
+vim.o.scrolloff = 20
 vim.cmd("highlight ColoColumn ctermbg=0 guibg=lightgrey")
 vim.cmd([[
 augroup highlight_yank
