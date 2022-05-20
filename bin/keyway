@@ -1,5 +1,5 @@
 #!/bin/bash
 
 xhost si:localuser:root
-sudo key-mapper-gtk
+sudo input-remapper-gtk
 xhost -si:localuser:root
