@@ -26,7 +26,7 @@ return require("packer").startup(function()
   use("windwp/nvim-ts-autotag")
   use({
     "nvim-telescope/telescope.nvim",
-    requires = { "nvim-lua/plenary.nvim", "nvim-telescope/telescope-fzf-native.nvim" },
+    requires = { "nvim-lua/plenary.nvim" },
   })
   use("lukas-reineke/indent-blankline.nvim")
   use({
@@ -35,7 +35,9 @@ return require("packer").startup(function()
       require("hop").setup({ keys = "etovxqpdygfblzhckisuran" })
     end,
   })
-  use("karb94/neoscroll.nvim")
+  use("KabbAmine/vCoolor.vim")
+  use("sotte/presenting.vim")
+  use({ "skywind3000/asynctasks.vim", requires = "skywind3000/asyncrun.vim" })
 
   -- Git
   use({
@@ -54,6 +56,7 @@ return require("packer").startup(function()
   -- De pana
   use("mhinz/vim-startify")
   use({ "p00f/nvim-ts-rainbow", requires = "nvim-treesitter/nvim-treesitter" })
+  use("rcarriga/nvim-notify")
 
   -- Codigo
   use({
@@ -69,19 +72,26 @@ return require("packer").startup(function()
       "hrsh7th/cmp-vsnip",
       "hrsh7th/vim-vsnip",
       "hrsh7th/vim-vsnip-integ",
+      "f3fora/cmp-spell",
     },
   })
   use("onsails/lspkind-nvim")
   use("rafamadriz/friendly-snippets")
+  --use({ "~/Documentos/repos/friendly-snippets", branch = "extended-global" })
   use("norcalli/nvim-colorizer.lua")
   use("editorconfig/editorconfig-vim")
   use("mhartington/formatter.nvim")
   use({ "tami5/lspsaga.nvim", requires = "neovim/nvim-lspconfig" })
-  use({ "williamboman/nvim-lsp-installer", requires = "neovim/nvim-lspconfig" })
+  use("williamboman/nvim-lsp-installer")
+  use("neovim/nvim-lspconfig")
   use("preservim/nerdcommenter")
+  use("puremourning/vimspector")
 
   -- Lenguajes
-  use("simrat39/rust-tools.nvim")
+  use({
+    "simrat39/rust-tools.nvim",
+    requires = { "neovim/nvim-lspconfig" },
+  })
   use({
     "saecki/crates.nvim",
     requires = { "nvim-lua/plenary.nvim" },

@@ -18,7 +18,6 @@ vim.o.colorcolumn = "110"
 vim.o.backup = false
 vim.o.spelllang = "es"
 vim.o.lazyredraw = false
-vim.o.scrolloff = 20
 vim.cmd("highlight ColoColumn ctermbg=0 guibg=lightgrey")
 vim.cmd([[
 augroup highlight_yank
@@ -26,3 +25,4 @@ augroup highlight_yank
     au TextYankPost * silent! lua vim.highlight.on_yank{higroup="IncSearch", timeout=700}
 augroup END
 ]])
+vim.notify = require("notify")

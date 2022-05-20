@@ -1,5 +1,13 @@
 -- Configuracion de aplicaciones no escritos en lua
 
+-- Configuracion de Coolor
+vim.g.vcoolor_disable_mappings = 1
+
+-- Configurando asyncrun
+vim.g.asyncrun_open = 6
+vim.g.asynctasks_term_pos = "toggleterm"
+vim.g.asynctasks_porfile = "debug"
+
 -- Configuracion para vimtex
 vim.g.vimtex_view_method = "zathura"
 
