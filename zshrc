@@ -1,12 +1,31 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:$PATH
+
+#Android sdk
+export PATH=$HOME/etc/android-sdk/cmdline-tools/:$PATH
+export PATH=$HOME/etc/android-sdk/cmdline-tools/bin:$PATH
+export PATH=$HOME/etc/android-sdk/tools:$PATH
+export PATH=$HOME/etc/android-sdk/tools/bin:$PATH
+export PATH=$HOME/etc/android-sdk/build-tools:$PATH
+export PATH=$HOME/etc/android-sdk/build-tools/28.0.3:$PATH
+export PATH=$HOME/etc/android-sdk/platform-tools:$PATH
+
+#flutter
+export PATH=$HOME/etc/flutter/bin:$PATH
+export PATH=$HOME/.pub-cache/bin:$PATH
+
+#Yarn bin
+export PATH=$HOME/.yarn/bin:$PATH
+
+#Ruta para las gemas de ruby
+export PATH=$HOME/.local/share/gem/ruby/3.0.0/bin:$PATH
+
+#Ruta de python
+export PATH=$HOME/.local/bin:$PATH
+
+#Ruta de rust
+export PATH=$HOME/.cargo/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/sno0bwy/.oh-my-zsh"
@@ -15,8 +34,7 @@ export ZSH="/home/sno0bwy/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-#ZSH_THEME="spaceship"
-eval "$(starship init zsh)"
+ZSH_THEME="robbyrussell"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -31,14 +49,13 @@ eval "$(starship init zsh)"
 # Case-sensitive completion must be off. _ and - will be interchangeable.
 # HYPHEN_INSENSITIVE="true"
 
-# Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
-
-# Uncomment the following line to automatically update without prompting.
-# DISABLE_UPDATE_PROMPT="true"
+# Uncomment one of the following lines to change the auto-update behavior
+# zstyle ':omz:update' mode disabled  # disable automatic updates
+# zstyle ':omz:update' mode auto      # update automatically without asking
+# zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 
 # Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
+# zstyle ':omz:update' frequency 13
 
 # Uncomment the following line if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS="true"
@@ -53,8 +70,9 @@ eval "$(starship init zsh)"
 # ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-# Caution: this setting can cause issues with multiline prompts (zsh 5.7.1 and newer seem to work)
-# See https://github.com/ohmyzsh/ohmyzsh/issues/5765
+# You can also set it to another string to have that shown instead of the default red dots.
+# e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
+# Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
 # COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
@@ -71,26 +89,24 @@ eval "$(starship init zsh)"
 # HIST_STAMPS="mm/dd/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
-# Rutas del sno0bwy
-export PATH=/home/sno0bwy/bin:$PATH
-export PATH=/home/sno0bwy/go/bin:$PATH
-export PATH=/home/sno0bwy/.local/share/gem/ruby/3.0.0/bin:$PATH
-export PATH=/home/sno0bwy/.local/bin:$PATH
-export FZF_DEFAULT_COMMAND="find -L"
-fpath+=~/.zfunc
+# ZSH_CUSTOM=/path/to/new-custom-folder
 
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
+
+# Configuracion para los completions
+autoload -Uz compinit
+compinit
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -101,6 +117,7 @@ source $ZSH/oh-my-zsh.sh
 # else
 #   export EDITOR='mvim'
 # fi
+export EDITOR='nvim'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -112,12 +129,17 @@ source $ZSH/oh-my-zsh.sh
 #
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 alias v="nvim"
-alias ls="exa --long"
+alias cat="bat"
 alias less="bat"
-alias mimir="systemctl suspend"
-alias r="ranger"
+alias ls="exa"
+alias la="exa -a"
+alias ll="exa -l -g --git --icons"
+alias lg="exa -l -g --git --icons --tree --level=2 -a --git-ignore"
+alias sdkmanager="sdkmanager --sdk_root=$HOME/etc/android-sdk/"
+alias yarn="yarn --emoji true"
+alias icat="kitty +kitten icat"
+alias dir="exa"
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# Starship
+eval "$(starship init zsh)"
