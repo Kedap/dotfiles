@@ -2,9 +2,9 @@
     border: none;
     border-radius: 4px;
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: "Roboto Mono Medium", Roboto, Helvetica, Arial, sans-serif;
+    font-family: "Roboto Mono Medium", "RobotoMono Nerd Font", Helvetica, Arial, sans-serif;
     font-size: 15px;
-    min-height: 0;
+    min-height: 0px;
 }
 
 window#waybar {

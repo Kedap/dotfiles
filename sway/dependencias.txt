@@ -1,9 +1,7 @@
 == Instala las siguientes dependencias para que funcione bien ==
-ttf-roboto 
-ttf-roboto-mono
+ttf-roboto ttf-roboto-mono
 mako
 playerctl
 rofi
 otf-font-awesome
 xorg-xwayland
-nerd-fonts-roboto-mono

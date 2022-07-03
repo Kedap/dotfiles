@@ -26,7 +26,9 @@ return require("packer").startup(function()
   use("windwp/nvim-ts-autotag")
   use({
     "nvim-telescope/telescope.nvim",
-    requires = { "nvim-lua/plenary.nvim" },
+    requires = {
+      "nvim-lua/plenary.nvim",
+    },
   })
   use("lukas-reineke/indent-blankline.nvim")
   use({

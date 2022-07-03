@@ -1,0 +1,4 @@
+#!/bin/bash
+
+grim -g "$(slurp -d)" captura.png - | wl-copy
+echo "Su captura de pantalla se copio al portapeles y guardado como captura.png"
