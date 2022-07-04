@@ -17,7 +17,6 @@ set cursorline
 set termguicolors
 set colorcolumn=110
 set nobackup
-set guifont=Cascadia\ Code\ 10
 set spelllang=es
 set nolazyredraw
 filetype plugin indent on
