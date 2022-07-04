@@ -30,39 +30,141 @@ require("indent_blankline").setup {
   show_first_indent_level = false,
 }
 
-require "format".setup {
-    ["*"] = {
-        {cmd = {"sed -i 's/[ \t]*$//'"}} -- remove trailing whitespace
-    },
-    lua = {
-        {
-            cmd = {
-                function(file)
-                    return string.format("luafmt -l %s -w replace %s", vim.bo.textwidth, file)
-                end
-            }
+require("formatter").setup({
+  filetype = {
+    javascript = {
+      -- prettier
+      function()
+        return {
+          exe = "prettier",
+          args = {
+            "--stdin-filepath",
+            vim.fn.fnameescape(vim.api.nvim_buf_get_name(0)),
+            "--single-quote",
+          },
+          stdin = true,
         }
+      end,
     },
-    go = {
-        {
-            cmd = {"gofmt -w", "goimports -w"},
-            tempfile_postfix = ".tmp"
+    rust = {
+      -- Rustfmt
+      function()
+        return {
+          exe = "rustfmt",
+          args = { "--emit=stdout" },
+          stdin = true,
         }
+      end,
+    },
+    typescript = {
+      -- prettier
+      function()
+        return {
+          exe = "prettier",
+          args = {
+            "--stdin-filepath",
+            vim.fn.fnameescape(vim.api.nvim_buf_get_name(0)),
+            "--single-quote",
+          },
+          stdin = true,
+        }
+      end,
+    },
+    typescriptreact = {
+      -- prettier
+      function()
+        return {
+          exe = "prettier",
+          args = {
+            "--stdin-filepath",
+            vim.fn.fnameescape(vim.api.nvim_buf_get_name(0)),
+            "--single-quote",
+          },
+          stdin = true,
+        }
+      end,
     },
     javascriptreact = {
-        {cmd = {"prettier -w", "yarn eslint --fix"}}
+      -- prettier
+      function()
+        return {
+          exe = "prettier",
+          args = {
+            "--stdin-filepath",
+            vim.fn.fnameescape(vim.api.nvim_buf_get_name(0)),
+            "--single-quote",
+          },
+          stdin = true,
+        }
+      end,
     },
-    typescripttreact = {
-        {cmd = {"prettier -w", "yarn eslint --fix"}}
+    json = {
+      function()
+        return {
+          exe = "prettier",
+          args = {
+            "--stdin-filepath",
+            vim.fn.fnameescape(vim.api.nvim_buf_get_name(0)),
+            "--double-quote",
+          },
+          stdin = true,
+        }
+      end,
     },
-    typescript= {
-        {cmd = {"prettier -w", "yarn eslint --fix"}}
+    lua = {
+      function()
+        return {
+          exe = "stylua",
+          args = {
+            "--config-path ~/.config/stylua/stylua.toml",
+            "-",
+          },
+          stdin = true,
+        }
+      end,
     },
-    javascript= {
-        {cmd = {"prettier -w"}}
+    dart = {
+      function()
+        return {
+          exe = "dart",
+          args = {
+            "format",
+          },
+          stdin = true,
+        }
+      end,
     },
-    dart= {
-        {cmd = {"dart format"}}
+    sh = {
+      -- Shell Script Formato
+      function()
+        return {
+          exe = "shfmt",
+          args = { "-i", 2 },
+          stdin = true,
+        }
+      end,
     },
-}
+    tex = {
+      -- Para LaTeX
+      function()
+        return {
+          exe = "latexindent",
+          args = { "-" },
+          stdin = true,
+        }
+      end,
+    },
+  },
+})
+
+vim.api.nvim_exec(
+  [[
+augroup FormatAutogroup
+  autocmd!
+  autocmd BufWritePost * FormatWrite
+augroup END
+]],
+  true
+)
+
 EOF

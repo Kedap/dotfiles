@@ -42,7 +42,7 @@ Plug 'junegunn/gv.vim'
 Plug 'honza/vim-snippets' "Instala coc-snippets para que funcionen estos snippets
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'rust-lang/rust.vim'
-Plug 'lukas-reineke/format.nvim'
+Plug 'mhartington/formatter.nvim'
 "Plug 'lervag/vimtex'
 "Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'preservim/nerdcommenter'
