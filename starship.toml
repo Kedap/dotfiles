@@ -1,24 +1,12 @@
+#configuraciones necesarias
+"$schema" = 'https://starship.rs/config-schema.json'
 add_newline = false
 
 [username]
-style_user = "yellow bold"
-style_root = "black bold"
-format = "[$user]($style) "
+style_user = "bold #3A91CB"
 show_always = true
 
-[cmd_duration]
-disabled = true
-
-[hostname]
-ssh_only = false
-format =  "on [$hostname](bold cyan) "
-trim_at = ".companyname.com"
-disabled = false
-
-[character]
-success_symbol = "[\\[I\\] [➜](bold green)](bold gray) "
-error_symbol = "[\\[I\\] [➜](bold red)](bold gray) "
-#Iconos
+#Iconos pros
 [aws]
 symbol = "  "
 
@@ -30,8 +18,8 @@ symbol = " "
 
 [directory]
 read_only = " "
-style = "bold green"
-format = "in [$path]($style)[$read_only]($read_only_style) "
+style = "bold #12A248"
+format = "[$path]($style)[$read_only]($read_only_style) "
 
 [docker_context]
 symbol = " "
