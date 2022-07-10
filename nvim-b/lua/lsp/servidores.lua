@@ -33,6 +33,11 @@ for _, servidor in ipairs(servidores) do
   end
 end
 
+-- Servidores locales configurados mnual
+require("lspconfig").hls.setup({
+  capabilities = capabilities,
+})
+
 --local servidores = {
 --"jsonls",
 --"lemminx",

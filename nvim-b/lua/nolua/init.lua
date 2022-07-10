@@ -50,6 +50,7 @@ let g:startify_bookmarks = [
             \ { 'r': '~/Documentos/repos' },
             \ { 'c': '~/.config/nvim' },
             \ { 'z': '~/.zshrc' },
+            \ { 'f': '~/.config/fish/config.fish' },
             \ { 't': '~/tempo' },
             \ ]
 let g:startify_lists = [
