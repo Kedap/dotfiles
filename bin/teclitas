@@ -1,0 +1,4 @@
+#!/bin/sh
+
+sudo input-remapper-gtk
+setxkbmap -layout es
