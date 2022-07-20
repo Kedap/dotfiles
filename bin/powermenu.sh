@@ -77,7 +77,7 @@ $reboot)
   fi
   ;;
 $lock)
-  betterlockscreen -l
+  betterlockscreen -l -u ~/Wallpapers/yosemite-lowpoly.jpg
   ;;
 $suspend)
   ans=$(confirm_exit &)
