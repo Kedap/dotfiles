@@ -312,7 +312,8 @@ myLogHook = return ()
 myStartupHook = do
   spawn "setxkbmap -layout es"
   spawnOnce "feh -z --bg-fill ~/Wallpapers/fondo.jpg"
-  --spawnOnce "picom"
+  spawnOnce "picom"
+  spawnOnce "emacs --daemon"
   spawnOnce "dunst"
   spawnOnce "redshift"
 
@@ -353,7 +354,7 @@ defaults = def {
         mouseBindings      = myMouseBindings,
 
       -- hooks, layouts
-        layoutHook         = gaps [(L,15), (R,15), (U,15), (D,15)] $ spacingRaw True (Border 5 5 5 5) True (Border 5 5 5 5) True $ smartBorders $ myLayout,
+        layoutHook         = gaps [(L,9), (R,9), (U,9), (D,9)] $ spacingRaw True (Border 5 5 5 5) True (Border 5 5 5 5) True $ smartBorders $ myLayout,
         manageHook         = myManageHook,
         handleEventHook    = myEventHook,
         logHook            = myLogHook,

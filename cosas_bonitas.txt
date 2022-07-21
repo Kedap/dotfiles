@@ -7,3 +7,5 @@ zathura
 dunst
 poner la version picom
 mdcat
+shell-color-scripts
+picom-ibhagwan-git
