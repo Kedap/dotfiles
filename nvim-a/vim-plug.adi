@@ -1,0 +1,22 @@
+[paquete]
+
+nombre = "vim-plug"
+version = "1.0.0-neovim"
+rama = "master"
+descrip = "Minimalist Vim Plugin Manager "
+pagina = "https://github.com/junegunn/vim-plug"
+licensia = "MIT"
+dependencias = ["nvim"]
+cmd_depen = ["nvim -v"]
+conflicto = "/opt/.file-does-exists"
+
+[descarga]
+
+git = "https://github.com/junegunn/vim-plug.git"
+carpeta = "vim-plug"
+sha256sum = "SALTAR"
+
+[instalacion]
+
+files = ["plug.png", "plug.vim"]
+ruta = [".local/no-touch-vim-plug", ".local/share/nvim/site/autoload/plug.vim"]

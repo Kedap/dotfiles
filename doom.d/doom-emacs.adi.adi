@@ -1,0 +1,24 @@
+[paquete]
+
+nombre = "doom-emacs-config"
+version = "1.0.0"
+rama = "estable"
+descrip = "Configuracion de Kedap para doom emacs"
+pagina = "https://github.com/Kedap/dotfiles"
+licensia = "GPL"
+dependencias = ["emacs", "git", "ripgrep", "fd", "tty-cascadia-code"]
+conflicto = "/opt/file-no-exists"
+
+[descarga]
+
+git = "https://github.com/Kedap/dotfiles.git"
+carpeta = "dotfiles"
+sha256sum = "SALTAR"
+
+[instalacion]
+
+pre_install = "doom.d/install_doom_emacs.sh"
+files = ["doom.d/doom-emacs.adi.adi", "doom.d/config.el", "doom.d/init.el", "doom.d/packages.el", "emacsclient.desktop"]
+ruta = [".local/.doom-emacs-ignore", ".doom.d/config.el", ".doom.d/init.el", ".doom.d/packages.el", "/usr/share/applications/emacsclient.desktop"]
+post_install = "doom.d/update_config.sh"
+mensaje = "Recomendamos que agrege ~/.emacs.d/bin/ a su PATH"
