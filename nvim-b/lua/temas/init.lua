@@ -12,39 +12,40 @@
 --}
 
 -- Catppuccin
+vim.g.catppuccin_flavour = "macchiato"
 local catppuccin = require("catppuccin")
 catppuccin.setup({
   transparent_background = false,
   term_colors = false,
   styles = {
-    comments = "italic",
-    conditionals = "italic",
-    loops = "NONE",
-    functions = "italic",
-    keywords = "bold",
-    strings = "NONE",
-    variables = "NONE",
-    numbers = "NONE",
-    booleans = "bold",
-    properties = "NONE",
-    types = "NONE",
-    operators = "NONE",
+    comments = { "italic" },
+    conditionals = { "italic" },
+    loops = {},
+    functions = { "italic" },
+    keywords = { "bold" },
+    strings = {},
+    variables = {},
+    numbers = {},
+    booleans = { "bold" },
+    properties = {},
+    types = {},
+    operators = {},
   },
   integrations = {
     treesitter = true,
     native_lsp = {
       enabled = true,
       virtual_text = {
-        errors = "italic",
-        hints = "italic",
-        warnings = "italic",
-        information = "italic",
+        errors = { "italic" },
+        hints = { "italic" },
+        warnings = { "italic" },
+        information = { "italic" },
       },
       underlines = {
-        errors = "underline",
-        hints = "underline",
-        warnings = "underline",
-        information = "underline",
+        errors = { "underline" },
+        hints = { "underline" },
+        warnings = { "underline" },
+        information = { "underline" },
       },
     },
     lsp_trouble = false,
@@ -83,7 +84,6 @@ catppuccin.setup({
     symbols_outline = false,
   },
 })
-vim.g.catppuccin_flavour = "macchiato"
 vim.cmd([[colorscheme catppuccin]])
 local opciones_lualine = {
   tema = "catppuccin",

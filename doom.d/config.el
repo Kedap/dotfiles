@@ -7,7 +7,7 @@
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets. It is optional.
 (setq user-full-name "Kedap"
-      user-mail-address "kedap.dev@protonmail.com")
+      user-mail-address "kedap@protonmail.com")
 
 ;; Doom exposes five (optional) variables for controlling fonts in Doom:
 ;;
@@ -22,7 +22,11 @@
 ;; accept. For example:
 ;;
 ;;(setq doom-font (font-spec :family "Fira Code" :size 12 :weight 'semi-light)
-(setq doom-font (font-spec :family "Cascadia Code" :size 13) doom-big-font (font-spec :family "Fira Mono" :size 20))
+;;      doom-variable-pitch-font (font-spec :family "Fira Sans" :size 13))
+
+(setq doom-font (font-spec :family "FiraCode Nerd Font" :size 13)
+      doom-variable-pitch-font (font-spec :family "Fira Sans")
+      doom-big-font (font-spec :family "Fira Mono" :size 19))
 ;;
 ;; If you or Emacs can't find your font, use 'M-x describe-font' to look them
 ;; up, `M-x eval-region' to execute elisp code, and 'M-x doom/reload-font' to
@@ -32,7 +36,10 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-one)
+;; Mi fuente para estos temas: https://www.joyk.com/dig/detail/1639684184681147
+;; (setq doom-theme 'doom-one)
+;; (setq doom-theme 'catppuccin)
+(setq doom-theme 'doom-tokyo-night)
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
@@ -41,9 +48,6 @@
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/org/")
-
-;;Configuracion para que funcione la S o s
-(remove-hook 'doom-first-input-hook #'evil-snipe-mode)
 
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
@@ -77,3 +81,38 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
+
+;; Configuracion para poder utilizar la s de manera correcta
+(remove-hook 'doom-first-input-hook #'evil-snipe-mode)
+
+;; Configuracion para el dashboard
+(setq fancy-splash-image "~/tempo/lol.jpg")
+
+;; Configuracion para el depurador para python
+(after! dap-mode
+  (setq dap-python-debugger 'debugpy))
+
+;; Atajos para el debugger
+
+(map! :map dap-mode-map
+      :leader
+      :prefix ("d" . "dap")
+      ;; basics
+      :desc "dap next"          "n" #'dap-next
+      :desc "dap step in"       "i" #'dap-step-in
+      :desc "dap step out"      "o" #'dap-step-out
+      :desc "dap continue"      "c" #'dap-continue
+      :desc "dap hydra"         "h" #'dap-hydra
+      :desc "dap debug restart" "r" #'dap-debug-restart
+      :desc "dap debug"         "s" #'dap-debug
+
+      ;; debug
+      :prefix ("dd" . "Debug")
+      :desc "dap debug recent"  "r" #'dap-debug-recent
+      :desc "dap debug last"    "l" #'dap-debug-last
+
+      :prefix ("db" . "Breakpoint")
+      :desc "dap breakpoint toggle"      "b" #'dap-breakpoint-toggle
+      :desc "dap breakpoint condition"   "c" #'dap-breakpoint-condition
+      :desc "dap breakpoint hit count"   "h" #'dap-breakpoint-hit-condition
+      :desc "dap breakpoint log message" "l" #'dap-breakpoint-log-message)

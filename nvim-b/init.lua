@@ -1,5 +1,5 @@
-require("opciones")
 require("plugins")
+require("opciones")
 require("treesitter-config")
 require("bufferline-config")
 require("autopairs-config")

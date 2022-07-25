@@ -15,7 +15,7 @@ vim.g.vimtex_view_method = "zathura"
 vim.cmd([[let g:gitblame_message_template = '<author> (<date>): <summary>']])
 
 -- Configuracion para markdown preview
-vim.g.mkdp_browser = "firefox"
+vim.g.mkdp_browser = "surf"
 
 vim.cmd([[
 let g:startify_custom_header =  [
