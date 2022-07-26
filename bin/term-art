@@ -1,0 +1,17 @@
+#!/usr/bin/sh
+
+# Este script depende de: bash-pipes, shell-color-scripts, asciiquarium, cmatrix y sl
+
+num_rand=$((1 + $RANDOM % 5))
+
+if [[ $num_rand -eq 1 ]]; then
+    bash-pipes
+elif [[ $num_rand -eq 2 ]]; then
+    colorscript -r
+elif [[ $num_rand -eq 3 ]]; then
+    asciiquarium
+elif [[ $num_rand -eq 4 ]]; then
+    cmatrix
+elif [[ $num_rand -eq 5 ]]; then
+    sl
+fi
