@@ -1,2 +1,2 @@
 # Dotfiles
-Dotfiles y algunos scripts que utilizo
+Dotfiles y algunos scripts que utilizo para las diferentes aplicaciones
