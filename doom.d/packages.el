@@ -51,3 +51,6 @@
 
 ;; Agregando tema del catppuccin
 (package! catppuccin-theme)
+
+;; Lector de EPUBs
+(package! nov)

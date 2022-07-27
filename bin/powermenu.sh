@@ -48,7 +48,7 @@ confirm_exit() {
 
 # Message
 msg() {
-  rofi -theme "$dir/message.rasi" -e "Opciones disponibles  -  si / chi / s / no / n"
+  rofi -theme "$dir/message.rasi" -e "Opciones disponibles  -  si / chi / shi / s / no / n"
 }
 
 # Variable passed to rofi
@@ -58,7 +58,7 @@ chosen="$(echo -e "$options" | $rofi_command -p "Uptime: $uptime" -dmenu -select
 case $chosen in
 $shutdown)
   ans=$(confirm_exit &)
-  if [[ $ans == "si" || $ans == "SI" || $ans == "chi" || $ans == "CHI" || $ans == "s" || $ans == "S" ]]; then
+  if [[ $ans == "si" || $ans == "SI" || $ans == "chi" || $ans == "CHI" || $ans == "shi" || $ans == "SHI" || $ans == "s" || $ans == "S" ]]; then
     systemctl poweroff
   elif [[ $ans == "no" || $ans == "NO" || $ans == "n" || $ans == "N" ]]; then
     exit 0
@@ -68,7 +68,7 @@ $shutdown)
   ;;
 $reboot)
   ans=$(confirm_exit &)
-  if [[ $ans == "si" || $ans == "SI" || $ans == "chi" || $ans == "CHI" || $ans == "s" || $ans == "S" ]]; then
+  if [[ $ans == "si" || $ans == "SI" || $ans == "chi" || $ans == "CHI" || $ans == "shi" || $ans == "SHI" || $ans == "s" || $ans == "S" ]]; then
     systemctl reboot
   elif [[ $ans == "no" || $ans == "NO" || $ans == "n" || $ans == "N" ]]; then
     exit 0
@@ -81,7 +81,7 @@ $lock)
   ;;
 $suspend)
   ans=$(confirm_exit &)
-  if [[ $ans == "si" || $ans == "SI" || $ans == "chi" || $ans == "CHI" || $ans == "s" || $ans == "S" ]]; then
+  if [[ $ans == "si" || $ans == "SI" || $ans == "chi" || $ans == "CHI" || $ans == "shi" || $ans == "SHI" || $ans == "s" || $ans == "S" ]]; then
     playerctl pause
     amixer set Master mute
     systemctl suspend
@@ -93,7 +93,7 @@ $suspend)
   ;;
 $logout)
   ans=$(confirm_exit &)
-  if [[ $ans == "si" || $ans == "SI" || $ans == "chi" || $ans == "CHI" || $ans == "s" || $ans == "S" ]]; then
+  if [[ $ans == "si" || $ans == "SI" || $ans == "chi" || $ans == "CHI" || $ans == "shi" || $ans == "SHI" || $ans == "s" || $ans == "S" ]]; then
     session=$(loginctl session-status | head -n 1 | awk '{print $1}')
     loginctl terminate-session $session
   elif [[ $ans == "no" || $ans == "NO" || $ans == "n" || $ans == "N" ]]; then

@@ -7,7 +7,7 @@
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets. It is optional.
 (setq user-full-name "Kedap"
-      user-mail-address "kedap@protonmail.com")
+      user-mail-address "kedap.dev@protonmail.com")
 
 ;; Doom exposes five (optional) variables for controlling fonts in Doom:
 ;;
@@ -26,7 +26,7 @@
 
 (setq doom-font (font-spec :family "FiraCode Nerd Font" :size 13)
       doom-variable-pitch-font (font-spec :family "Fira Sans")
-      doom-big-font (font-spec :family "Fira Mono" :size 19))
+      doom-big-font (font-spec :family "Fira Mono" :size 20))
 ;;
 ;; If you or Emacs can't find your font, use 'M-x describe-font' to look them
 ;; up, `M-x eval-region' to execute elisp code, and 'M-x doom/reload-font' to
@@ -86,7 +86,8 @@
 (remove-hook 'doom-first-input-hook #'evil-snipe-mode)
 
 ;; Configuracion para el dashboard
-(setq fancy-splash-image "~/tempo/lol.jpg")
+;; (setq fancy-splash-image "~/tempo/lol.jpg")
+(setq fancy-splash-image "~/Descargas/vscode.jpg")
 
 ;; Configuracion para el depurador para python
 (after! dap-mode
@@ -116,3 +117,6 @@
       :desc "dap breakpoint condition"   "c" #'dap-breakpoint-condition
       :desc "dap breakpoint hit count"   "h" #'dap-breakpoint-hit-condition
       :desc "dap breakpoint log message" "l" #'dap-breakpoint-log-message)
+
+;; Configuracion para el nov.el
+(add-to-list 'auto-mode-alist '("\\.epub\\'" . nov-mode))
