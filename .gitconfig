@@ -1,0 +1,11 @@
+[user]
+	signingkey = ED6C60EDE210E2F5FAC70395448DD64285F75BA6
+	email = kedap.dev@protonmail.com
+	name = Kedap
+
+[commit]
+	gpgsign = true
+
+
+[alias]
+	lg = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
