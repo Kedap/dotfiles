@@ -39,6 +39,9 @@
 ;; Mi fuente para estos temas: https://www.joyk.com/dig/detail/1639684184681147
 ;; (setq doom-theme 'doom-one)
 ;; (setq doom-theme 'catppuccin)
+;; (setq doom-theme 'doom-challenger-deep)
+;; (setq doom-theme 'doom-gruvbox)
+;; (setq doom-theme 'doom-moonlight)
 (setq doom-theme 'doom-tokyo-night)
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
@@ -86,8 +89,51 @@
 (remove-hook 'doom-first-input-hook #'evil-snipe-mode)
 
 ;; Configuracion para el dashboard
-;; (setq fancy-splash-image "~/tempo/lol.jpg")
-(setq fancy-splash-image "~/Descargas/vscode.jpg")
+(setq fancy-splash-image "~/Wallpapers/ss.png")
+;; (setq fancy-splash-image "~/Descargas/vscode.jpg")
+;; (setq fancy-splash-image "~/Descargas/imax.jpg")
+
+;;Ascii art para el dashboard
+;; (defun doom-dashboard-draw-ascii-emacs-banner-fn ()
+;;   (let* ((banner
+;;           '("   -{ Bienvenido sempai }-"
+;;             ""
+;;             "    ⠄⠄⠄⠄ ⠄⠄⠄⠄⠄   ⠄⠄⠄⠄⠄⠄"
+;;             "    ⠄⠄⡔⠙⠢⡀⠄⠄⠄⢀⠼⠅⠈⢂⠄⠄⠄⠄⠄"
+;;             "    ⠄⠄⡌⠄⢰⠉⢙⢗⣲⡖⡋⢐⡺⡄⠈⢆⠄⠄⠄"
+;;             "    ⠄⡜⠄⢀⠆⢠⣿⣿⣿⣿⢡⢣⢿⡱⡀⠈⠆⠄⠄"
+;;             "    ⠄⠧⠤⠂⠄⣼⢧⢻⣿⣿⣞⢸⣮⠳⣕⢤⡆⠄⠄"
+;;             "    ⢺⣿⣿⣶⣦⡇⡌⣰⣍⠚⢿⠄⢩⣧⠉⢷⡇⠄⠄"
+;;             "    ⠘⣿⣿⣯⡙⣧⢎⢨⣶⣶⣶⣶⢸⣼⡻⡎⡇⠄⠄"
+;;             "    ⠄⠘⣿⣿⣷⡀⠎⡮⡙⠶⠟⣫⣶⠛⠧⠁⠄⠄⠄"
+;;             "    ⠄⠄⠘⣿⣿⣿⣦⣤⡀⢿⣿⣿⣿⣄⠄⠄⠄⠄⠄"
+;;             "    ⠄⠄⠄⠈⢿⣿⣿⣿⣿⣷⣯⣿⣿⣷⣾⣿⣷⡄⠄"
+;;             "    ⠄⠄⠄⠄⠄⢻⠏⣼⣿⣿⣿⣿⡿⣿⣿⣏⢾⠇⠄"
+;;             "    ⠄⠄⠄⠄⠄⠈⡼⠿⠿⢿⣿⣦⡝⣿⣿⣿⠷⢀⠄"
+;;             "    ⠄⠄⠄⠄⠄⠄⡇⠄⠄⠄⠈⠻⠇⠿⠋⠄⠄⢘⡆"
+;;             "    ⠄⠄⠄⠄⠄⠄⠱⣀⠄⠄⠄⣀⢼⡀⠄⢀⣀⡜⠄"
+;;             "    ⠄⠄⠄⠄⠄⠄⠄⢸⣉⠉⠉⠄⢀⠈⠉⢏⠁⠄⠄"
+;;             "    ⠄⠄⠄⠄⠄⠄⡰⠃⠄⠄⠄⠄⢸⠄⠄⢸⣧⠄⠄"
+;;             "    ⠄⠄⠄⠄⠄⣼⣧⠄⠄⠄⠄⠄⣼⠄⠄⡘⣿⡆⠄"
+;;             "    ⠄⠄⠄⢀⣼⣿⡙⣷⡄⠄⠄⠄⠃⠄⢠⣿⢸⣿⡀"
+;;             "    ⠄⠄⢀⣾⣿⣿⣷⣝⠿⡀⠄⠄⠄⢀⡞⢍⣼⣿⠇"
+;;             "    ⠄⠄⣼⣿⣿⣿⣿⣿⣷⣄⠄⠄⠠⡊⠴⠋⠹⡜⠄"
+;;             "    ⠄⠄⣿⣿⣿⣿⣿⣿⣿⣿⡆⣤⣾⣿⣿⣧⠹⠄⠄"))
+;;          (longest-line (apply #'max (mapcar #'length banner))))
+;;     (put-text-property
+;;      (point)
+;;      (dolist (line banner (point))
+;;        (insert (+doom-dashboard--center
+;;                 +doom-dashboard--width
+;;                 (concat
+;;                  line (make-string (max 0 (- longest-line (length line)))
+;;                                    32)))
+;;                "\n"))
+;;      'face 'doom-dashboard-banner)))
+
+;; (unless (display-graphic-p) ; for some reason this messes up the graphical splash screen atm
+;;   (setq +doom-dashboard-ascii-banner-fn #'doom-dashboard-draw-ascii-emacs-banner-fn))
+
 
 ;; Configuracion para el depurador para python
 (after! dap-mode
@@ -120,3 +166,7 @@
 
 ;; Configuracion para el nov.el
 (add-to-list 'auto-mode-alist '("\\.epub\\'" . nov-mode))
+
+;; Configuracion para el visual columnas
+(setq visual-fill-column-width 110
+      visual-fill-column-center-text t)

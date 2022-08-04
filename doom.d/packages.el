@@ -54,3 +54,12 @@
 
 ;; Lector de EPUBs
 (package! nov)
+
+;; El lorem
+(package! lorem-ipsum)
+
+;; Ajidri
+(package! chess)
+
+;; Dependencias para la presentacion
+(package! visual-fill-column)
