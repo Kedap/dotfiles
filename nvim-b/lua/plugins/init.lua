@@ -104,5 +104,11 @@ return require("packer").startup(function()
 
 	-- Terminales
 	use("voldikss/vim-floaterm")
-	use("akinsho/toggleterm.nvim")
+	use({
+		"akinsho/toggleterm.nvim",
+		tag = "v2.*",
+		config = function()
+			require("toggleterm").setup()
+		end,
+	})
 end)
