@@ -21,7 +21,7 @@ Aquí la configuración de Neovim escrito en Lua
 ![duskfox_ejemplo](./screenshots/duskfox_sample.png)
 
 ## Plugins
-Gestor de paquetes: [packer](https://github.com/wbthomason/packer.nvim)
+Gestor de plugins: [packer](https://github.com/wbthomason/packer.nvim)
 
 ### Temas disponibles
   - [Gruvbox](https://github.com/morhetz/gruvbox)
