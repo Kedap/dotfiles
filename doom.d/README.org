@@ -1,4 +1,4 @@
 #+title: README
 
 * Doom Emacs
-En estos archivos se encuentra la configuracion para Emacs
+En estos archivos se encuentra la configuracion para Emacs y derivados
