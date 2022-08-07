@@ -1,6 +1,6 @@
 # Neovim (Lua)
 
-Aquí la configuración de Neovim escrito en Lua
+Aquí la configuración de Neovim escrito en Lua.
 
 ## Screenshots
 ---
