@@ -1,0 +1,11 @@
+@document.meta
+title: README
+description: Información basica de los plugins de mi config de Neovim
+authors: sno0bwy
+categories: [Doc, README]
+created: 2022-08-07
+version: 0.0.11
+@end
+
+* Titulo
+  Información puesta por el momento

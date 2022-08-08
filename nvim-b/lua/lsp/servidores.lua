@@ -6,32 +6,84 @@ local servidores = {}
 local capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
 for _, servidor in ipairs(instalador.get_installed_servers()) do
-	table.insert(servidores, servidor.name)
+  table.insert(servidores, servidor.name)
 end
 for _, servidor in ipairs(servidores) do
-	if servidor == "sumneko_lua" then
-		require("lspconfig")["sumneko_lua"].setup({
-			capabilities = capabilities,
-			settings = {
-				Lua = {
-					diagnostics = {
-						globals = { "vim" },
-					},
-					workspace = {
-						library = {
-							[vim.fn.expand("$VIMRUNTIME/lua")] = true,
-							[vim.fn.stdpath("config") .. "/lua"] = true,
-						},
-					},
-				},
-			},
-		})
-	else
-		require("lspconfig")[servidor].setup({
-			capabilities = capabilities,
-		})
-	end
+  if servidor == "sumneko_lua" then
+    require("lspconfig")["sumneko_lua"].setup({
+      capabilities = capabilities,
+      settings = {
+        Lua = {
+          diagnostics = {
+            globals = { "vim" },
+          },
+          workspace = {
+            library = {
+              [vim.fn.expand("$VIMRUNTIME/lua")] = true,
+              [vim.fn.stdpath("config") .. "/lua"] = true,
+            },
+          },
+        },
+      },
+      on_attach = function()
+        for _, server in ipairs(vim.lsp.buf_get_clients()) do
+          local client = vim.lsp.get_client_by_id(server.id)
+          if client.resolved_capabilities.document_highlight then
+            vim.api.nvim_exec(
+              [[
+                              augroup lsp_document_highlight
+                                autocmd! * <buffer>
+                                autocmd CursorHold <buffer> lua vim.lsp.buf.document_highlight()
+                                autocmd CursorMoved <buffer> lua vim.lsp.buf.clear_references()
+                              augroup END
+                            ]],
+              false
+            )
+          end
+        end
+      end,
+    })
+  else
+    require("lspconfig")[servidor].setup({
+      capabilities = capabilities,
+      on_attach = function()
+        for _, server in ipairs(vim.lsp.buf_get_clients()) do
+          local client = vim.lsp.get_client_by_id(server.id)
+          if client.resolved_capabilities.document_highlight then
+            vim.api.nvim_exec(
+              [[
+                              augroup lsp_document_highlight
+                                autocmd! * <buffer>
+                                autocmd CursorHold <buffer> lua vim.lsp.buf.document_highlight()
+                                autocmd CursorMoved <buffer> lua vim.lsp.buf.clear_references()
+                              augroup END
+                            ]],
+              false
+            )
+          end
+        end
+      end,
+    })
+  end
 end
+
+--vim.api.nvim_create_namespace("LspAttach", {
+--    callback = function()
+--        local client = vim.lsp.get_client_by_id()
+--        if client.resolved_capabilities.document_highlight then
+--            vim.api.nvim_exec(
+--                [[
+--      augroup lsp_document_highlight
+--        autocmd! * <buffer>
+--        autocmd CursorHold <buffer> lua vim.lsp.buf.document_highlight()
+--        autocmd CursorMoved <buffer> lua vim.lsp.buf.clear_references()
+--      augroup END
+--    ]],
+--                false
+--            )
+--        end
+--    end,
+--})
 
 -- Servidores locales configurados mnual
 --require("lspconfig").hls.setup({

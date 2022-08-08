@@ -60,6 +60,7 @@ cmp.setup({
     { name = "crates" },
     { name = "calc" },
     { name = "spell" },
+    { name = "neorg" },
     -- { name = 'luasnip' }, -- For luasnip users.
     -- { name = 'ultisnips' }, -- For ultisnips users.
     -- { name = 'snippy' }, -- For snippy users.
@@ -69,6 +70,9 @@ cmp.setup({
   formatting = {
     format = lspkind.cmp_format({ with_text = true, maxwidth = 50 }),
   },
+  experimental = {
+    ghost_text = true
+  }
 })
 
 -- Set configuration for specific filetype.
