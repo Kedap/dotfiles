@@ -121,7 +121,8 @@ Gestor de plugins: [packer](https://github.com/wbthomason/packer.nvim)
 Necesarios:
 - [kitty](https://github.com/kovidgoyal/kitty) (terminal y no necesario pero se
   ve mas bonito) tambien es recomendable utilizar la
-  [config](https://github.com/Kedap/dotfiles/blob/main/kitty.conf) de mi repo
+  [config](https://github.com/Kedap/dotfiles/blob/main/kitty.conf) de mi repo.
+  Lo imporante es que tenga soporte con ligaturas
   - [Cascadia code font](https://github.com/microsoft/cascadia-code) es la fuente que utilzo junto a
   - [Victor mono](https://rubjo.github.io/victor-mono/)
   - [noto-fonts-emoji](https://github.com/googlefonts/noto-emoji) para emojis en al terminal
