@@ -57,7 +57,7 @@ dash.custom_center = {
   {
     icon = "📔  ",
     desc = "Abrir la agenda (neorg)                 ",
-    action = "e ~/.config/nvim",
+    action = "e ~/org/norg/agenda.norg",
     shortcut = "SPC m n a",
   },
   {

@@ -5,7 +5,7 @@ vim.g.vcoolor_disable_mappings = 1
 vim.g.vimtex_view_method = "zathura"
 
 -- Markdown preview
-vim.g.mkdp_browser = "surf"
+vim.g.mkdp_browser = "firefox"
 
 -- Para el git pero de los cambios
 vim.g.undotree_ShortIndicators = 1
