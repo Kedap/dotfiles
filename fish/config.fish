@@ -4,6 +4,10 @@ end
 
 # alias para los comandos
 alias v="nvim"
+alias edit="nvim"
+alias open="nvim ."
+alias abrir="nvim ."
+alias editar="nvim ."
 alias less="bat"
 alias ls="exa"
 alias la="exa -a"
@@ -14,22 +18,23 @@ alias yarn="yarn --emoji true"
 alias icat="kitty +kitten icat"
 alias dir="exa"
 alias descanse="asciiquarium"
+alias openemm="emacsclient -n"
 
 # Agregando path
 fish_add_path ~/bin/
 
 # Android sdk
-fish_add_path ~/etc/android-sdk/cmdline-tools/
-fish_add_path ~/etc/android-sdk/cmdline-tools/bin/
-fish_add_path ~/etc/android-sdk/tools/
-fish_add_path ~/etc/android-sdk/tools/bin/
-fish_add_path ~/etc/android-sdk/build-tools/
-fish_add_path ~/etc/android-sdk/build-tools/28.0.3
-fish_add_path ~/etc/android-sdk/platform-tools/
+#fish_add_path ~/etc/android-sdk/cmdline-tools/
+#fish_add_path ~/etc/android-sdk/cmdline-tools/bin/
+#fish_add_path ~/etc/android-sdk/tools/
+#fish_add_path ~/etc/android-sdk/tools/bin/
+#fish_add_path ~/etc/android-sdk/build-tools/
+#fish_add_path ~/etc/android-sdk/build-tools/28.0.3
+#fish_add_path ~/etc/android-sdk/platform-tools/
 
 # flutter
-fish_add_path ~/etc/flutter/bin/
-fish_add_path ~/.pub-cache/bin/
+#fish_add_path ~/etc/flutter/bin/
+#fish_add_path ~/.pub-cache/bin/
 
 # Yarn bin
 fish_add_path ~/.yarn/bin/
@@ -42,3 +47,6 @@ fish_add_path ~/.local/bin/
 
 # Ruta de rust
 fish_add_path ~/.cargo/bin/
+
+# Ruta de doom emacs
+fish_add_path ~/.emacs.d/bin/
