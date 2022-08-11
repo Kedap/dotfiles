@@ -58,13 +58,14 @@ version: 0.0.11
 
 *** Depuración
     - {https://github.com/rcarriga/nvim-dap-ui}[nvim-dap-ui]
-    - {https://github.com/mfussenegger/nvim-dap-python}[nvim-dap-python]
+    - [nvim-dap-python]
     - {https://github.com/mfussenegger/nvim-dap}[nvim-dap]
 
 *** LSP
-    - {https://github.com/kkharji/lspsaga.nvim}[lspsaga.nvim]
+    - {https://github.com/glepnir/lspsaga.nvim}[lspsaga.nvim]
     -- {https://github.com/neovim/nvim-lspconfig}[nvim-lspconfig]
-    - {https://github.com/williamboman/nvim-lsp-installer}[nvim-lsp-installer]
+    - [mason.nvim]{https://github.com/williamboman/mason.nvim}
+    -- {https://github.com/williamboman/mason-lspconfig.nvim}[mason-lspconfig.nvim]
     - {https://github.com/onsails/lspkind-nvim}[lspkind-nvim]
     - {https://github.com/folke/trouble.nvim}[trouble.nvim]
 
@@ -109,6 +110,7 @@ version: 0.0.11
     - {https://github.com/tpope/vim-repeat}[vim-repeat]
     - {https://github.com/terrortylor/nvim-comment}[nvim-comment]
     - {https://github.com/mbbill/undotree}[undotree]
+    - {https://github.com/ahmedkhalf/project.nvim}[project.nvim]
 
 *** Atajos
     - {https://github.com/folke/which-key.nvim}[which-key.nvim]
@@ -120,3 +122,37 @@ version: 0.0.11
 *** Cosas no necesarias pero bonitas
     - {https://github.com/nvim-neorg/neorg}[neorg]
     - {https://github.com/glepnir/dashboard-nvim}[dashboard-nvim]
+
+* Dependencias
+  *Necesarios*:
+  - {https://github.com/kovidgoyal/kitty}[kitty], no es necesario pero es para
+    que se vea bonito, el concepto es que tenga soporte para ligaturas o
+    mostrar pictogramas como las NerdFonts. se puede consultar mi
+    {https://github.com/Kedap/dotfiles/blob/main/kitty.conf}[config] con
+    soporte para ligaturas.
+  -- {https://github.com/microsoft/cascadia-code}[Cascadia code] Es la fuente
+     que utilizo, puede utilizar otra o una NerdFont, tambien lo utilizo junto
+     a
+  -- {https://rubjo.github.io/victor-mono/}[Victor Mono]
+  -- {https://github.com/googlefonts/noto-emoji}[noto-emoji] Para soportar los emojis
+  - Rust
+  - Yarn
+  - Ripgrep
+  - {https://github.com/Kedap/dotfiles/blob/main/wallpapers/splashes}[Mis~
+     splashes], Deben de estar justo en `~/Wallpapers/splashes` (se puede
+     modificar despues la ruta)
+
+  *No* necesarios:
+  - Zenity (para seleccionar los colores)
+  - Programas de formatter
+  -- Latexindent
+  -- Los demas se instalan via [mason.nvim]
+  - Depuradores
+  -- [nvim-dap-python]{https://github.com/mfussenegger/nvim-dap-python} haga
+     click para mas informacion (la configuracion esta hecha para ser que el
+     directorio sea `~/.virtualenvs/debugpy/bin/python`)
+  -- {https://github.com/mfussenegger/nvim-dap/wiki/Debug-Adapter-installation#ccrust-via-lldb-vscode}[lldb-vscode | lldb]
+     Este puede ser instaldo con [mason.nvim] pero se recomienda *Instalarlo en `/usr/bin/lldb-vscode`*
+      (esa es la configuracion por defecto, se puede cambiar)
+  - Algo que instale pdflatex
+  - Firefox para ver los archivos Markdown, pero puede configurarse otro navegador
