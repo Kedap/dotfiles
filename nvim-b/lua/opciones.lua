@@ -1,4 +1,4 @@
-vim.cmd("filetype plugin indent on")
+vim.cmd "filetype plugin indent on"
 vim.wo.number = true
 vim.o.fileencoding = "utf-8"
 vim.o.mouse = "a"
@@ -17,12 +17,12 @@ vim.opt.termguicolors = true
 vim.o.colorcolumn = "110"
 vim.o.backup = false
 vim.o.spelllang = "es"
-vim.o.lazyredraw = false
-vim.cmd("highlight ColoColumn ctermbg=0 guibg=lightgrey")
-vim.cmd([[
+vim.o.lazyredraw = true
+vim.cmd "highlight ColoColumn ctermbg=0 guibg=lightgrey"
+vim.cmd [[
 augroup highlight_yank
     autocmd!
     au TextYankPost * silent! lua vim.highlight.on_yank{higroup="IncSearch", timeout=700}
 augroup END
-]])
-vim.notify = require("notify")
+]]
+vim.notify = require "notify"

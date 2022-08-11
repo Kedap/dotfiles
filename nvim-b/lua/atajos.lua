@@ -11,6 +11,10 @@ map("n", "<C-h>", "<C-w>h", opts)
 map("n", "<C-j>", "<C-w>j", opts)
 map("n", "<C-k>", "<C-w>k", opts)
 map("n", "<C-l>", "<C-w>l", opts)
+map("n", "<C-w><left>", "5<C-w><", opts)
+map("n", "<C-w><right>", "5<C-w>>", opts)
+map("n", "<C-w><up>", "5<C-w>+", opts)
+map("n", "<C-w><down>", "5<C-w>-", opts)
 -- Para el indent
 map("v", "<", "<gv", opts)
 map("v", ">", ">gv", opts)
@@ -33,6 +37,7 @@ wk.register({
     f = { "<cmd>Telescope find_files<CR>", "Encontrar archivos" },
     d = { "<cmd>e ~/.config/nvim<CR>", "Editar dotfiles de NeoGOD" },
     c = { "<cmd>UndotreeToggle<CR>", "Ver arbol de cambios" },
+    p = { "<cmd>Telescope projects<CR>", "Encontrar proyecto" },
   },
   p = {
     name = "Gestor de plugins",
@@ -113,6 +118,8 @@ wk.register({
     l = { "<cmd>tabs<CR>", "Lista de tabs" },
     c = { "<cmd>tabclose<CR>", "Quitar tab" },
     N = { "<cmd>tabnew<CR>", "Nuevo tab" },
+    s = { "<cmd>split<CR>", "Split de arriba y abajo" },
+    v = { "<cmd>vsplit<CR>", "Split de derecha a izquierda" },
   },
   d = {
     name = "Depuración moment",
@@ -133,7 +140,7 @@ wk.register({
     p = { "<cmd>lua require'neogit'.open({'push'})<CR>", "PUSH" },
     P = { "<cmd>lua require'neogit'.open({'pull'})<CR>", "PULL" },
     b = { "<cmd>lua require'neogit'.open({'branch'})<CR>", "Rama..." },
-    r = { "<cmd>Git restore<CR>", "Restaurar el archivo" },
+    r = { "<cmd>Git restore %<CR>", "Restaurar el archivo" },
     R = { "<cmd>Git restore .<CR>", "Restaurar TODOS los ARCHIVOS" },
   },
 }, wk_opts)
@@ -146,8 +153,9 @@ map("n", "\\", ":noh<CR>", opts)
 -- LSP mapeos
 map("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
 map("n", "K", "<cmd>Lspsaga hover_doc<CR>", opts)
-map("n", "gn", "<cmd>lua vim.diagnostic.goto_next()<CR>", opts)
-map("n", "gp", "<cmd>lua vim.diagnostic.goto_prev()<CR>", opts)
+map("n", "<C-k>", "<cmd>Lspsaga signature_help<CR>", opts)
+map("n", "gn", "<cmd>Lspsaga diagnostic_jump_next<CR>", opts)
+map("n", "gp", "<cmd>Lspsaga diagnostic_jump_prev<CR>", opts)
 map("n", "<C-u>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1, '<c-u>')<cr>", {})
 map("n", "<C-d>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(1, '<c-d>')<cr>", {})
 map("n", "<F5>", "<cmd>lua require'dap'.continue()<CR>", opts)

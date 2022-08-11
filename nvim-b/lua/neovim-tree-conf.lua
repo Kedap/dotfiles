@@ -1,4 +1,6 @@
 require("nvim-tree").setup({
+  sync_root_with_cwd = true,
+  respect_buf_cwd = true,
   auto_reload_on_write = true,
   disable_netrw = false,
   hijack_cursor = false,
@@ -42,9 +44,10 @@ require("nvim-tree").setup({
     auto_open = true,
   },
   update_focused_file = {
-    enable = false,
+    enable = true,
     update_cwd = false,
     ignore_list = {},
+    update_root = true,
   },
   ignore_ft_on_setup = {},
   system_open = {

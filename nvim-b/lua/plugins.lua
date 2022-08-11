@@ -11,7 +11,7 @@ return require("packer").startup(function()
   use({ "akinsho/bufferline.nvim", tag = "v2.*", requires = "kyazdani42/nvim-web-devicons" })
   use({ "nvim-lualine/lualine.nvim", requires = "kyazdani42/nvim-web-devicons" })
 
-  -- Tema
+  -- Tema (Descomente cuando los utilice)
   -- use("bluz71/vim-nightfly-guicolors")
   use({ "shaunsingh/oxocarbon.nvim", run = "./install.sh" })
   -- use("rebelot/kanagawa.nvim")
@@ -20,13 +20,15 @@ return require("packer").startup(function()
   -- use({
   --   "olimorris/onedarkpro.nvim",
   -- })
-  -- use({
+  -- use{
   --   "rose-pine/neovim",
   --   as = "rose-pine",
   --   tag = "v1.*",
-  -- })
+  -- }
   -- use("wuelnerdotexe/vim-enfocado")
-  use({ "challenger-deep-theme/vim", as = "challenger-deep" })
+  -- use({ "challenger-deep-theme/vim", as = "challenger-deep" })
+  use({ "ellisonleao/gruvbox.nvim" })
+  -- use("morhetz/gruvbox")
 
   -- Kodigo (super coco)
   -- Treesitter y sus acompañantes
@@ -38,11 +40,11 @@ return require("packer").startup(function()
   use({ "mfussenegger/nvim-dap-python", requires = { "mfussenegger/nvim-dap" } })
 
   --LSP
-  use({ "kkharji/lspsaga.nvim", requires = "neovim/nvim-lspconfig" })
-  use({
-    "williamboman/nvim-lsp-installer",
-    "neovim/nvim-lspconfig",
-  })
+  use({ "glepnir/lspsaga.nvim", branch = "main" })
+  use {
+      "williamboman/mason.nvim",
+      "williamboman/mason-lspconfig.nvim",
+  }
   use({
     "hrsh7th/nvim-cmp",
     requires = {
@@ -100,6 +102,7 @@ return require("packer").startup(function()
   use("tpope/vim-repeat")
   use("terrortylor/nvim-comment")
   use("mbbill/undotree")
+  use("ahmedkhalf/project.nvim")
 
   -- Atajos
   use("folke/which-key.nvim")

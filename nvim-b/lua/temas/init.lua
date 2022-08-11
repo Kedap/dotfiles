@@ -31,5 +31,13 @@
 -- return opciones_linea
 
 -- Configuracion para el challenger
-local opciones_linea = require("temas.reto-tema")
+-- local opciones_linea = require("temas.reto-tema")
+-- return opciones_linea
+
+-- Configuracion para gruvbox nvim
+local opciones_linea = require("temas.grubocs")
 return opciones_linea
+
+-- Configuracion para gruvbox vim
+-- local opciones_linea = require("temas.ori_gruvbox")
+-- return opciones_linea
