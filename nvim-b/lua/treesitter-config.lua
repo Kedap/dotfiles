@@ -14,6 +14,7 @@ require("nvim-treesitter.configs").setup({
     "python",
     "norg",
     "haskell",
+    "fish",
   },
 
   highlight = {

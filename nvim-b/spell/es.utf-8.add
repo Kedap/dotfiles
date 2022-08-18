@@ -5,3 +5,9 @@ workspace
 Neovim
 Lua
 plugins
+Markdown
+Makefile
+pdf
+latex
+LaTeX
+yaml

@@ -1,4 +1,4 @@
-require("formatter").setup({
+require("formatter").setup {
   filetype = {
     javascript = {
       -- prettier
@@ -91,16 +91,16 @@ require("formatter").setup({
       end,
     },
     lua = {
-        function()
-            return {
-                exe = "stylua",
-                args = {
-                    "--config-path ~/.config/stylua/stylua.toml",
-                    "-",
-                },
-                stdin = true,
-            }
-        end,
+      function()
+        return {
+          exe = "stylua",
+          args = {
+            "--config-path ~/.config/stylua/stylua.toml",
+            "-",
+          },
+          stdin = true,
+        }
+      end,
     },
     sh = {
       -- Shell Script Formato
@@ -122,14 +122,30 @@ require("formatter").setup({
         }
       end,
     },
+    -- Aqui es donde volvi a ver la documentacion de formatter y utilizo menos lineas de codigo
     python = {
-      require("formatter.filetypes.python").black
+      require("formatter.filetypes.python").black,
     },
     markdown = {
-      require("formatter.filetypes.markdown").prettier
+      require("formatter.filetypes.markdown").prettier,
+    },
+    toml = {
+      require("formatter.filetypes.toml").taplo,
+    },
+    html = {
+      require("formatter.filetypes.html").prettier,
+    },
+    ruby = {
+      require("formatter.filetypes.ruby").rubocop,
+    },
+    c = {
+      require("formatter.filetypes.c").clangformat,
+    },
+    cpp = {
+      require("formatter.filetypes.cpp").clangformat,
     },
   },
-})
+}
 
 vim.api.nvim_exec(
   [[
@@ -137,6 +153,6 @@ augroup FormatAutogroup
   autocmd!
   autocmd BufWritePost * FormatWrite
 augroup END
-]] ,
+]],
   true
 )

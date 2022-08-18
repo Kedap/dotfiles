@@ -35,9 +35,13 @@
 -- return opciones_linea
 
 -- Configuracion para gruvbox nvim
-local opciones_linea = require("temas.grubocs")
+local opciones_linea = require "temas.grubocs"
 return opciones_linea
 
 -- Configuracion para gruvbox vim
 -- local opciones_linea = require("temas.ori_gruvbox")
+-- return opciones_linea
+
+-- Configuracion para night
+-- local opciones_linea = require "temas.night"
 -- return opciones_linea

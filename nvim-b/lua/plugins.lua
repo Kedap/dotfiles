@@ -1,19 +1,19 @@
 return require("packer").startup(function()
   -- Para que packer se pueda administrar
-  use("wbthomason/packer.nvim")
-  use("lewis6991/impatient.nvim")
-  use({
+  use "wbthomason/packer.nvim"
+  use "lewis6991/impatient.nvim"
+  use {
     "kyazdani42/nvim-tree.lua",
     requires = {
       "kyazdani42/nvim-web-devicons",
     },
-  })
-  use({ "akinsho/bufferline.nvim", tag = "v2.*", requires = "kyazdani42/nvim-web-devicons" })
-  use({ "nvim-lualine/lualine.nvim", requires = "kyazdani42/nvim-web-devicons" })
+  }
+  use { "akinsho/bufferline.nvim", tag = "v2.*", requires = "kyazdani42/nvim-web-devicons" }
+  use { "nvim-lualine/lualine.nvim", requires = "kyazdani42/nvim-web-devicons" }
 
   -- Tema (Descomente cuando los utilice)
   -- use("bluz71/vim-nightfly-guicolors")
-  use({ "shaunsingh/oxocarbon.nvim", run = "./install.sh" })
+  use { "shaunsingh/oxocarbon.nvim", run = "./install.sh" }
   -- use("rebelot/kanagawa.nvim")
   -- use({ "catppuccin/nvim", as = "catppuccin" })
   -- use("EdenEast/nightfox.nvim")
@@ -27,25 +27,26 @@ return require("packer").startup(function()
   -- }
   -- use("wuelnerdotexe/vim-enfocado")
   -- use({ "challenger-deep-theme/vim", as = "challenger-deep" })
-  use({ "ellisonleao/gruvbox.nvim" })
+  use { "ellisonleao/gruvbox.nvim" }
   -- use("morhetz/gruvbox")
+  -- use { "NightCS/night.nvim", as = "night" }
 
   -- Kodigo (super coco)
   -- Treesitter y sus acompañantes
-  use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
-  use({ "p00f/nvim-ts-rainbow", requires = "nvim-treesitter/nvim-treesitter" })
-  use({ "windwp/nvim-ts-autotag", requires = "nvim-treesitter/nvim-treesitter" })
-  use("tpope/vim-surround")
-  use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } })
-  use({ "mfussenegger/nvim-dap-python", requires = { "mfussenegger/nvim-dap" } })
+  use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
+  use { "p00f/nvim-ts-rainbow", requires = "nvim-treesitter/nvim-treesitter" }
+  use { "windwp/nvim-ts-autotag", requires = "nvim-treesitter/nvim-treesitter" }
+  use "tpope/vim-surround"
+  use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } }
+  use { "mfussenegger/nvim-dap-python", requires = { "mfussenegger/nvim-dap" } }
 
   --LSP
-  use({ "glepnir/lspsaga.nvim", branch = "main" })
+  use { "glepnir/lspsaga.nvim", branch = "main" }
   use {
-      "williamboman/mason.nvim",
-      "williamboman/mason-lspconfig.nvim",
+    "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
   }
-  use({
+  use {
     "hrsh7th/nvim-cmp",
     requires = {
       "neovim/nvim-lspconfig",
@@ -60,61 +61,61 @@ return require("packer").startup(function()
       "hrsh7th/vim-vsnip-integ",
       "f3fora/cmp-spell",
     },
-  })
-  use("onsails/lspkind-nvim")
-  use("rafamadriz/friendly-snippets")
-  use("editorconfig/editorconfig-vim")
-  use("mhartington/formatter.nvim")
-  use({ "folke/trouble.nvim", requires = "kyazdani42/nvim-web-devicons" })
+  }
+  use "onsails/lspkind-nvim"
+  use "rafamadriz/friendly-snippets"
+  use "editorconfig/editorconfig-vim"
+  use "mhartington/formatter.nvim"
+  use { "folke/trouble.nvim", requires = "kyazdani42/nvim-web-devicons" }
 
   --Lengaujes
-  use({ "simrat39/rust-tools.nvim", requires = { "neovim/nvim-lspconfig", "nvim-lua/plenary.nvim" } })
-  use({
+  use { "simrat39/rust-tools.nvim", requires = { "neovim/nvim-lspconfig", "nvim-lua/plenary.nvim" } }
+  use {
     "saecki/crates.nvim",
     tag = "v0.2.1",
     requires = { "nvim-lua/plenary.nvim" },
-  })
-  use("lervag/vimtex")
-  use({ "iamcco/markdown-preview.nvim", run = "cd app && yarn install" })
-  use({ "thosakwe/vim-flutter", requires = "Nash0x7E2/awesome-flutter-snippets" })
+  }
+  use "lervag/vimtex"
+  use { "iamcco/markdown-preview.nvim", run = "cd app && yarn install" }
+  use { "thosakwe/vim-flutter", requires = "Nash0x7E2/awesome-flutter-snippets" }
 
   --GIT
-  use({ "TimUntersberger/neogit", requires = { "nvim-lua/plenary.nvim", "sindrets/diffview.nvim" } })
-  use({
+  use { "TimUntersberger/neogit", requires = { "nvim-lua/plenary.nvim", "sindrets/diffview.nvim" } }
+  use {
     "lewis6991/gitsigns.nvim",
-  })
-  use("tpope/vim-fugitive")
+  }
+  use "tpope/vim-fugitive"
 
   --Utilidades
-  use({ "windwp/nvim-autopairs" })
-  use({ "norcalli/nvim-colorizer.lua" })
-  use({ "lukas-reineke/indent-blankline.nvim" })
-  use({
+  use { "windwp/nvim-autopairs" }
+  use { "norcalli/nvim-colorizer.lua" }
+  use { "lukas-reineke/indent-blankline.nvim" }
+  use {
     "nvim-telescope/telescope.nvim",
-  })
-  use("rcarriga/nvim-notify")
-  use("KabbAmine/vCoolor.vim")
-  use({
+  }
+  use "rcarriga/nvim-notify"
+  use "KabbAmine/vCoolor.vim"
+  use {
     "phaazon/hop.nvim",
     branch = "v2", -- optional but strongly recommended
-  })
-  use("AndrewRadev/tagalong.vim")
-  use("tpope/vim-repeat")
-  use("terrortylor/nvim-comment")
-  use("mbbill/undotree")
-  use("ahmedkhalf/project.nvim")
+  }
+  use "AndrewRadev/tagalong.vim"
+  use "tpope/vim-repeat"
+  use "terrortylor/nvim-comment"
+  use "mbbill/undotree"
+  use "ahmedkhalf/project.nvim"
 
   -- Atajos
-  use("folke/which-key.nvim")
+  use "folke/which-key.nvim"
 
   -- Terminales
-  use("voldikss/vim-floaterm")
-  use({
+  use "voldikss/vim-floaterm"
+  use {
     "akinsho/toggleterm.nvim",
-  })
+  }
 
   -- Cosas bonitas
-  use("kyazdani42/nvim-web-devicons")
-  use({ "nvim-neorg/neorg", requires = "nvim-lua/plenary.nvim" })
-  use({ "glepnir/dashboard-nvim" })
+  use "kyazdani42/nvim-web-devicons"
+  use { "nvim-neorg/neorg", requires = "nvim-lua/plenary.nvim" }
+  use { "glepnir/dashboard-nvim" }
 end)
