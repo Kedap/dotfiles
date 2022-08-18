@@ -156,3 +156,4 @@ version: 0.0.11
       (esa es la configuracion por defecto, se puede cambiar)
   - Algo que instale pdflatex
   - Firefox para ver los archivos Markdown, pero puede configurarse otro navegador
+  - {https://github.com/TheZoraiz/ascii-image-converter}[ascii-image-converter] para ver imagenes en ascii

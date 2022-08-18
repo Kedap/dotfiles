@@ -164,7 +164,7 @@ Necesarios:
   splashes](https://github.com/Kedap/dotfiles/blob/main/wallpapers/splashes),
   justo en `~/Wallpapers/splashes` (lo puedes configurar despues)
 
-No necesarios, a menos que utilices algo de la lista o plugins
+No necesarios, a menos que utilices algo de la lista o plugins:
 
 - Zenity (para seleccionar colores)
 - Formatos
@@ -184,3 +184,4 @@ No necesarios, a menos que utilices algo de la lista o plugins
 
 - Algo que instale pdflatex
 - Firefox para ver los archivos Markdown
+- [ascii-image-converter](https://github.com/TheZoraiz/ascii-image-converter) para ver imagenes en ascii
