@@ -11,7 +11,7 @@ return require("packer").startup(function()
   use { "akinsho/bufferline.nvim", tag = "v2.*", requires = "kyazdani42/nvim-web-devicons" }
   use { "nvim-lualine/lualine.nvim", requires = "kyazdani42/nvim-web-devicons" }
 
-  -- Tema (Descomente cuando los utilice)
+  -- Temas (Descomente cuando los utilice)
   -- use("bluz71/vim-nightfly-guicolors")
   use { "shaunsingh/oxocarbon.nvim", run = "./install.sh" }
   -- use("rebelot/kanagawa.nvim")
@@ -30,12 +30,15 @@ return require("packer").startup(function()
   use { "ellisonleao/gruvbox.nvim" }
   -- use("morhetz/gruvbox")
   -- use { "NightCS/night.nvim", as = "night" }
+  -- use { "Everblush/everblush.nvim", as = "everblush" }
+  -- use "folke/tokyonight.nvim"
 
   -- Kodigo (super coco)
   -- Treesitter y sus acompañantes
   use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
   use { "p00f/nvim-ts-rainbow", requires = "nvim-treesitter/nvim-treesitter" }
   use { "windwp/nvim-ts-autotag", requires = "nvim-treesitter/nvim-treesitter" }
+  use "RRethy/vim-illuminate"
   use "tpope/vim-surround"
   use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } }
   use { "mfussenegger/nvim-dap-python", requires = { "mfussenegger/nvim-dap" } }
@@ -88,6 +91,7 @@ return require("packer").startup(function()
 
   --Utilidades
   use { "windwp/nvim-autopairs" }
+  use "gaoDean/autolist.nvim"
   use { "norcalli/nvim-colorizer.lua" }
   use { "lukas-reineke/indent-blankline.nvim" }
   use {
@@ -118,4 +122,10 @@ return require("packer").startup(function()
   use "kyazdani42/nvim-web-devicons"
   use { "nvim-neorg/neorg", requires = "nvim-lua/plenary.nvim" }
   use { "glepnir/dashboard-nvim" }
+  use {
+    "samodostal/image.nvim",
+    requires = {
+      "nvim-lua/plenary.nvim",
+    },
+  }
 end)

@@ -1,6 +1,6 @@
-local saga = require("lspsaga")
+local saga = require "lspsaga"
 
-saga.init_lsp_saga({
+saga.init_lsp_saga {
   server_filetype_map = {
     typescript = "typescript",
   },
@@ -13,4 +13,13 @@ saga.init_lsp_saga({
     scroll_down = "<C-f>",
     scroll_up = "<C-b>",
   },
-})
+  code_action_lightbulb = {
+    enable = true,
+    enable_in_insert = true,
+    cache_code_action = true,
+    sign = false,
+    update_time = 150,
+    sign_priority = 20,
+    virtual_text = true,
+  },
+}

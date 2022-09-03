@@ -1,9 +1,9 @@
-require("which-key").setup({})
+require("which-key").setup {}
 vim.g.mapleader = " "
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = false }
 local wk_opts = { prefix = "<leader>" }
-local wk = require("which-key")
+local wk = require "which-key"
 
 -- Atajos naturales
 -- Como el tmux
@@ -152,12 +152,10 @@ map("n", "\\", ":noh<CR>", opts)
 
 -- LSP mapeos
 map("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
-map("n", "K", "<cmd>Lspsaga hover_doc<CR>", opts)
-map("n", "<C-k>", "<cmd>Lspsaga signature_help<CR>", opts)
+map("n", "K", "<cmd>Lspsaga hover_doc<CR>", { silent = true })
+-- map("n", "<C-K>", "<cmd>Lspsaga signature_help<CR>", opts)
 map("n", "gn", "<cmd>Lspsaga diagnostic_jump_next<CR>", opts)
 map("n", "gp", "<cmd>Lspsaga diagnostic_jump_prev<CR>", opts)
-map("n", "<C-u>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1, '<c-u>')<cr>", {})
-map("n", "<C-d>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(1, '<c-d>')<cr>", {})
 map("n", "<F5>", "<cmd>lua require'dap'.continue()<CR>", opts)
 
 -- Codigo

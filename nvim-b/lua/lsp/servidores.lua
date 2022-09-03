@@ -1,10 +1,15 @@
-local lspconfig = require("lspconfig")
+local lspconfig = require "lspconfig"
 require("mason").setup()
-require("mason-lspconfig").setup({
-  ensure_installed = { "sumneko_lua", "tsserver" }
+require("mason-lspconfig").setup {
+  ensure_installed = { "sumneko_lua", "tsserver" },
   -- ensure_installed = { "sumneko_lua", "tsserver", "stylua" }
-})
+}
 local capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities())
+
+-- vim.api.nvim_command [[ let g:Illuminate_delay = 9999 ]]
+-- vim.api.nvim_command [[
+-- let g:Illuminate_ftwhitelist = ['lua', 'sh', 'python','go', 'cpp', 'c', 'rust', 'typescript', 'javascript', 'json', 'toml', 'javascriptreact', 'typescriptreact', 'bash']
+-- ]]
 
 require("mason-lspconfig").setup_handlers {
   function(server_name)
@@ -13,7 +18,7 @@ require("mason-lspconfig").setup_handlers {
     }
   end,
   ["sumneko_lua"] = function()
-    require("lspconfig")["sumneko_lua"].setup({
+    require("lspconfig")["sumneko_lua"].setup {
       capabilities = capabilities,
       settings = {
         Lua = {
@@ -22,12 +27,16 @@ require("mason-lspconfig").setup_handlers {
           },
           workspace = {
             library = {
-              [vim.fn.expand("$VIMRUNTIME/lua")] = true,
-              [vim.fn.stdpath("config") .. "/lua"] = true,
+              [vim.fn.expand "$VIMRUNTIME/lua"] = true,
+              [vim.fn.stdpath "config" .. "/lua"] = true,
             },
           },
         },
       },
-    })
+    }
   end,
 }
+
+vim.api.nvim_command [[ hi def link LspReferenceText CursorLine ]]
+vim.api.nvim_command [[ hi def link LspReferenceWrite CursorLine ]]
+vim.api.nvim_command [[ hi def link LspReferenceRead CursorLine ]]

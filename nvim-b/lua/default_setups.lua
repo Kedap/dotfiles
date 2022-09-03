@@ -8,3 +8,5 @@ require("nvim_comment").setup {}
 require("project_nvim").setup {}
 require("bufferline").setup {}
 require("gitsigns").setup()
+require("image").setup()
+require("autolist").setup()

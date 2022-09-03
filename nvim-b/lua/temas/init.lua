@@ -45,3 +45,11 @@ return opciones_linea
 -- Configuracion para night
 -- local opciones_linea = require "temas.night"
 -- return opciones_linea
+
+-- Configuracion para everbluch
+-- local opciones_linea = require "temas.everfluch"
+-- return opciones_linea
+
+-- Configuracion para tokio night
+-- local opciones_linea = require "temas.tokio_noche"
+-- return opciones_linea
