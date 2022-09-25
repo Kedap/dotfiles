@@ -1,6 +1,7 @@
 local saga = require "lspsaga"
 
 saga.init_lsp_saga {
+  border_style = "rounded",
   server_filetype_map = {
     typescript = "typescript",
   },

@@ -1,6 +1,6 @@
-local opciones = require("temas.init")
+local opciones = require "temas.init"
 
-require("lualine").setup({
+require("lualine").setup {
   options = {
     icons_enabled = true,
     theme = opciones.tema,
@@ -54,4 +54,4 @@ require("lualine").setup({
     lualine_z = {},
   },
   extensions = { "nvim-tree", "toggleterm", "fugitive", "quickfix", "nvim-dap-ui" },
-})
+}

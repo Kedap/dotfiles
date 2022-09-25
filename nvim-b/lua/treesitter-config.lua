@@ -15,6 +15,8 @@ require("nvim-treesitter.configs").setup({
     "norg",
     "haskell",
     "fish",
+    "go",
+    "sql",
   },
 
   highlight = {

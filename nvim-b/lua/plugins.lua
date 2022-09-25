@@ -27,11 +27,12 @@ return require("packer").startup(function()
   -- }
   -- use("wuelnerdotexe/vim-enfocado")
   -- use({ "challenger-deep-theme/vim", as = "challenger-deep" })
-  use { "ellisonleao/gruvbox.nvim" }
+  -- use { "ellisonleao/gruvbox.nvim" }
   -- use("morhetz/gruvbox")
   -- use { "NightCS/night.nvim", as = "night" }
   -- use { "Everblush/everblush.nvim", as = "everblush" }
-  -- use "folke/tokyonight.nvim"
+  use "folke/tokyonight.nvim"
+  -- use "sam4llis/nvim-tundra"
 
   -- Kodigo (super coco)
   -- Treesitter y sus acompañantes
@@ -70,6 +71,10 @@ return require("packer").startup(function()
   use "editorconfig/editorconfig-vim"
   use "mhartington/formatter.nvim"
   use { "folke/trouble.nvim", requires = "kyazdani42/nvim-web-devicons" }
+  use {
+    "SmiteshP/nvim-navic",
+    requires = "neovim/nvim-lspconfig",
+  }
 
   --Lengaujes
   use { "simrat39/rust-tools.nvim", requires = { "neovim/nvim-lspconfig", "nvim-lua/plenary.nvim" } }
@@ -88,6 +93,7 @@ return require("packer").startup(function()
     "lewis6991/gitsigns.nvim",
   }
   use "tpope/vim-fugitive"
+  use "akinsho/git-conflict.nvim"
 
   --Utilidades
   use { "windwp/nvim-autopairs" }
@@ -107,7 +113,6 @@ return require("packer").startup(function()
   use "tpope/vim-repeat"
   use "terrortylor/nvim-comment"
   use "mbbill/undotree"
-  use "ahmedkhalf/project.nvim"
 
   -- Atajos
   use "folke/which-key.nvim"
@@ -128,4 +133,5 @@ return require("packer").startup(function()
       "nvim-lua/plenary.nvim",
     },
   }
+  use "sunjon/shade.nvim"
 end)

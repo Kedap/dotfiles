@@ -5,21 +5,23 @@ require("mason-lspconfig").setup {
   -- ensure_installed = { "sumneko_lua", "tsserver", "stylua" }
 }
 local capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities())
+local navic = require "nvim-navic" -- TODO: Con la siguiente version estable utilizar el winbar
 
--- vim.api.nvim_command [[ let g:Illuminate_delay = 9999 ]]
--- vim.api.nvim_command [[
--- let g:Illuminate_ftwhitelist = ['lua', 'sh', 'python','go', 'cpp', 'c', 'rust', 'typescript', 'javascript', 'json', 'toml', 'javascriptreact', 'typescriptreact', 'bash']
--- ]]
+local on_attach = function(client, bufnr)
+  navic.attach(client, bufnr)
+end
 
 require("mason-lspconfig").setup_handlers {
   function(server_name)
     lspconfig[server_name].setup {
       capabilities = capabilities,
+      on_attach = on_attach,
     }
   end,
   ["sumneko_lua"] = function()
     require("lspconfig")["sumneko_lua"].setup {
       capabilities = capabilities,
+      on_attach = on_attach,
       settings = {
         Lua = {
           diagnostics = {

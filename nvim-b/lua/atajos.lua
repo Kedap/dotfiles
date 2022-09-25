@@ -37,7 +37,6 @@ wk.register({
     f = { "<cmd>Telescope find_files<CR>", "Encontrar archivos" },
     d = { "<cmd>e ~/.config/nvim<CR>", "Editar dotfiles de NeoGOD" },
     c = { "<cmd>UndotreeToggle<CR>", "Ver arbol de cambios" },
-    p = { "<cmd>Telescope projects<CR>", "Encontrar proyecto" },
   },
   p = {
     name = "Gestor de plugins",
@@ -152,8 +151,8 @@ map("n", "\\", ":noh<CR>", opts)
 
 -- LSP mapeos
 map("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
+-- map("n", "gd", "<cmd>Lspsaga peek_definition<CR>", opts)
 map("n", "K", "<cmd>Lspsaga hover_doc<CR>", { silent = true })
--- map("n", "<C-K>", "<cmd>Lspsaga signature_help<CR>", opts)
 map("n", "gn", "<cmd>Lspsaga diagnostic_jump_next<CR>", opts)
 map("n", "gp", "<cmd>Lspsaga diagnostic_jump_prev<CR>", opts)
 map("n", "<F5>", "<cmd>lua require'dap'.continue()<CR>", opts)

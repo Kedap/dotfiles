@@ -7,7 +7,7 @@ end
 
 vim.diagnostic.config({
   virtual_text = {
-    spacing = 1,
+    spacing = 4,
   },
   signs = true,
   underline = true,
