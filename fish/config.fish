@@ -2,6 +2,8 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
+fish_config theme save "Catppuccin Mocha"
+
 # alias para los comandos
 alias v="nvim"
 alias edit="nvim"
