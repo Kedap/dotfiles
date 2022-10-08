@@ -33,6 +33,10 @@ return require("packer").startup(function()
   -- use { "Everblush/everblush.nvim", as = "everblush" }
   use "folke/tokyonight.nvim"
   -- use "sam4llis/nvim-tundra"
+  -- use {
+  --   "glepnir/zephyr-nvim",
+  --   requires = { "nvim-treesitter/nvim-treesitter", opt = true },
+  -- }
 
   -- Kodigo (super coco)
   -- Treesitter y sus acompañantes
@@ -71,10 +75,6 @@ return require("packer").startup(function()
   use "editorconfig/editorconfig-vim"
   use "mhartington/formatter.nvim"
   use { "folke/trouble.nvim", requires = "kyazdani42/nvim-web-devicons" }
-  use {
-    "SmiteshP/nvim-navic",
-    requires = "neovim/nvim-lspconfig",
-  }
 
   --Lengaujes
   use { "simrat39/rust-tools.nvim", requires = { "neovim/nvim-lspconfig", "nvim-lua/plenary.nvim" } }
@@ -113,6 +113,7 @@ return require("packer").startup(function()
   use "tpope/vim-repeat"
   use "terrortylor/nvim-comment"
   use "mbbill/undotree"
+  use { "krivahtoo/silicon.nvim", run = "./install.sh build" }
 
   -- Atajos
   use "folke/which-key.nvim"
@@ -125,7 +126,10 @@ return require("packer").startup(function()
 
   -- Cosas bonitas
   use "kyazdani42/nvim-web-devicons"
-  use { "nvim-neorg/neorg", requires = "nvim-lua/plenary.nvim" }
+  use {
+    "nvim-neorg/neorg",
+    requires = "nvim-lua/plenary.nvim",
+  }
   use { "glepnir/dashboard-nvim" }
   use {
     "samodostal/image.nvim",

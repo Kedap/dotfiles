@@ -51,8 +51,8 @@ wk.register({
   },
   c = {
     name = "Codigo",
-    d = { "<cmd>lua vim.lsp.buf.definition()<CR>", "Ir a la definición" },
-    p = { "<cmd>Lspsaga preview_definition<CR>", "Vista previa de la definición" },
+    d = { "<cmd>lua vim.lsp.buf.definition()<CR>", "Ver la definición" },
+    p = { "<cmd>Lspsaga peek_definition<CR>", "Vista previa de la definición" },
     f = { "<cmd>Lspsaga lsp_finder<CR>", "Ver referencias" },
     r = { "<cmd>Lspsaga rename<CR>", "Renombrar..." },
     a = { "<cmd>Lspsaga code_action<CR>", "Accion del codigo" },

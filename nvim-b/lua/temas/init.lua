@@ -57,3 +57,7 @@ return opciones_linea
 -- Configuracion para el tundra
 -- local opciones_linea = require "temas.trundrita"
 -- return opciones_linea
+
+-- Configuracion para zenfi
+-- local opciones_linea = require "temas.zenfi"
+-- return opciones_linea
