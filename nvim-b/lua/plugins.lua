@@ -8,7 +8,7 @@ return require("packer").startup(function()
       "kyazdani42/nvim-web-devicons",
     },
   }
-  use { "akinsho/bufferline.nvim", tag = "v2.*", requires = "kyazdani42/nvim-web-devicons" }
+  use { "akinsho/bufferline.nvim", tag = "v3.*", requires = "kyazdani42/nvim-web-devicons" }
   use { "nvim-lualine/lualine.nvim", requires = "kyazdani42/nvim-web-devicons" }
 
   -- Temas (Descomente cuando los utilice)
@@ -86,7 +86,7 @@ return require("packer").startup(function()
   use { "simrat39/rust-tools.nvim", requires = { "neovim/nvim-lspconfig", "nvim-lua/plenary.nvim" } }
   use {
     "saecki/crates.nvim",
-    tag = "v0.2.1",
+    tag = "v0.3.*",
     requires = { "nvim-lua/plenary.nvim" },
   }
   use "lervag/vimtex"
