@@ -1,6 +1,6 @@
 -- configuracion de nightfox
 
-local nightfox = require("nightfox")
+local nightfox = require "nightfox"
 local grupos = {
   all = {
     --TSPunctDelimiter = { fg = "${red}" },
@@ -11,7 +11,7 @@ local grupos = {
     DiagnosticUnderlineHint = { bg = "NONE", style = "underline" },
   },
 }
-nightfox.setup({
+nightfox.setup {
   options = {
     styles = {
       comments = "italic",
@@ -32,7 +32,6 @@ nightfox.setup({
     modules = {
       lsp_saga = true,
       lsp_trouble = true,
-      neogit = true,
       whichkey = true,
       cmp = true,
       dap_ui = true,
@@ -45,9 +44,9 @@ nightfox.setup({
     },
   },
   groups = grupos,
-})
+}
 
-vim.cmd("colorscheme duskfox")
+vim.cmd "colorscheme duskfox"
 local opciones_lualine = {
   -- tema = "palenight",
   tema = "modus-vivendi",

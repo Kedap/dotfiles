@@ -4,7 +4,7 @@ require("mason-lspconfig").setup {
   ensure_installed = { "sumneko_lua", "tsserver" },
   -- ensure_installed = { "sumneko_lua", "tsserver", "stylua" }
 }
-local capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities())
+local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 require("mason-lspconfig").setup_handlers {
   function(server_name)

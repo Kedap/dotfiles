@@ -147,6 +147,9 @@ require("formatter").setup {
     go = {
       require("formatter.filetypes.go").gofmt,
     },
+    php = {
+      require("formatter.filetypes.php").phpcbf,
+    },
   },
 }
 

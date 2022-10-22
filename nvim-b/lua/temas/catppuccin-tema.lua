@@ -1,6 +1,6 @@
 vim.g.catppuccin_flavour = "macchiato"
-local catppuccin = require("catppuccin")
-catppuccin.setup({
+local catppuccin = require "catppuccin"
+catppuccin.setup {
   transparent_background = false,
   term_colors = false,
   styles = {
@@ -56,7 +56,6 @@ catppuccin.setup({
       colored_indent_levels = true,
     },
     dashboard = true,
-    neogit = true,
     vim_sneak = false,
     fern = false,
     barbar = false,
@@ -69,8 +68,8 @@ catppuccin.setup({
     telekasten = false,
     symbols_outline = false,
   },
-})
-vim.cmd([[colorscheme catppuccin]])
+}
+vim.cmd [[colorscheme catppuccin]]
 
 local opciones_lualine = {
   tema = "catppuccin",

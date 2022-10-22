@@ -61,7 +61,7 @@ wk.register({
     R = { "<cmd>TroubleRefresh<CR>", "Refrescar los logs de LSP" },
   },
   m = {
-    name = "Acciones del lengauje",
+    name = "Acciones del lenguaje",
     r = {
       name = "Rust",
       l = { "<cmd>lua require('crates').show_popup()<CR>", "Ver mejor los crates" },
@@ -75,6 +75,7 @@ wk.register({
     l = {
       name = "LaTeX",
       c = { ":VimtexCompile<CR>", "Compilar y ver el documento LaTeX" },
+      p = { "<cmd>lua require('nabla').popup({border = rounded})<CR>", "Vista previa de la expresion" },
     },
     n = {
       name = "Neorg",
@@ -133,12 +134,12 @@ wk.register({
     name = "Git",
     d = { "<cmd>DiffviewOpen<CR>", "Ver los ultimos cambios" },
     D = { "<cmd>DiffviewFileHistory %<CR>", "Ver TODOS los cambios de ESTE archivo" },
-    g = { "<cmd>Neogit<CR>", "Abrir Neogit" },
+    g = { "<cmd>LazyGit<CR>", "Abrir lazygit" },
     a = { "<cmd>Git add --all<CR>", "Agregar todos los cambios al commit" },
-    c = { "<cmd>Neogit commit<CR>", "Realizar commit" },
-    p = { "<cmd>lua require'neogit'.open({'push'})<CR>", "PUSH" },
-    P = { "<cmd>lua require'neogit'.open({'pull'})<CR>", "PULL" },
-    b = { "<cmd>lua require'neogit'.open({'branch'})<CR>", "Rama..." },
+    -- c = { "<cmd>Neogit commit<CR>", "Realizar commit" },
+    -- p = { "<cmd>lua require'neogit'.open({'push'})<CR>", "PUSH" },
+    -- P = { "<cmd>lua require'neogit'.open({'pull'})<CR>", "PULL" },
+    -- b = { "<cmd>lua require'neogit'.open({'branch'})<CR>", "Rama..." },
     r = { "<cmd>Git restore %<CR>", "Restaurar el archivo" },
     R = { "<cmd>Git restore .<CR>", "Restaurar TODOS los ARCHIVOS" },
   },

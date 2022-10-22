@@ -37,12 +37,18 @@ return require("packer").startup(function()
   --   "glepnir/zephyr-nvim",
   --   requires = { "nvim-treesitter/nvim-treesitter", opt = true },
   -- }
+  -- use {
+  --   "katawful/kat.nvim",
+  --   tag = "2.0",
+  -- }
 
   -- Kodigo (super coco)
   -- Treesitter y sus acompañantes
   use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
   use { "p00f/nvim-ts-rainbow", requires = "nvim-treesitter/nvim-treesitter" }
   use { "windwp/nvim-ts-autotag", requires = "nvim-treesitter/nvim-treesitter" }
+  use { "nvim-treesitter/nvim-treesitter-textobjects", requires = "nvim-treesitter/nvim-treesitter" }
+
   use "RRethy/vim-illuminate"
   use "tpope/vim-surround"
   use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } }
@@ -88,7 +94,8 @@ return require("packer").startup(function()
   use { "thosakwe/vim-flutter", requires = "Nash0x7E2/awesome-flutter-snippets" }
 
   --GIT
-  use { "TimUntersberger/neogit", requires = { "nvim-lua/plenary.nvim", "sindrets/diffview.nvim" } }
+  use "kdheepak/lazygit.nvim"
+  use "sindrets/diffview.nvim"
   use {
     "lewis6991/gitsigns.nvim",
   }
@@ -138,4 +145,5 @@ return require("packer").startup(function()
     },
   }
   use "sunjon/shade.nvim"
+  use "jbyuki/nabla.nvim"
 end)

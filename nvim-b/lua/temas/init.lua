@@ -61,3 +61,7 @@ return opciones_linea
 -- Configuracion para zenfi
 -- local opciones_linea = require "temas.zenfi"
 -- return opciones_linea
+
+-- Configuracion para kat
+-- local opciones_linea = require "temas.gatito"
+-- return opciones_linea
