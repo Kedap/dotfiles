@@ -120,7 +120,13 @@ return require("packer").startup(function()
   use "tpope/vim-repeat"
   use "terrortylor/nvim-comment"
   use "mbbill/undotree"
-  use { "krivahtoo/silicon.nvim", run = "./install.sh build" }
+  -- use {
+  --   "krivahtoo/silicon.nvim",
+  --   run = "./install.sh build",
+  --   config = function()
+  --     require("silicon").setup()
+  --   end,
+  -- }
 
   -- Atajos
   use "folke/which-key.nvim"

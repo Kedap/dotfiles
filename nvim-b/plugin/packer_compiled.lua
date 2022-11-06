@@ -329,11 +329,6 @@ _G.packer_plugins = {
     path = "/home/sno0bwy/.local/share/nvim/site/pack/packer/start/shade.nvim",
     url = "https://github.com/sunjon/shade.nvim"
   },
-  ["silicon.nvim"] = {
-    loaded = true,
-    path = "/home/sno0bwy/.local/share/nvim/site/pack/packer/start/silicon.nvim",
-    url = "https://github.com/krivahtoo/silicon.nvim"
-  },
   ["tagalong.vim"] = {
     loaded = true,
     path = "/home/sno0bwy/.local/share/nvim/site/pack/packer/start/tagalong.vim",
