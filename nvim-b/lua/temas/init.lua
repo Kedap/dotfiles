@@ -15,8 +15,8 @@
 -- return opciones_linea
 
 -- configuracion nightfox
--- local opciones_linea = require("temas.nightfox-conf")
--- return opciones_linea
+local opciones_linea = require "temas.nightfox-conf"
+return opciones_linea
 
 -- configuracion onedark
 -- local opciones_linea = require("temas.unodarkpro")
@@ -51,8 +51,8 @@
 -- return opciones_linea
 
 -- Configuracion para tokio night
-local opciones_linea = require "temas.tokio_noche"
-return opciones_linea
+-- local opciones_linea = require "temas.tokio_noche"
+-- return opciones_linea
 
 -- Configuracion para el tundra
 -- local opciones_linea = require "temas.trundrita"
@@ -64,4 +64,8 @@ return opciones_linea
 
 -- Configuracion para kat
 -- local opciones_linea = require "temas.gatito"
+-- return opciones_linea
+
+-- Configuracion para lucia
+-- local opciones_linea = require "temas.lucia"
 -- return opciones_linea

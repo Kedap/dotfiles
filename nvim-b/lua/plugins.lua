@@ -16,7 +16,7 @@ return require("packer").startup(function()
   use { "shaunsingh/oxocarbon.nvim", run = "./install.sh" }
   -- use("rebelot/kanagawa.nvim")
   -- use({ "catppuccin/nvim", as = "catppuccin" })
-  -- use("EdenEast/nightfox.nvim")
+  use "EdenEast/nightfox.nvim"
   -- use({
   --   "olimorris/onedarkpro.nvim",
   -- })
@@ -26,12 +26,12 @@ return require("packer").startup(function()
   --   tag = "v1.*",
   -- }
   -- use("wuelnerdotexe/vim-enfocado")
-  -- use({ "challenger-deep-theme/vim", as = "challenger-deep" })
+  -- use { "challenger-deep-theme/vim", as = "challenger-deep" }
   -- use { "ellisonleao/gruvbox.nvim" }
   -- use("morhetz/gruvbox")
   -- use { "NightCS/night.nvim", as = "night" }
   -- use { "Everblush/everblush.nvim", as = "everblush" }
-  use "folke/tokyonight.nvim"
+  -- use "folke/tokyonight.nvim"
   -- use "sam4llis/nvim-tundra"
   -- use {
   --   "glepnir/zephyr-nvim",
@@ -41,6 +41,7 @@ return require("packer").startup(function()
   --   "katawful/kat.nvim",
   --   tag = "2.0",
   -- }
+  -- use "Yazeed1s/oh-lucy.nvim"
 
   -- Kodigo (super coco)
   -- Treesitter y sus acompañantes

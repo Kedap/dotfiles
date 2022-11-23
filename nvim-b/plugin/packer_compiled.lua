@@ -229,6 +229,11 @@ _G.packer_plugins = {
     path = "/home/sno0bwy/.local/share/nvim/site/pack/packer/start/neorg",
     url = "https://github.com/nvim-neorg/neorg"
   },
+  ["nightfox.nvim"] = {
+    loaded = true,
+    path = "/home/sno0bwy/.local/share/nvim/site/pack/packer/start/nightfox.nvim",
+    url = "https://github.com/EdenEast/nightfox.nvim"
+  },
   ["nvim-autopairs"] = {
     loaded = true,
     path = "/home/sno0bwy/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
@@ -343,11 +348,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/sno0bwy/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
     url = "https://github.com/akinsho/toggleterm.nvim"
-  },
-  ["tokyonight.nvim"] = {
-    loaded = true,
-    path = "/home/sno0bwy/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
-    url = "https://github.com/folke/tokyonight.nvim"
   },
   ["trouble.nvim"] = {
     loaded = true,

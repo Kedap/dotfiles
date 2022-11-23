@@ -46,24 +46,24 @@ nightfox.setup {
   groups = grupos,
 }
 
-vim.cmd "colorscheme duskfox"
-local opciones_lualine = {
-  -- tema = "palenight",
-  tema = "modus-vivendi",
-  estilo = "buble",
-}
+-- vim.cmd "colorscheme duskfox"
+-- local opciones_lualine = {
+--   -- tema = "palenight",
+--   tema = "modus-vivendi",
+--   estilo = "buble",
+-- }
 
--- vim.cmd("colorscheme terafox")
+-- vim.cmd "colorscheme terafox"
 -- local opciones_lualine = {
 --   -- tema = "nightfly",
 --   tema = "solarized_dark",
 --   estilo = "buble",
 -- }
 
--- vim.cmd("colorscheme nightfox")
--- local opciones_lualine = {
---   tema = "",
---   estilo = "eviline",
--- }
+vim.cmd "colorscheme nightfox"
+local opciones_lualine = {
+  tema = "",
+  estilo = "eviline",
+}
 
 return opciones_lualine

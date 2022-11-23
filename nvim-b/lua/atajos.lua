@@ -31,7 +31,7 @@ wk.register({
   -- De cajon
   f = {
     name = "Archivo",
-    w = { ":w <cr>", "Guardar" },
+    w = { ":w! <cr>", "Guardar" },
     s = { ":x! <cr>", "Guardar y salir" },
     n = { ":NvimTreeToggle<CR>", "Abrir gestor de archivos" },
     f = { "<cmd>Telescope find_files<CR>", "Encontrar archivos" },
