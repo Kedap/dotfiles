@@ -151,6 +151,5 @@ return require("packer").startup(function()
       "nvim-lua/plenary.nvim",
     },
   }
-  use "sunjon/shade.nvim"
   use "jbyuki/nabla.nvim"
 end)
