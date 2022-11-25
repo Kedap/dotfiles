@@ -2,8 +2,6 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
-fish_config theme save "Catppuccin Mocha"
-
 # alias para los comandos
 alias v="nvim"
 alias edit="nvim"
@@ -15,6 +13,8 @@ alias ls="exa"
 alias la="exa -a"
 alias ll="exa -l -g --git --icons"
 alias lg="exa -l -g --git --icons --tree --level=2 -a --git-ignore"
+alias lt="exa -l -g --icons --tree -a"
+alias lw="exa -l -g --icons --tree -a"
 alias sdkmanager="sdkmanager --sdk_root=~/etc/android-sdk/"
 alias yarn="yarn --emoji true"
 alias icat="kitty +kitten icat"
