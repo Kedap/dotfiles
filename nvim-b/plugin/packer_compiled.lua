@@ -329,11 +329,6 @@ _G.packer_plugins = {
     path = "/home/sno0bwy/.local/share/nvim/site/pack/packer/start/rust-tools.nvim",
     url = "https://github.com/simrat39/rust-tools.nvim"
   },
-  ["shade.nvim"] = {
-    loaded = true,
-    path = "/home/sno0bwy/.local/share/nvim/site/pack/packer/start/shade.nvim",
-    url = "https://github.com/sunjon/shade.nvim"
-  },
   ["tagalong.vim"] = {
     loaded = true,
     path = "/home/sno0bwy/.local/share/nvim/site/pack/packer/start/tagalong.vim",
@@ -413,6 +408,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/sno0bwy/.local/share/nvim/site/pack/packer/start/which-key.nvim",
     url = "https://github.com/folke/which-key.nvim"
+  },
+  ["zone.nvim"] = {
+    loaded = true,
+    path = "/home/sno0bwy/.local/share/nvim/site/pack/packer/start/zone.nvim",
+    url = "https://github.com/tamton-aquib/zone.nvim"
   }
 }
 

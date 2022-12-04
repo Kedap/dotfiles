@@ -152,4 +152,5 @@ return require("packer").startup(function()
     },
   }
   use "jbyuki/nabla.nvim"
+  use { "tamton-aquib/zone.nvim" }
 end)
