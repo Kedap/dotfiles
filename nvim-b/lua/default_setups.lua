@@ -13,3 +13,4 @@ require("git-conflict").setup {
     current = "DiffAdd",
   },
 }
+require"fidget".setup{}

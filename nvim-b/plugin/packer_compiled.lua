@@ -309,11 +309,6 @@ _G.packer_plugins = {
     path = "/home/sno0bwy/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/kyazdani42/nvim-web-devicons"
   },
-  ["oxocarbon.nvim"] = {
-    loaded = true,
-    path = "/home/sno0bwy/.local/share/nvim/site/pack/packer/start/oxocarbon.nvim",
-    url = "https://github.com/shaunsingh/oxocarbon.nvim"
-  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/sno0bwy/.local/share/nvim/site/pack/packer/start/packer.nvim",

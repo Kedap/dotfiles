@@ -23,7 +23,7 @@ return opciones_linea
 -- return opciones_linea
 
 -- configuracion para rose pine
--- local opciones_linea = require("temas.rosame-esta")
+-- local opciones_linea = require "temas.rosame-esta"
 -- return opciones_linea
 
 -- Configuracion para enfocado

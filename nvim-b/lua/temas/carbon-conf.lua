@@ -1,14 +1,14 @@
-vim.cmd([[colorscheme oxocarbon]])
---vim.o.background = "dark"
-
---local linea = {
---  tema = "iceberg_dark",
---  estilo = "burbuja",
---}
+-- vim.o.background = "dark"
+vim.cmd [[colorscheme oxocarbon]]
 
 local linea = {
-  tema = "",
-  estilo = "novoline",
+  tema = "iceberg_dark",
+  estilo = "burbuja",
 }
+
+-- local linea = {
+--   tema = "",
+--   estilo = "novoline",
+-- }
 
 return linea

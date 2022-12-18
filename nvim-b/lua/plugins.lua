@@ -13,14 +13,14 @@ return require("packer").startup(function()
 
   -- Temas (Descomente cuando los utilice)
   -- use("bluz71/vim-nightfly-guicolors")
-  use { "shaunsingh/oxocarbon.nvim", run = "./install.sh" }
+  -- use { "shaunsingh/oxocarbon.nvim" }
   -- use("rebelot/kanagawa.nvim")
   -- use({ "catppuccin/nvim", as = "catppuccin" })
   use "EdenEast/nightfox.nvim"
   -- use({
   --   "olimorris/onedarkpro.nvim",
   -- })
-  -- use{
+  -- use {
   --   "rose-pine/neovim",
   --   as = "rose-pine",
   --   tag = "v1.*",
@@ -153,4 +153,5 @@ return require("packer").startup(function()
   }
   use "jbyuki/nabla.nvim"
   use { "tamton-aquib/zone.nvim" }
+  use "j-hui/fidget.nvim"
 end)
