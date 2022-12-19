@@ -1,0 +1,10 @@
+kitty
+rofi
+i3lock
+flameshot
+SF Text (?)
+nautilus
+redshift
+unclutter
+pavucontrol 
+vida social (IMPORTANTE)
