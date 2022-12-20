@@ -48,7 +48,7 @@ confirm_exit() {
 
 # Message
 msg() {
-  rofi -theme "$dir/message.rasi" -e "Opciones disponibles  -  si / chi / shi / s / no / n"
+  rofi -theme "$dir/message.rasi" -e "Opciones disponibles  -  si / chi / s / no / n"
 }
 
 # Variable passed to rofi

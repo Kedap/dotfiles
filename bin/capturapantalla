@@ -1,4 +1,4 @@
 #!/bin/bash
 
 wf-recorder -g "$(slurp)"
-echo "Se ha terminado de capturar la pantalla"
+echo "Se ha terminado de capturar la pantalla!"
