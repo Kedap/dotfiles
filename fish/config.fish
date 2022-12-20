@@ -52,3 +52,6 @@ fish_add_path ~/.cargo/bin/
 
 # Ruta de doom emacs
 fish_add_path ~/.emacs.d/bin/
+
+# Starshiop
+starship init fish | source
