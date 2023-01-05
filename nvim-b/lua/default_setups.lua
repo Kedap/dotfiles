@@ -13,4 +13,5 @@ require("git-conflict").setup {
     current = "DiffAdd",
   },
 }
-require"fidget".setup{}
+require("fidget").setup {}
+require("nvim-dap-virtual-text").setup()

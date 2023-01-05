@@ -126,9 +126,10 @@ wk.register({
     b = { "<cmd>lua require'dap'.toggle_breakpoint()<CR>", "Poner/quitar breakpoint" },
     l = { "<cmd>lua require'dap'.clear_breakpoints()<CR>", "Limpiar los breakpoint" },
     c = { "<cmd>lua require'dap'.continue()<CR>", "Continuar con la depuración" },
-    C = { "<cmd>lua require'dap'.terminate()<CR>", "Quitar el depurador" },
+    C = { "<cmd>DapTerminate<CR>", "Quitar el depurador" },
     p = { "<cmd>lua require'dap'.step_into()<CR>", "Step into" },
     P = { "<cmd>lua require'dap'.step_over()<CR>", "Step over" },
+    e = { "<cmd>lua require'telescope'.extensions.dap.list_breakpoints{}<CR>", "Ver los breakpoints" },
   },
   g = {
     name = "Git",

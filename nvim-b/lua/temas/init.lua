@@ -11,12 +11,12 @@
 -- return opciones_linea
 
 -- configuracion para catppuccin
--- local opciones_linea = require("temas.catppuccin-tema")
--- return opciones_linea
+local opciones_linea = require "temas.catppuccin-tema"
+return opciones_linea
 
 -- configuracion nightfox
-local opciones_linea = require "temas.nightfox-conf"
-return opciones_linea
+-- local opciones_linea = require "temas.nightfox-conf"
+-- return opciones_linea
 
 -- configuracion onedark
 -- local opciones_linea = require("temas.unodarkpro")

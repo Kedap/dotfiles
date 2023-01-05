@@ -15,8 +15,8 @@ return require("packer").startup(function()
   -- use("bluz71/vim-nightfly-guicolors")
   -- use { "shaunsingh/oxocarbon.nvim" }
   -- use("rebelot/kanagawa.nvim")
-  -- use({ "catppuccin/nvim", as = "catppuccin" })
-  use "EdenEast/nightfox.nvim"
+  use { "catppuccin/nvim", as = "catppuccin" }
+  -- use "EdenEast/nightfox.nvim"
   -- use({
   --   "olimorris/onedarkpro.nvim",
   -- })
@@ -53,7 +53,11 @@ return require("packer").startup(function()
   use "RRethy/vim-illuminate"
   use "tpope/vim-surround"
   use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } }
+  use { "theHamsta/nvim-dap-virtual-text", requires = { "mfussenegger/nvim-dap" } }
   use { "mfussenegger/nvim-dap-python", requires = { "mfussenegger/nvim-dap" } }
+  -- Instala js debug adapter
+  use { "mxsdev/nvim-dap-vscode-js", requires = { "mfussenegger/nvim-dap" } }
+  use { "nvim-telescope/telescope-dap.nvim", requires = { "mfussenegger/nvim-dap" } }
 
   --LSP
   use { "glepnir/lspsaga.nvim", branch = "main" }
@@ -75,6 +79,7 @@ return require("packer").startup(function()
       "hrsh7th/vim-vsnip",
       "hrsh7th/vim-vsnip-integ",
       "f3fora/cmp-spell",
+      "rcarriga/cmp-dap",
     },
   }
   use "onsails/lspkind-nvim"
