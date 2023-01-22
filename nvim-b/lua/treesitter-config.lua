@@ -1,6 +1,7 @@
 require("nvim-treesitter.configs").setup {
   -- Lista de lengaujes instalados
   ensure_installed = {
+    "markdown",
     "html",
     "javascript",
     "lua",

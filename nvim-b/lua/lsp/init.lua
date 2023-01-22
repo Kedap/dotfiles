@@ -1,6 +1,7 @@
-require("lsp/servidores")
-require("lsp/cmp")
-require("lsp/signos")
-require("lsp/lsp-log-conf")
-require("lsp/lsp-saga")
-require("lsp/iluminacion-conf")
+require "lsp/servidores"
+require "lsp/cmp"
+require "lsp/signos"
+require "lsp/lsp-log-conf"
+require "lsp/lsp-saga"
+require "lsp/iluminacion-conf"
+require "lsp.ufoo"

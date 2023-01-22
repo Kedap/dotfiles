@@ -13,7 +13,7 @@ return require("packer").startup(function()
 
   -- Temas (Descomente cuando los utilice)
   -- use("bluz71/vim-nightfly-guicolors")
-  -- use { "shaunsingh/oxocarbon.nvim" }
+  use { "shaunsingh/oxocarbon.nvim" }
   -- use("rebelot/kanagawa.nvim")
   use { "catppuccin/nvim", as = "catppuccin" }
   -- use "EdenEast/nightfox.nvim"
@@ -39,9 +39,11 @@ return require("packer").startup(function()
   -- }
   -- use {
   --   "katawful/kat.nvim",
-  --   tag = "2.0",
+  --   tag = "3.*",
   -- }
   -- use "Yazeed1s/oh-lucy.nvim"
+  -- use "Shatur/neovim-ayu"
+  -- use "ayu-theme/ayu-vim"
 
   -- Kodigo (super coco)
   -- Treesitter y sus acompañantes
@@ -84,9 +86,9 @@ return require("packer").startup(function()
   }
   use "onsails/lspkind-nvim"
   use "rafamadriz/friendly-snippets"
-  use "editorconfig/editorconfig-vim"
   use "mhartington/formatter.nvim"
   use { "folke/trouble.nvim", requires = "kyazdani42/nvim-web-devicons" }
+  use { "kevinhwang91/nvim-ufo", requires = "kevinhwang91/promise-async" }
 
   --Lengaujes
   use { "simrat39/rust-tools.nvim", requires = { "neovim/nvim-lspconfig", "nvim-lua/plenary.nvim" } }

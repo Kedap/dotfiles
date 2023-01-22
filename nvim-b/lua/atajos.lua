@@ -167,5 +167,11 @@ map("n", "<F5>", "<cmd>lua require'dap'.continue()<CR>", opts)
 --map("n", "ñtr", ":AsyncTask", opts)
 --map("n", "ñtl", ":AsyncTaskLast", opts)
 
+-- Atajos del fold
+vim.keymap.set("n", "zR", require("ufo").openAllFolds)
+vim.keymap.set("n", "zM", require("ufo").closeAllFolds)
+vim.keymap.set("n", "zr", require("ufo").openFoldsExceptKinds)
+vim.keymap.set("n", "zm", require("ufo").closeFoldsWith) -- closeAllFolds == closeFoldsWith(0)
+
 -- Registrando los atajos
 wk.register(mappings, wk_opts)

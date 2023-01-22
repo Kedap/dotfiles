@@ -10,9 +10,20 @@ for _, language in ipairs { "typescript", "javascript" } do
     {
       type = "pwa-node",
       request = "launch",
-      name = "Ejecutar archivo",
+      name = "Ejecutar este archivo",
       program = "${file}",
       cwd = "${workspaceFolder}",
+    },
+    {
+      type = "pwa-node",
+      request = "launch",
+      name = "Ejecutar este archivo con argumentos",
+      program = "${file}",
+      cwd = "${workspaceFolder}",
+      args = function()
+        local args_string = vim.fn.input "Argumentos: "
+        return vim.split(args_string, " +")
+      end,
     },
     {
       type = "pwa-node",

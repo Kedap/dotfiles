@@ -1,4 +1,4 @@
--- vim.o.background = "dark"
+vim.o.background = "dark"
 vim.cmd [[colorscheme oxocarbon]]
 
 local linea = {

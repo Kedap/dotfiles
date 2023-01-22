@@ -3,16 +3,16 @@
 -- return opciones_linea
 
 -- Configuracion para el carbon
--- local opciones_linea = require("temas.carbon-conf")
--- return opciones_linea
+local opciones_linea = require "temas.carbon-conf"
+return opciones_linea
 
 -- Configuracion para el japanes
 -- local opciones_linea = require("temas.tema-japones")
 -- return opciones_linea
 
 -- configuracion para catppuccin
-local opciones_linea = require "temas.catppuccin-tema"
-return opciones_linea
+-- local opciones_linea = require "temas.catppuccin-tema"
+-- return opciones_linea
 
 -- configuracion nightfox
 -- local opciones_linea = require "temas.nightfox-conf"
@@ -68,4 +68,8 @@ return opciones_linea
 
 -- Configuracion para lucia
 -- local opciones_linea = require "temas.lucia"
+-- return opciones_linea
+
+-- Configuracion para eyu
+-- local opciones_linea = require "temas.eyu"
 -- return opciones_linea
