@@ -31,9 +31,9 @@ apps = {
    power_manager = "", -- recommended: xfce4-power-manager
    terminal = "kitty",
    launcher = "rofi -normal-window -modi drun -show drun -theme " .. theme_config_dir .. "rofi.rasi",
-   lock = "i3lock",
+   lock = "i3lock -i ~/Wallpapers/bill.png",
    screenshot = "flameshot gui",
-   filebrowser = "nautilus"
+   filebrowser = "caja"
 }
 
 -- define wireless and ethernet interface names for the network widget
@@ -46,7 +46,7 @@ network_interfaces = {
 -- List of apps to run on start-up
 local run_on_start_up = {
    "redshift",
-   "unclutter",
+   --"unclutter",
    "setxkbmap -layout es"
 }
 
