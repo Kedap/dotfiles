@@ -1,5 +1,5 @@
 [user]
-	signingkey = ED6C60EDE210E2F5FAC70395448DD64285F75BA6
+	signingkey = 05E88DCE1FB040C38DE077EA62A1A1A1600C4B1A
 	email = kedap.dev@protonmail.com
 	name = Kedap
 
@@ -10,3 +10,24 @@
 [alias]
 	lg = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
         primero = rev-list --max-parents=0 HEAD
+
+# git-delta
+[core]
+    pager = delta
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    navigate = true    # use n and N to move between diff sections
+    light = false      # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
+
+[merge]
+    conflictstyle = diff3
+
+[diff]
+    colorMoved = default
+
+[delta]
+    side-by-side = true
+    line-numbers = true
