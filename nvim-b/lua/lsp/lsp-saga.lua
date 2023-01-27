@@ -33,7 +33,7 @@ require("lspsaga").setup {
     outgoing = " ",
     colors = {
       --float window normal background color
-      normal_bg = "#371B1B",
+      normal_bg = "#252837",
       --title background color
       title_bg = "#afd700",
       red = "#e95678",

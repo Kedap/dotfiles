@@ -62,8 +62,8 @@ return opciones_linea
 -- local opciones_linea = require "temas.zenfi"
 -- return opciones_linea
 
--- Configuracion para kat
--- local opciones_linea = require "temas.gatito"
+-- Configuracion para noridoc
+-- local opciones_linea = require "temas.nordico"
 -- return opciones_linea
 
 -- Configuracion para lucia
@@ -72,4 +72,8 @@ return opciones_linea
 
 -- Configuracion para eyu
 -- local opciones_linea = require "temas.eyu"
+-- return opciones_linea
+
+-- Configuracion para palenight
+-- local opciones_linea = require "temas.palenaight"
 -- return opciones_linea

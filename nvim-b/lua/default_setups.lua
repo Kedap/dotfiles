@@ -15,3 +15,7 @@ require("git-conflict").setup {
 }
 require("fidget").setup {}
 require("nvim-dap-virtual-text").setup()
+-- require('silicon').setup({
+--  font = 'Victor Mono Medium=16',
+--  theme = 'Monokai Extended',
+-- })

@@ -1,4 +1,4 @@
-require("nvim-tree").setup({
+require("nvim-tree").setup {
   sync_root_with_cwd = true,
   respect_buf_cwd = true,
   auto_reload_on_write = true,
@@ -107,4 +107,4 @@ require("nvim-tree").setup({
       profile = false,
     },
   },
-})
+}

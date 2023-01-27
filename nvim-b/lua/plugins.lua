@@ -15,7 +15,7 @@ return require("packer").startup(function()
   -- use("bluz71/vim-nightfly-guicolors")
   use { "shaunsingh/oxocarbon.nvim" }
   -- use("rebelot/kanagawa.nvim")
-  use { "catppuccin/nvim", as = "catppuccin" }
+  -- use { "catppuccin/nvim", as = "catppuccin" }
   -- use "EdenEast/nightfox.nvim"
   -- use({
   --   "olimorris/onedarkpro.nvim",
@@ -37,13 +37,11 @@ return require("packer").startup(function()
   --   "glepnir/zephyr-nvim",
   --   requires = { "nvim-treesitter/nvim-treesitter", opt = true },
   -- }
-  -- use {
-  --   "katawful/kat.nvim",
-  --   tag = "3.*",
-  -- }
+  -- use { "AlexvZyl/nordic.nvim" }
   -- use "Yazeed1s/oh-lucy.nvim"
   -- use "Shatur/neovim-ayu"
   -- use "ayu-theme/ayu-vim"
+  -- use "JoosepAlviste/palenightfall.nvim"
 
   -- Kodigo (super coco)
   -- Treesitter y sus acompañantes
@@ -128,13 +126,7 @@ return require("packer").startup(function()
   use "tpope/vim-repeat"
   use "terrortylor/nvim-comment"
   use "mbbill/undotree"
-  -- use {
-  --   "krivahtoo/silicon.nvim",
-  --   run = "./install.sh build",
-  --   config = function()
-  --     require("silicon").setup()
-  --   end,
-  -- }
+  -- use { "krivahtoo/silicon.nvim", run = "./install.sh build" }
 
   -- Atajos
   use "folke/which-key.nvim"
