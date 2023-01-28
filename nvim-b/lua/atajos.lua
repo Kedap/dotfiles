@@ -144,6 +144,12 @@ wk.register({
     r = { "<cmd>Git restore %<CR>", "Restaurar el archivo" },
     R = { "<cmd>Git restore .<CR>", "Restaurar TODOS los ARCHIVOS" },
   },
+  h = {
+    name = "Http (API rest)",
+    r = { "<Plug>RestNvim", "Correr la peticion bajo el cursor" },
+    p = { "<Plug>RestNvimPreview", "Ver la peticion con cURL" },
+    l = { "<Plug>RestNvimLast", "Volver a correr la ultima peticion" },
+  },
 }, wk_opts)
 
 map("n", "\\", ":noh<CR>", opts)
@@ -168,10 +174,8 @@ map("n", "<F5>", "<cmd>lua require'dap'.continue()<CR>", opts)
 --map("n", "ñtl", ":AsyncTaskLast", opts)
 
 -- Atajos del fold
-vim.keymap.set("n", "zR", require("ufo").openAllFolds)
-vim.keymap.set("n", "zM", require("ufo").closeAllFolds)
-vim.keymap.set("n", "zr", require("ufo").openFoldsExceptKinds)
-vim.keymap.set("n", "zm", require("ufo").closeFoldsWith) -- closeAllFolds == closeFoldsWith(0)
+vim.keymap.set("n", "zr", require("ufo").openAllFolds)
+vim.keymap.set("n", "zm", require("ufo").closeAllFolds)
 
 -- Registrando los atajos
 wk.register(mappings, wk_opts)

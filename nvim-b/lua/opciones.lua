@@ -25,4 +25,3 @@ augroup highlight_yank
     au TextYankPost * silent! lua vim.highlight.on_yank{higroup="IncSearch", timeout=700}
 augroup END
 ]]
-vim.notify = require "notify"

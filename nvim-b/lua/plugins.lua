@@ -12,14 +12,14 @@ return require("packer").startup(function()
   use { "nvim-lualine/lualine.nvim", requires = "kyazdani42/nvim-web-devicons" }
 
   -- Temas (Descomente cuando los utilice)
-  -- use("bluz71/vim-nightfly-guicolors")
-  use { "shaunsingh/oxocarbon.nvim" }
+  use "bluz71/vim-nightfly-guicolors"
+  -- use { "shaunsingh/oxocarbon.nvim" }
   -- use("rebelot/kanagawa.nvim")
   -- use { "catppuccin/nvim", as = "catppuccin" }
   -- use "EdenEast/nightfox.nvim"
-  -- use({
-  --   "olimorris/onedarkpro.nvim",
-  -- })
+  use {
+    "olimorris/onedarkpro.nvim",
+  }
   -- use {
   --   "rose-pine/neovim",
   --   as = "rose-pine",
@@ -49,8 +49,8 @@ return require("packer").startup(function()
   use { "p00f/nvim-ts-rainbow", requires = "nvim-treesitter/nvim-treesitter" }
   use { "windwp/nvim-ts-autotag", requires = "nvim-treesitter/nvim-treesitter" }
   use { "nvim-treesitter/nvim-treesitter-textobjects", requires = "nvim-treesitter/nvim-treesitter" }
+  use { "nvim-treesitter/nvim-treesitter-refactor", requires = "nvim-treesitter/nvim-treesitter" }
 
-  use "RRethy/vim-illuminate"
   use "tpope/vim-surround"
   use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } }
   use { "theHamsta/nvim-dap-virtual-text", requires = { "mfussenegger/nvim-dap" } }
@@ -97,7 +97,6 @@ return require("packer").startup(function()
   }
   use "lervag/vimtex"
   use { "iamcco/markdown-preview.nvim", run = "cd app && yarn install" }
-  use { "thosakwe/vim-flutter", requires = "Nash0x7E2/awesome-flutter-snippets" }
 
   --GIT
   use "kdheepak/lazygit.nvim"
@@ -106,7 +105,6 @@ return require("packer").startup(function()
     "lewis6991/gitsigns.nvim",
   }
   use "tpope/vim-fugitive"
-  use "akinsho/git-conflict.nvim"
 
   --Utilidades
   use { "windwp/nvim-autopairs" }
@@ -127,6 +125,7 @@ return require("packer").startup(function()
   use "terrortylor/nvim-comment"
   use "mbbill/undotree"
   -- use { "krivahtoo/silicon.nvim", run = "./install.sh build" }
+  use { "rest-nvim/rest.nvim", requires = { "nvim-lua/plenary.nvim" } }
 
   -- Atajos
   use "folke/which-key.nvim"
@@ -151,6 +150,6 @@ return require("packer").startup(function()
     },
   }
   use "jbyuki/nabla.nvim"
-  use { "tamton-aquib/zone.nvim" }
+  -- use { "tamton-aquib/zone.nvim" }
   use "j-hui/fidget.nvim"
 end)

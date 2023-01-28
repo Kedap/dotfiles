@@ -30,6 +30,19 @@ require("mason-lspconfig").setup_handlers {
       },
     }
   end,
+  ["tsserver"] = function()
+    require("lspconfig")["tsserver"].setup {
+      capabilities = capabilities,
+      single_file_support = false,
+      root_dir = lspconfig.util.root_pattern("package.json", "tsconfig.json", "jsconfig.json"),
+    }
+  end,
+  ["denols"] = function()
+    require("lspconfig")["denols"].setup {
+      capabilities = capabilities,
+      root_dir = lspconfig.util.root_pattern("deno.json", "deno.jsonc"),
+    }
+  end,
 }
 
 vim.api.nvim_command [[ hi def link LspReferenceText CursorLine ]]

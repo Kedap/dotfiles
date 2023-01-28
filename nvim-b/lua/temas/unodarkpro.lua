@@ -1,6 +1,6 @@
 vim.o.background = "dark"
-local onedarkpro = require("onedarkpro")
-onedarkpro.setup({
+local onedarkpro = require "onedarkpro"
+onedarkpro.setup {
   -- Theme can be overwritten with 'onedark' or 'onelight' as a string
   theme = function()
     if vim.o.background == "dark" then
@@ -22,10 +22,9 @@ onedarkpro.setup({
     nvim_dap = true,
     nvim_dap_ui = true,
     nvim_ts_rainbow = true,
-    trouble_nvim = true,
-    which_key_nvim = true,
+    trouble = true,
+    which_key = true,
     native_lsp = true,
-    startify = true,
     treesitter = true,
     lsp_saga = true,
     telescope = true,
@@ -49,7 +48,7 @@ onedarkpro.setup({
     terminal_colors = true, -- Use the theme's colors for Neovim's :terminal?
     window_unfocussed_color = false, -- When the window is out of focus, change the normal background?
   },
-})
+}
 onedarkpro.load()
 
 local opciones_lualine = {

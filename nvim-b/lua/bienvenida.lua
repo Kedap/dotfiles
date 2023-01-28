@@ -1,8 +1,6 @@
 local function repeat_str(str, times)
   return times > 0 and str .. repeat_str(str, times - 1) or ""
 end
-local dash = require("dashboard")
-
 local header = {
   [[]],
   [[ -{ Bienvenido sempai }-]],
@@ -39,9 +37,7 @@ local padding = (#header[#header] - #splash) / 2 - 2
 splash = repeat_str(" ", padding) .. "-> " .. splash .. " <-"
 table.insert(header, splash)
 
-dash.custom_header = header
-
-dash.custom_center = {
+local center = {
   {
     icon = "🛑  ",
     desc = "Salir de NeoGOD                         ",
@@ -85,3 +81,13 @@ dash.custom_center = {
     action = "SessionLoad",
   },
 }
+
+require("dashboard").setup {
+  theme = "doom",
+  config = {
+    header = header,
+  center = center,
+  },
+}
+
+-- dash.custom_header = header

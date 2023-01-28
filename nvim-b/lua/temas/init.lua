@@ -3,8 +3,8 @@
 -- return opciones_linea
 
 -- Configuracion para el carbon
-local opciones_linea = require "temas.carbon-conf"
-return opciones_linea
+-- local opciones_linea = require "temas.carbon-conf"
+-- return opciones_linea
 
 -- Configuracion para el japanes
 -- local opciones_linea = require("temas.tema-japones")
@@ -19,8 +19,8 @@ return opciones_linea
 -- return opciones_linea
 
 -- configuracion onedark
--- local opciones_linea = require("temas.unodarkpro")
--- return opciones_linea
+local opciones_linea = require("temas.unodarkpro")
+return opciones_linea
 
 -- configuracion para rose pine
 -- local opciones_linea = require "temas.rosame-esta"
