@@ -153,6 +153,9 @@ return {
         php = {
           require("formatter.filetypes.php").phpcbf,
         },
+        jsonc = {
+          require("formatter.filetypes.json").prettier,
+        }
       },
     }
 

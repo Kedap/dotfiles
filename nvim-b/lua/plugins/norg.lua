@@ -15,8 +15,20 @@ return {
         ["core.norg.dirman"] = {
           config = {
             workspaces = {
-              home = "~/org/norg/",
+              home = "~/norg/",
             },
+          },
+        },
+
+        ["core.export"] = {
+          config = { -- Note that this table is optional and doesn't need to be provided
+            export_dir = "~/norg/",
+          },
+        },
+        ["core.export.markdown"] = {
+          config = { -- Note that this table is optional and doesn't need to be provided
+            extensions = "all",
+            extension = "md",
           },
         },
 

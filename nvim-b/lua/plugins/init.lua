@@ -1,7 +1,7 @@
 return {
   "tpope/vim-repeat",
   { "nvim-tree/nvim-web-devicons", config = true },
-  { "jbyuki/nabla.nvim", ft = "tex" },
+  { "jbyuki/nabla.nvim", ft = { "tex", "norg" } },
   { "tpope/vim-fugitive", cmd = "Git" },
   { "kdheepak/lazygit.nvim", cmd = "LazyGit" },
   { "voldikss/vim-floaterm", cmd = "FloatermNew" },

@@ -1,0 +1,8 @@
+plugins/!
+plugins
+Neovim/!
+Neovim
+lua
+LSP
+GIT
+Rust
