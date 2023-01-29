@@ -1,13 +1,3 @@
----
-title: README
-description: Información básica de los plugins de Neovim
-authors: sno0bwy
-categories: created: 2023-01-29
-updated: 2023-01-29
-version: 1.0.0
----
-
-
 # Neovim (lua)
 
 Aquí se puede ver la configuración escrito en este lenguaje
