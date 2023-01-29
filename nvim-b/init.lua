@@ -1,30 +1,20 @@
--- Para mejorar el arranque
-local impati_ok, impatient = pcall(require, "impatient")
-if impati_ok then
-  impatient.enable_profile()
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
 end
+vim.opt.rtp:prepend(lazypath)
 
-require "plugins"
-require "opciones"
-require "atajos"
-require "neovim-tree-conf"
-require "treesitter-config"
-require "default_setups"
-require "pairs_conf"
-require "indent-conf"
-require "org-conf"
-require "lsp"
-require "barritas"
-require "rust-conf"
-require "formato-conf"
-require "telescopio-config"
-require "notificaciones-config"
-require "nolua"
-require "depuracion-conf"
-require "colorizer-config"
-require "ver-diff"
-require "bienvenida"
-require "temas"
-require "lineabuffer"
-require "res-api"
--- require "pantalla-sal"
+require("opciones")
+require("lazy").setup {
+spec = {
+        { import = "plugins" },
+    },
+    checker = { enabled = true, notify = false },
+}

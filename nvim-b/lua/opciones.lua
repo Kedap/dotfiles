@@ -18,6 +18,7 @@ vim.o.colorcolumn = "105"
 vim.o.backup = false
 vim.o.spelllang = "es"
 vim.o.lazyredraw = true
+vim.g.mapleader = " "
 vim.cmd "highlight ColoColumn ctermbg=0 guibg=lightgrey"
 vim.cmd [[
 augroup highlight_yank
