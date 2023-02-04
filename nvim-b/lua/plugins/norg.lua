@@ -2,8 +2,9 @@ return {
   "nvim-neorg/neorg",
   build = ":Neorg sync-parsers",
   ft = "norg",
-  dependencies = { { "nvim-lua/plenary.nvim" } },
+  dependencies = { "nvim-lua/plenary.nvim", { "Pocco81/true-zen.nvim", config = true }, "nvim-neorg/neorg-telescope" },
   config = function()
+    -- require "config.telescope"
     require("neorg").setup {
       load = {
         ["core.defaults"] = {},
@@ -31,6 +32,13 @@ return {
             extension = "md",
           },
         },
+
+        ["core.presenter"] = {
+          config = {
+            zen_mode = "truezen",
+          },
+        },
+        ["core.integrations.telescope"] = {}, -- Enable the telescope module
 
         ["core.norg.concealer"] = {
           config = {
