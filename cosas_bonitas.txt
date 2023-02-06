@@ -1,7 +1,6 @@
 cava (audio)
 tty-clock
 redshift
-surf
 pipe bash
 zathura
 dunst
