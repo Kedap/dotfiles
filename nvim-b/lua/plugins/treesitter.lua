@@ -33,6 +33,7 @@ return {
         "http",
         "json",
         "jsonc",
+        "rust",
       },
 
       highlight = {

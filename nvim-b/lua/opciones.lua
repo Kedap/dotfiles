@@ -19,6 +19,7 @@ vim.o.backup = false
 vim.o.spelllang = "es"
 vim.o.lazyredraw = true
 vim.g.mapleader = " "
+vim.wo.signcolumn = "auto:3"
 vim.cmd "highlight ColoColumn ctermbg=0 guibg=lightgrey"
 vim.cmd [[
 augroup highlight_yank

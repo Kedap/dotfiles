@@ -15,6 +15,8 @@ return {
     "f3fora/cmp-spell",
     "onsails/lspkind-nvim",
     "rafamadriz/friendly-snippets",
+    { "petertriho/cmp-git", dependencies = "nvim-lua/plenary.nvim" },
+    "hrsh7th/cmp-emoji",
   },
   config = function()
     -- Set up nvim-cmp.
@@ -78,6 +80,7 @@ return {
         { name = "calc" },
         { name = "spell" },
         { name = "neorg" },
+        { name = "emoji" },
         -- { name = 'luasnip' }, -- For luasnip users.
         -- { name = 'ultisnips' }, -- For ultisnips users.
         -- { name = 'snippy' }, -- For snippy users.
@@ -95,8 +98,9 @@ return {
     -- Set configuration for specific filetype.
     cmp.setup.filetype("gitcommit", {
       sources = cmp.config.sources({
-        { name = "cmp_git" }, -- You can specify the `cmp_git` source if you were installed it.
+        { name = "git" }, -- You can specify the `cmp_git` source if you were installed it.
       }, {
+        { name = "vsnip" },
         { name = "buffer" },
       }),
     })
@@ -124,5 +128,7 @@ return {
         { name = "cmdline" },
       }),
     })
+
+    require("cmp_git").setup()
   end,
 }
