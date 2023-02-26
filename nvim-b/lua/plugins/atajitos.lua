@@ -36,7 +36,7 @@ return {
       -- De cajon
       f = {
         name = "Archivo",
-        w = { ":w! <cr>", "Guardar" },
+        o = { ":w! <cr>", "Guardar" },
         s = { ":x! <cr>", "Guardar y salir" },
         n = { ":NvimTreeToggle<CR>", "Abrir gestor de archivos" },
         f = { "<cmd>Telescope find_files<CR>", "Encontrar archivos" },
@@ -45,9 +45,9 @@ return {
       },
       p = {
         name = "Gestor de plugins",
-        i = { "<cmd>PackerInstall<CR>", "Instalar nuevos plugins" },
-        c = { "<cmd>PackerClean<CR>", "Limpiar cache" },
-        u = { "<cmd>PackerSync<CR>", "Actualizar plugins" },
+        i = { "<cmd>Lazy install<CR>", "Instalar nuevos plugins" },
+        c = { "<cmd>Lazy clean<CR>", "Limpiar cache" },
+        u = { "<cmd>Lazy update<CR>", "Actualizar plugins" },
       },
       b = {
         name = "Buffer",

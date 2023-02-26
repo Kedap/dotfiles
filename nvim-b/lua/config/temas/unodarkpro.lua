@@ -9,12 +9,6 @@ onedarkpro.setup {
       return "onelight"
     end
   end,
-  hlgroups = {
-    DiagnosticUnderlineError = { bg = "NONE", style = "underline" },
-    DiagnosticUnderlineWarn = { bg = "NONE", style = "underline" },
-    DiagnosticUnderlineInfo = { bg = "NONE", style = "underline" },
-    DiagnosticUnderlineHint = { bg = "NONE", style = "underline" },
-  },
   plugins = { -- Override which plugins highlight groups are loaded
     hop = true,
     indentline = true,

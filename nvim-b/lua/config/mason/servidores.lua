@@ -1,7 +1,7 @@
 local lspconfig = require "lspconfig"
 require("mason").setup()
 require("mason-lspconfig").setup {
-  ensure_installed = { "sumneko_lua", "tsserver" },
+  ensure_installed = { "lua_ls", "tsserver" },
   -- ensure_installed = { "sumneko_lua", "tsserver", "stylua" }
 }
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
@@ -12,8 +12,8 @@ require("mason-lspconfig").setup_handlers {
       capabilities = capabilities,
     }
   end,
-  ["sumneko_lua"] = function()
-    require("lspconfig")["sumneko_lua"].setup {
+  ["lua_ls"] = function()
+    require("lspconfig")["lua_ls"].setup {
       capabilities = capabilities,
       settings = {
         Lua = {

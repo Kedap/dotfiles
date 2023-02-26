@@ -1,6 +1,6 @@
-vim.g.catppuccin_flavour = "macchiato"
 local catppuccin = require "catppuccin"
 catppuccin.setup {
+  flavour = "mocha",
   transparent_background = false,
   term_colors = false,
   styles = {
@@ -51,15 +51,10 @@ catppuccin.setup {
       transparent_panel = true,
     },
     which_key = true,
-    indent_blankline = {
-      enabled = true,
-      colored_indent_levels = true,
-    },
     dashboard = true,
     vim_sneak = false,
     fern = false,
     barbar = false,
-    bufferline = true,
     markdown = true,
     lightspeed = false,
     ts_rainbow = true,
@@ -67,6 +62,7 @@ catppuccin.setup {
     notify = true,
     telekasten = false,
     symbols_outline = false,
+    fidget = true,
   },
 }
 vim.cmd [[colorscheme catppuccin]]

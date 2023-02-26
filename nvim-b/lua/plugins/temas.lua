@@ -18,9 +18,9 @@ return {
   -- lazy = true,
   -- priority = 1000,
 
-  "olimorris/onedarkpro.nvim",
-  lazy = true,
-  priority = 1000,
+  -- "olimorris/onedarkpro.nvim",
+  -- lazy = true,
+  -- priority = 1000,
 
   -- "rose-pine/neovim",
   -- name = "rose-pine",
@@ -85,4 +85,9 @@ return {
   -- "JoosepAlviste/palenightfall.nvim",
   -- lazy = true,
   -- priority = 1000,
+
+  "uloco/bluloco.nvim",
+  lazy = true,
+  priority = 1000,
+  dependencies = { "rktjmp/lush.nvim" },
 }

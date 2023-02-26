@@ -6,7 +6,7 @@ return {
   -- { "kdheepak/lazygit.nvim", cmd = "LazyGit" },
   { "voldikss/vim-floaterm", cmd = "FloatermNew" },
   { "akinsho/toggleterm.nvim", cmd = "ToggleTerm", config = true },
-  { "j-hui/fidget.nvim", event = "BufRead", config = true },
+  { "j-hui/fidget.nvim", event = "BufRead", opts = { window = { blend = 0 } } },
   { "terrortylor/nvim-comment", name = "nvim_comment", config = true, keys = {
     { "gc", mode = "n" },
   } },

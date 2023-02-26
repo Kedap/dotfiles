@@ -19,8 +19,8 @@
 -- return opciones_linea
 
 -- configuracion onedark
-local opciones_linea = require "config.temas.unodarkpro"
-return opciones_linea
+-- local opciones_linea = require "config.temas.unodarkpro"
+-- return opciones_linea
 
 -- configuracion para rose pine
 -- local opciones_linea = require "config.temas.rosame-esta"
@@ -77,3 +77,7 @@ return opciones_linea
 -- Configuracion para palenight
 -- local opciones_linea = require "config.temas.palenaight"
 -- return opciones_linea
+
+-- Configuracion para loco
+local opciones_linea = require "config.temas.loco"
+return opciones_linea
