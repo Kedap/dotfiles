@@ -79,5 +79,9 @@
 -- return opciones_linea
 
 -- Configuracion para loco
-local opciones_linea = require "config.temas.loco"
+-- local opciones_linea = require "config.temas.loco"
+-- return opciones_linea
+
+-- Configuracion dulce
+local opciones_linea = require "config.temas.dulcesito"
 return opciones_linea

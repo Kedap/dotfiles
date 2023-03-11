@@ -3,7 +3,6 @@ return {
   { "nvim-tree/nvim-web-devicons", config = true },
   { "jbyuki/nabla.nvim", ft = { "tex", "norg" } },
   { "tpope/vim-fugitive", cmd = "Git" },
-  -- { "kdheepak/lazygit.nvim", cmd = "LazyGit" },
   { "voldikss/vim-floaterm", cmd = "FloatermNew" },
   { "akinsho/toggleterm.nvim", cmd = "ToggleTerm", config = true },
   { "j-hui/fidget.nvim", event = "BufRead", opts = { window = { blend = 0 } } },

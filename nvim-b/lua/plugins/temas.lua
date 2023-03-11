@@ -86,8 +86,12 @@ return {
   -- lazy = true,
   -- priority = 1000,
 
-  "uloco/bluloco.nvim",
+  -- "uloco/bluloco.nvim",
+  -- lazy = true,
+  -- priority = 1000,
+  -- dependencies = { "rktjmp/lush.nvim" },
+
+  "NTBBloodbath/sweetie.nvim",
   lazy = true,
   priority = 1000,
-  dependencies = { "rktjmp/lush.nvim" },
 }
