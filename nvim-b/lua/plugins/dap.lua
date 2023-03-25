@@ -5,6 +5,7 @@ return {
     { "theHamsta/nvim-dap-virtual-text", config = true },
     "mfussenegger/nvim-dap-python",
     "mxsdev/nvim-dap-vscode-js",
+    "suketa/nvim-dap-ruby",
 
     "nvim-telescope/telescope-dap.nvim",
     "rcarriga/cmp-dap",

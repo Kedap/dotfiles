@@ -66,9 +66,9 @@ return {
   -- lazy = true,
   -- priority = 1000,
 
-  -- "AlexvZyl/nordic.nvim",
-  -- lazy = true,
-  -- priority = 1000,
+  "AlexvZyl/nordic.nvim",
+  lazy = true,
+  priority = 1000,
 
   -- "Yazeed1s/oh-lucy.nvim",
   -- lazy = true,
@@ -91,7 +91,7 @@ return {
   -- priority = 1000,
   -- dependencies = { "rktjmp/lush.nvim" },
 
-  "NTBBloodbath/sweetie.nvim",
-  lazy = true,
-  priority = 1000,
+  -- "NTBBloodbath/sweetie.nvim",
+  -- lazy = true,
+  -- priority = 1000,
 }
