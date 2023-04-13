@@ -49,7 +49,10 @@ fish_add_path ~/.local/bin/
 fish_add_path ~/.cargo/bin/
 
 # Ruta de doom emacs
-fish_add_path ~/.emacs.d/bin/
+# fish_add_path ~/.emacs.d/bin/
+
+# Ruta de scala
+fish_add_path ~/.local/share/coursier/bin
 
 # Starshiop
 starship init fish | source
