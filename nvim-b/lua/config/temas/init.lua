@@ -63,8 +63,8 @@
 -- return opciones_linea
 
 -- Configuracion para noridoc
-local opciones_linea = require "config.temas.nordico"
-return opciones_linea
+-- local opciones_linea = require "config.temas.nordico"
+-- return opciones_linea
 
 -- Configuracion para lucia
 -- local opciones_linea = require "config.temas.lucia"
@@ -85,3 +85,7 @@ return opciones_linea
 -- Configuracion dulce
 -- local opciones_linea = require "config.temas.dulcesito"
 -- return opciones_linea
+
+-- Configuracion monosai
+local opciones_linea = require "config.temas.monosai"
+return opciones_linea

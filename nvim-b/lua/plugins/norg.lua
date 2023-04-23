@@ -8,12 +8,12 @@ return {
     require("neorg").setup {
       load = {
         ["core.defaults"] = {},
-        ["core.norg.completion"] = {
+        ["core.completion"] = {
           config = {
             engine = "nvim-cmp", -- we current support nvim-compe and nvim-cmp only
           },
         },
-        ["core.norg.dirman"] = {
+        ["core.dirman"] = {
           config = {
             workspaces = {
               home = "~/norg/",
@@ -40,7 +40,7 @@ return {
         },
         ["core.integrations.telescope"] = {}, -- Enable the telescope module
 
-        ["core.norg.concealer"] = {
+        ["core.concealer"] = {
           config = {
             icons = {
               todo = {
