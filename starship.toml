@@ -11,7 +11,7 @@ disabled = true
 
 [hostname]
 ssh_only = false
-format =  "on [$hostname](bold cyan) "
+format = "on [$hostname](bold cyan) "
 trim_at = ".companyname.com"
 disabled = false
 
@@ -29,7 +29,7 @@ symbol = " "
 symbol = " "
 
 [directory]
-read_only = " "
+read_only = " 󰌾"
 style = "bold green"
 format = "in [$path]($style)[$read_only]($read_only_style) "
 
@@ -43,7 +43,7 @@ symbol = " "
 symbol = " "
 
 [git_branch]
-symbol = " "
+symbol = " "
 
 [golang]
 symbol = " "
@@ -58,16 +58,16 @@ symbol = " "
 symbol = " "
 
 [memory_usage]
-symbol = " "
+symbol = "󰍛 "
 
 [nim]
-symbol = " "
+symbol = "󰆥 "
 
 [nix_shell]
 symbol = " "
 
 [package]
-symbol = " "
+symbol = "󰏗 "
 
 [perl]
 symbol = " "
@@ -91,4 +91,4 @@ symbol = " "
 symbol = " "
 
 [swift]
-symbol = "ﯣ "
+symbol = "󰛥 "
