@@ -48,7 +48,7 @@ return {
 
                 done = {
                   enabled = true,
-                  icon = "",
+                  icon = "",
                   pattern = "^(%s*%-%s+%[%s*)x%s*%]%s+",
                   whitespace_index = 1,
                   highlight = "NeorgTodoItemDoneMark",
@@ -57,7 +57,7 @@ return {
 
                 pending = {
                   enabled = true,
-                  icon = "",
+                  icon = "󰥔",
                   pattern = "^(%s*%-%s+%[%s*)%*%s*%]%s+",
                   whitespace_index = 1,
                   highlight = "NeorgTodoItemPendingMark",
@@ -125,7 +125,7 @@ return {
 
               marker = {
                 enabled = true,
-                icon = "",
+                icon = "󰀱",
                 pattern = "^(%s*)%|%s+",
                 whitespace_index = 1,
                 highlight = "NeorgMarker",

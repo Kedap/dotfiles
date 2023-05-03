@@ -32,8 +32,8 @@ return {
       preview = " ",
       code_action = "💡",
       diagnostic = "🐞",
-      incoming = " ",
-      outgoing = " ",
+      incoming = "󰏷 ",
+      outgoing = "󰏻 ",
       colors = {
         --float window normal background color
         normal_bg = "#252837",
