@@ -14,7 +14,7 @@ require("lualine").setup {
     lualine_a = { "mode" },
     lualine_b = { { "branch", icon = "" }, "diff", "diagnostics" },
     lualine_c = {
-      { "filename", symbols = { modified = " []", readonly = " []", unnamed = " [Sin nombre]" } },
+      { "filename", symbols = { modified = " []", readonly = " [󰃀]", unnamed = " [Sin nombre]" } },
     },
     lualine_x = {
       "encoding",
