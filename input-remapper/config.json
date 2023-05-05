@@ -1,7 +1,7 @@
 {
-    "version": "1.5.0",
+    "version": "2.0.0",
     "autoload": {
-        "BY Tech Usb Gaming Keyboard": "programing"
+        "BY Tech Usb Gaming Keyboard": "superTeclas"
     },
     "macros": {
         "keystroke_sleep_ms": 10
