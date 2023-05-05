@@ -47,8 +47,8 @@ network_interfaces = {
 local run_on_start_up = {
    "redshift",
    --"unclutter",
-   "setxkbmap -layout es",
-   --"setxkbmap -layout es -variant dvorak"
+   -- "setxkbmap -layout es",
+   "setxkbmap -layout es -variant dvorak"
 }
 
 
