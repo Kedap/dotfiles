@@ -147,6 +147,9 @@ return {
         cpp = {
           require("formatter.filetypes.cpp").clangformat,
         },
+        cmake = {
+          require("formatter.filetypes.cmake").cmakeformat,
+        },
         go = {
           require("formatter.filetypes.go").gofmt,
         },
@@ -155,7 +158,7 @@ return {
         },
         jsonc = {
           require("formatter.filetypes.json").prettier,
-        }
+        },
       },
     }
 

@@ -58,9 +58,9 @@ return {
   -- lazy = true,
   -- priority = 1000,
 
-  -- "sam4llis/nvim-tundra",
-  -- lazy = true,
-  -- priority = 1000,
+  "sam4llis/nvim-tundra",
+  lazy = true,
+  priority = 1000,
 
   -- "glepnir/zephyr-nvim",
   -- lazy = true,
@@ -95,7 +95,7 @@ return {
   -- lazy = true,
   -- priority = 1000,
 
-  "https://gitlab.com/__tpb/monokai-pro.nvim",
-  lazy = true,
-  priority = 1000,
+  -- "https://gitlab.com/__tpb/monokai-pro.nvim",
+  -- lazy = true,
+  -- priority = 1000,
 }

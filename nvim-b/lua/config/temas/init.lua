@@ -55,8 +55,8 @@
 -- return opciones_linea
 
 -- Configuracion para el tundra
--- local opciones_linea = require "config.temas.trundrita"
--- return opciones_linea
+local opciones_linea = require "config.temas.trundrita"
+return opciones_linea
 
 -- Configuracion para zenfi
 -- local opciones_linea = require "config.temas.zenfi"
@@ -87,5 +87,5 @@
 -- return opciones_linea
 
 -- Configuracion monosai
-local opciones_linea = require "config.temas.monosai"
-return opciones_linea
+-- local opciones_linea = require "config.temas.monosai"
+-- return opciones_linea

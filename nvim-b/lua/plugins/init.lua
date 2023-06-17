@@ -5,7 +5,7 @@ return {
   { "tpope/vim-fugitive", cmd = "Git" },
   { "voldikss/vim-floaterm", cmd = "FloatermNew" },
   { "akinsho/toggleterm.nvim", cmd = "ToggleTerm", config = true },
-  { "j-hui/fidget.nvim", event = "BufRead", opts = { window = { blend = 0 } } },
+  { "j-hui/fidget.nvim", event = "BufRead", opts = { window = { blend = 0 } }, tag = "legacy" },
   { "terrortylor/nvim-comment", name = "nvim_comment", config = true, keys = {
     { "gc", mode = "n" },
   } },
