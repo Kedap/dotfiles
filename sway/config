@@ -62,6 +62,7 @@ exec swayidle -w \
 # Read `man 5 sway-input` for more information about this section.
 input * {
     xkb_layout "es"
+    xkb_variant "dvorak"
 }
 
 # Configuracion para las teclas normales

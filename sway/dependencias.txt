@@ -5,3 +5,4 @@ playerctl
 rofi
 otf-font-awesome
 xorg-xwayland
+xorg-xhost
