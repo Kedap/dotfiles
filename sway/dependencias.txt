@@ -6,3 +6,4 @@ rofi
 otf-font-awesome
 xorg-xwayland
 xorg-xhost
+gammastep (redshift)
