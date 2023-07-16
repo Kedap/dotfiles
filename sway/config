@@ -232,4 +232,6 @@ bar {
     swaybar_command waybar
 }
 
+exec "/home/sno0bwy/.config/sway/fondo.sh"
+exec "gammastep"
 include /etc/sway/config.d/*
