@@ -79,7 +79,7 @@ return {
         { name = "crates" },
         { name = "calc" },
         { name = "spell" },
-        { name = "neorg" },
+        -- { name = "neorg" },
         { name = "emoji" },
         -- { name = 'luasnip' }, -- For luasnip users.
         -- { name = 'ultisnips' }, -- For ultisnips users.
