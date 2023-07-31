@@ -4,6 +4,6 @@ rm -rf gtk-theme-collections
 git clone https://github.com/vinceliuice/vimix-icon-theme.git
 ./vimix-icon-theme/install.sh -a
 rm -rf vimi-icon-theme
-echo "Installing lxappereance"
-sudo pacman -S lxappearance --noconfirm
+echo "Installing lxappereance for gtk+ and gtk+ 3"
+sudo pacman -S lxappearance lxappearance-gtk3 --noconfirm
 lxappearance
