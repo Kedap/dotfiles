@@ -54,13 +54,13 @@ return {
   -- lazy = true,
   -- priority = 1000,
 
-  -- "folke/tokyonight.nvim",
-  -- lazy = true,
-  -- priority = 1000,
-
-  "sam4llis/nvim-tundra",
+  "folke/tokyonight.nvim",
   lazy = true,
   priority = 1000,
+
+  -- "sam4llis/nvim-tundra",
+  -- lazy = true,
+  -- priority = 1000,
 
   -- "glepnir/zephyr-nvim",
   -- lazy = true,

@@ -1,8 +1,8 @@
 local lspconfig = require "lspconfig"
 require("mason").setup()
 require("mason-lspconfig").setup {
-  ensure_installed = { "lua_ls", "tsserver" },
-  -- ensure_installed = { "sumneko_lua", "tsserver", "stylua" }
+  -- ensure_installed = { "lua_ls", "typescript-language-server" },
+  ensure_installed = { "lua_ls", "tsserver"}
 }
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 

@@ -51,12 +51,12 @@
 -- return opciones_linea
 
 -- Configuracion para tokio night
--- local opciones_linea = require "config.temas.tokio_noche"
--- return opciones_linea
+local opciones_linea = require "config.temas.tokio_noche"
+return opciones_linea
 
 -- Configuracion para el tundra
-local opciones_linea = require "config.temas.trundrita"
-return opciones_linea
+-- local opciones_linea = require "config.temas.trundrita"
+-- return opciones_linea
 
 -- Configuracion para zenfi
 -- local opciones_linea = require "config.temas.zenfi"

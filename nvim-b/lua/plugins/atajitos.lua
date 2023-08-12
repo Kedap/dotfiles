@@ -54,6 +54,7 @@ return {
         n = { "<cmd>BufferLineCycleNext<CR>", "Ir al siguiente buffer" },
         p = { "<cmd>BufferLineCyclePrev<CR>", "Ir al anterior buffer" },
         c = { "<cmd>bd<CR>", "Borrar buffer actual" },
+        v = { "<cmd>enew<CR>", "Abrir un buffer nuevo y vacio" },
       },
       c = {
         name = "Codigo",

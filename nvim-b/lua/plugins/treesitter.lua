@@ -3,7 +3,8 @@ return {
   build = ":TSUpdate",
   event = "BufRead",
   dependencies = {
-    "p00f/nvim-ts-rainbow",
+    -- "p00f/nvim-ts-rainbow",
+    "https://gitlab.com/HiPhish/rainbow-delimiters.nvim",
     "windwp/nvim-ts-autotag",
     "nvim-treesitter/nvim-treesitter-textobjects",
     "nvim-treesitter/nvim-treesitter-refactor",
@@ -40,14 +41,14 @@ return {
         enable = true,
         additional_vim_regex_highlighting = false,
       },
-      rainbow = {
-        enable = true,
-        -- disable = { "jsx", "cpp" }, list of languages you want to disable the plugin for
-        extended_mode = true, -- Also highlight non-bracket delimiters like html tags, boolean or table: lang -> boolean
-        max_file_lines = nil, -- Do not enable for files with more than n lines, int
-        -- colors = {}, -- table of hex strings
-        -- termcolors = {} -- table of colour name strings
-      },
+      -- rainbow = {
+      --   enable = true,
+      --   -- disable = { "jsx", "cpp" }, list of languages you want to disable the plugin for
+      --   extended_mode = true, -- Also highlight non-bracket delimiters like html tags, boolean or table: lang -> boolean
+      --   max_file_lines = nil, -- Do not enable for files with more than n lines, int
+      --   -- colors = {}, -- table of hex strings
+      --   -- termcolors = {} -- table of colour name strings
+      -- },
       autotag = { enable = true },
 
       textobjects = {
@@ -60,8 +61,8 @@ return {
           keymaps = {
             ["af"] = "@function.outer",
             ["if"] = "@function.inner",
-            ["ac"] = "@conditional.outer",
-            ["ic"] = "@conditional.inner",
+            ["ac"] = "@class.outer",
+            ["ic"] = "@class.inner",
           },
           -- You can choose the select mode (default is charwise 'v')
           --
@@ -95,6 +96,29 @@ return {
         highlight_current_scope = { enable = false },
         smart_rename = { enable = false },
         navigation = { enable = false },
+      },
+    }
+
+    -- Rainbow
+    local rainbow_delimiters = require "rainbow-delimiters"
+
+    vim.g.rainbow_delimiters = {
+      strategy = {
+        [""] = rainbow_delimiters.strategy["global"],
+        vim = rainbow_delimiters.strategy["local"],
+      },
+      query = {
+        [""] = "rainbow-delimiters",
+        lua = "rainbow-blocks",
+      },
+      highlight = {
+        "RainbowDelimiterRed",
+        "RainbowDelimiterYellow",
+        "RainbowDelimiterBlue",
+        "RainbowDelimiterOrange",
+        "RainbowDelimiterGreen",
+        "RainbowDelimiterViolet",
+        "RainbowDelimiterCyan",
       },
     }
   end,
