@@ -1,17 +1,32 @@
 local dap = require "dap"
-dap.adapters.lldb = {
-  type = "executable",
-  command = "/usr/bin/lldb-vscode", -- adjust as needed, must be absolute path
-  name = "lldb",
+-- dap.adapters.lldb = {
+--   type = "executable",
+--   command = "/usr/bin/lldb-vscode", -- adjust as needed, must be absolute path
+--   name = "lldb",
+-- }
+
+dap.adapters.codelldb = {
+  type = "server",
+  -- host = "127.0.0.1",
+  -- port = 13000,
+  port = "${port}",
+  executable = {
+    -- CHANGE THIS to your path!
+    command = "/usr/bin/codelldb",
+    args = { "--port", "${port}" },
+
+    -- On windows you may have to uncomment this:
+    -- detached = false,
+  },
 }
 
-dap.configurations.cpp = {
+dap.configurations.rust = {
   {
     name = "Ejecutar",
-    type = "lldb",
+    type = "codelldb",
     request = "launch",
     program = function()
-      return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
+      return vim.fn.input("Ruta del ejecutable: ", vim.fn.getcwd() .. "/", "file")
     end,
     cwd = "${workspaceFolder}",
     stopOnEntry = false,
@@ -32,13 +47,13 @@ dap.configurations.cpp = {
   },
   {
     name = "Ejecutar con argumentos",
-    type = "lldb",
+    type = "codelldb",
     request = "launch",
     program = function()
-      return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
+      return vim.fn.input("Ruta del ejecutable: ", vim.fn.getcwd() .. "/", "file")
     end,
     cwd = "${workspaceFolder}",
-    stopOnEntry = false,
+    stopOnEntry = true,
     args = function()
       local args_string = vim.fn.input "Argumentos: "
       return vim.split(args_string, " +")
@@ -62,4 +77,9 @@ dap.configurations.cpp = {
 -- If you want to use this for Rust and C, add something like this:
 
 dap.configurations.c = dap.configurations.cpp
-dap.configurations.rust = dap.configurations.cpp
+-- dap.configurations.rust = dap.configurations.cpp
+dap.configurations.cpp = dap.configurations.rust
+
+dap.listeners.before.event_initialized["split_winow"] = function()
+  vim.cmd "vs"
+end

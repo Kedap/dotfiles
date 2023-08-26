@@ -133,6 +133,10 @@ return {
       d = {
         name = "Depuración moment",
         b = { "<cmd>lua require'dap'.toggle_breakpoint()<CR>", "Poner/quitar breakpoint" },
+        k = {
+          "<cmd>lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>",
+          "Poner un breakpoint condicional",
+        },
         l = { "<cmd>lua require'dap'.clear_breakpoints()<CR>", "Limpiar los breakpoint" },
         c = { "<cmd>lua require'dap'.continue()<CR>", "Continuar con la depuración" },
         C = { "<cmd>DapTerminate<CR>", "Quitar el depurador" },
