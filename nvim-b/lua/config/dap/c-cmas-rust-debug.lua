@@ -16,7 +16,7 @@ dap.adapters.codelldb = {
     args = { "--port", "${port}" },
 
     -- On windows you may have to uncomment this:
-    -- detached = false,
+    detached = false,
   },
 }
 
@@ -74,11 +74,24 @@ dap.configurations.rust = {
   },
 }
 
+dap.configurations.cpp = {
+  {
+    name = "Launch file",
+    type = "codelldb",
+    request = "launch",
+    program = function()
+      return vim.fn.input("Ruta del ejecutable: ", vim.fn.getcwd() .. "/", "file")
+    end,
+    cwd = "${workspaceFolder}",
+    stopOnEntry = false,
+  },
+}
+
 -- If you want to use this for Rust and C, add something like this:
 
 dap.configurations.c = dap.configurations.cpp
 -- dap.configurations.rust = dap.configurations.cpp
-dap.configurations.cpp = dap.configurations.rust
+-- dap.configurations.cpp = dap.configurations.rust
 
 dap.listeners.before.event_initialized["split_winow"] = function()
   vim.cmd "vs"
