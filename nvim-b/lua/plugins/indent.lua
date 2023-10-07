@@ -1,18 +1,29 @@
 return {
   "lukas-reineke/indent-blankline.nvim",
+  main = "ibl",
   event = "BufRead",
-  opts = {
-    indentLine_enable = 1,
-    filetype_exclude = {
-      "help",
-      "terminal",
-      "toggleterm",
-      "floatterm",
-      "NvimTree",
-      "",
-    },
-    show_trailing_blankline_indent = false,
-    show_first_indent_level = false,
-    show_current_context = true,
-  },
+  config = function()
+    local hooks = require "ibl.hooks"
+    require("ibl").setup {
+      exclude = {
+        filetypes = {
+          "help",
+          "terminal",
+          "toggleterm",
+          "floatterm",
+          "NvimTree",
+          "nofile",
+          "prompt",
+          "quickfix",
+        },
+      },
+      scope = {
+        show_start = false,
+        show_end = false,
+      },
+      indent = { char = "│" },
+    }
+    hooks.register(hooks.type.WHITESPACE, hooks.builtin.hide_first_space_indent_level)
+    hooks.register(hooks.type.WHITESPACE, hooks.builtin.hide_first_tab_indent_level)
+  end,
 }
