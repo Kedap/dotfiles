@@ -93,6 +93,6 @@ dap.configurations.c = dap.configurations.cpp
 -- dap.configurations.rust = dap.configurations.cpp
 -- dap.configurations.cpp = dap.configurations.rust
 
-dap.listeners.before.event_initialized["split_winow"] = function()
-  vim.cmd "vs"
-end
+-- dap.listeners.before.event_initialized["split_winow"] = function()
+--   vim.cmd "vs"
+-- end

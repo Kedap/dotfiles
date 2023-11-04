@@ -6,6 +6,7 @@ return {
     "mfussenegger/nvim-dap-python",
     "mxsdev/nvim-dap-vscode-js",
     "suketa/nvim-dap-ruby",
+    "leoluz/nvim-dap-go",
 
     "nvim-telescope/telescope-dap.nvim",
     "rcarriga/cmp-dap",

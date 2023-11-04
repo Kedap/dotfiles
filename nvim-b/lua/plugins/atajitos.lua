@@ -65,6 +65,7 @@ return {
         a = { "<cmd>Lspsaga code_action<CR>", "Accion del codigo" },
         D = { "<cmd>Lspsaga show_line_diagnostics<CR>", "Ver diagnostico" },
         l = { "<cmd>TroubleToggle<CR>", "Ver logs de LSP" },
+        t = { "<cmd>TodoTrouble<CR>", "Ver todos los comentarios" },
         R = { "<cmd>TroubleRefresh<CR>", "Refrescar los logs de LSP" },
       },
       m = {
@@ -99,11 +100,19 @@ return {
           h = { "<cmd>FlutterHotReload<CR>", "Ejecutar el hot reload" },
           s = { "<cmd>FlutterVSplit<CR>", "Split?" },
         },
+        g = {
+          name = "Go",
+          c = { "<cmd>GoCmt<CR>", "Comentar!" },
+          t = { "<cmd>GoModTidy<CR>", "Limpia las librerias" },
+          e = { "<cmd>GoIfErr<CR>", "If err != Zzz" },
+          i = { "<cmd>GoImpl", "Implementar.interfaz(struct)" },
+        },
       },
       l = {
         name = "Encontrar",
         a = { "<cmd>Telescope live_grep<CR>", "Encontrar palabras" },
         l = { "<cmd>HopChar2<CR>", "Encontrar palabras en tu vista" },
+        t = { "<cmd>TodoTelescope<CR>", "Encontrar los comentarios" },
       },
       k = {
         name = "Colorines",
