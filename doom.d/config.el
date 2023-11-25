@@ -15,19 +15,18 @@
 ;; - `doom-variable-pitch-font' -- a non-monospace font (where applicable)
 ;; - `doom-big-font' -- used for `doom-big-font-mode'; use this for
 ;;   presentations or streaming.
-;; - `doom-unicode-font' -- for unicode glyphs
+;; - `doom-symbol-font' -- for symbols
 ;; - `doom-serif-font' -- for the `fixed-pitch-serif' face
-;;
 ;; See 'C-h v doom-font' for documentation and more examples of what they
 ;; accept. For example:
 ;;
-;;(setq doom-font (font-spec :family "Fira Code" :size 12 :weight 'semi-light)
-;;      doom-variable-pitch-font (font-spec :family "Fira Sans" :size 13))
 
-(setq doom-font (font-spec :family "FiraCode Nerd Font" :size 13)
-      doom-variable-pitch-font (font-spec :family "Fira Sans")
-      doom-big-font (font-spec :family "Fira Mono" :size 20))
-;;
+;;(setq doom-font (font-spec :family "FiraCode Nerd Font" :size 13)
+;;      doom-variable-pitch-font (font-spec :family "Fira Sans")
+;;      doom-big-font (font-spec :family "Fira Mono" :size 20))
+
+(setq doom-font (font-spec :family "Fira Code" :size 16 :weight 'medium))
+
 ;; If you or Emacs can't find your font, use 'M-x describe-font' to look them
 ;; up, `M-x eval-region' to execute elisp code, and 'M-x doom/reload-font' to
 ;; refresh your font settings. If Emacs still can't find your font, it likely
@@ -36,12 +35,6 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-;; Mi fuente para estos temas: https://www.joyk.com/dig/detail/1639684184681147
-;; (setq doom-theme 'doom-one)
-;; (setq doom-theme 'catppuccin)
-;; (setq doom-theme 'doom-challenger-deep)
-;; (setq doom-theme 'doom-gruvbox)
-;; (setq doom-theme 'doom-moonlight)
 (setq doom-theme 'doom-tokyo-night)
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
@@ -84,62 +77,15 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
-
-;; Configuracion para poder utilizar la s de manera correcta
 (remove-hook 'doom-first-input-hook #'evil-snipe-mode)
 
-;; Configuracion para el dashboard
-(setq fancy-splash-image "~/Wallpapers/ss.png")
-;; (setq fancy-splash-image "~/Descargas/vscode.jpg")
-;; (setq fancy-splash-image "~/Descargas/imax.jpg")
+;; Foto sumamente importante
+(setq fancy-splash-image "~/Wallpapers/emacs.png")
 
-;;Ascii art para el dashboard
-;; (defun doom-dashboard-draw-ascii-emacs-banner-fn ()
-;;   (let* ((banner
-;;           '("   -{ Bienvenido sempai }-"
-;;             ""
-;;             "    ⠄⠄⠄⠄ ⠄⠄⠄⠄⠄   ⠄⠄⠄⠄⠄⠄"
-;;             "    ⠄⠄⡔⠙⠢⡀⠄⠄⠄⢀⠼⠅⠈⢂⠄⠄⠄⠄⠄"
-;;             "    ⠄⠄⡌⠄⢰⠉⢙⢗⣲⡖⡋⢐⡺⡄⠈⢆⠄⠄⠄"
-;;             "    ⠄⡜⠄⢀⠆⢠⣿⣿⣿⣿⢡⢣⢿⡱⡀⠈⠆⠄⠄"
-;;             "    ⠄⠧⠤⠂⠄⣼⢧⢻⣿⣿⣞⢸⣮⠳⣕⢤⡆⠄⠄"
-;;             "    ⢺⣿⣿⣶⣦⡇⡌⣰⣍⠚⢿⠄⢩⣧⠉⢷⡇⠄⠄"
-;;             "    ⠘⣿⣿⣯⡙⣧⢎⢨⣶⣶⣶⣶⢸⣼⡻⡎⡇⠄⠄"
-;;             "    ⠄⠘⣿⣿⣷⡀⠎⡮⡙⠶⠟⣫⣶⠛⠧⠁⠄⠄⠄"
-;;             "    ⠄⠄⠘⣿⣿⣿⣦⣤⡀⢿⣿⣿⣿⣄⠄⠄⠄⠄⠄"
-;;             "    ⠄⠄⠄⠈⢿⣿⣿⣿⣿⣷⣯⣿⣿⣷⣾⣿⣷⡄⠄"
-;;             "    ⠄⠄⠄⠄⠄⢻⠏⣼⣿⣿⣿⣿⡿⣿⣿⣏⢾⠇⠄"
-;;             "    ⠄⠄⠄⠄⠄⠈⡼⠿⠿⢿⣿⣦⡝⣿⣿⣿⠷⢀⠄"
-;;             "    ⠄⠄⠄⠄⠄⠄⡇⠄⠄⠄⠈⠻⠇⠿⠋⠄⠄⢘⡆"
-;;             "    ⠄⠄⠄⠄⠄⠄⠱⣀⠄⠄⠄⣀⢼⡀⠄⢀⣀⡜⠄"
-;;             "    ⠄⠄⠄⠄⠄⠄⠄⢸⣉⠉⠉⠄⢀⠈⠉⢏⠁⠄⠄"
-;;             "    ⠄⠄⠄⠄⠄⠄⡰⠃⠄⠄⠄⠄⢸⠄⠄⢸⣧⠄⠄"
-;;             "    ⠄⠄⠄⠄⠄⣼⣧⠄⠄⠄⠄⠄⣼⠄⠄⡘⣿⡆⠄"
-;;             "    ⠄⠄⠄⢀⣼⣿⡙⣷⡄⠄⠄⠄⠃⠄⢠⣿⢸⣿⡀"
-;;             "    ⠄⠄⢀⣾⣿⣿⣷⣝⠿⡀⠄⠄⠄⢀⡞⢍⣼⣿⠇"
-;;             "    ⠄⠄⣼⣿⣿⣿⣿⣿⣷⣄⠄⠄⠠⡊⠴⠋⠹⡜⠄"
-;;             "    ⠄⠄⣿⣿⣿⣿⣿⣿⣿⣿⡆⣤⣾⣿⣿⣧⠹⠄⠄"))
-;;          (longest-line (apply #'max (mapcar #'length banner))))
-;;     (put-text-property
-;;      (point)
-;;      (dolist (line banner (point))
-;;        (insert (+doom-dashboard--center
-;;                 +doom-dashboard--width
-;;                 (concat
-;;                  line (make-string (max 0 (- longest-line (length line)))
-;;                                    32)))
-;;                "\n"))
-;;      'face 'doom-dashboard-banner)))
-
-;; (unless (display-graphic-p) ; for some reason this messes up the graphical splash screen atm
-;;   (setq +doom-dashboard-ascii-banner-fn #'doom-dashboard-draw-ascii-emacs-banner-fn))
-
-
-;; Configuracion para el depurador para python
+;; Configuracion para depurar
 (after! dap-mode
   (setq dap-python-debugger 'debugpy))
 
-;; Atajos para el debugger
 
 (map! :map dap-mode-map
       :leader
@@ -158,15 +104,16 @@
       :desc "dap debug recent"  "r" #'dap-debug-recent
       :desc "dap debug last"    "l" #'dap-debug-last
 
+      ;; eval
+      :prefix ("de" . "Eval")
+      :desc "eval"                "e" #'dap-eval
+      :desc "eval region"         "r" #'dap-eval-region
+      :desc "eval thing at point" "s" #'dap-eval-thing-at-point
+      :desc "add expression"      "a" #'dap-ui-expressions-add
+      :desc "remove expression"   "d" #'dap-ui-expressions-remove
+
       :prefix ("db" . "Breakpoint")
       :desc "dap breakpoint toggle"      "b" #'dap-breakpoint-toggle
       :desc "dap breakpoint condition"   "c" #'dap-breakpoint-condition
       :desc "dap breakpoint hit count"   "h" #'dap-breakpoint-hit-condition
       :desc "dap breakpoint log message" "l" #'dap-breakpoint-log-message)
-
-;; Configuracion para el nov.el
-(add-to-list 'auto-mode-alist '("\\.epub\\'" . nov-mode))
-
-;; Configuracion para el visual columnas
-(setq visual-fill-column-width 110
-      visual-fill-column-center-text t)

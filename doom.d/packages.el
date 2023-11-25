@@ -48,18 +48,3 @@
 ;(unpin! pinned-package another-pinned-package)
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;(unpin! t)
-
-;; Agregando tema del catppuccin
-(package! catppuccin-theme)
-
-;; Lector de EPUBs
-(package! nov)
-
-;; El lorem
-(package! lorem-ipsum)
-
-;; Ajidri
-(package! chess)
-
-;; Dependencias para la presentacion
-(package! visual-fill-column)
