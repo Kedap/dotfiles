@@ -1,10 +1,14 @@
 #!/bin/bash
 echo "Iniciando la instalacion de cosas que debe de estar actualizadas xd"
 echo "Actualizando rust"
-#rustup selfupdate
+rustup self update
 rustup update
 echo "Actualizando paquetes con dnf"
 sudo dnf update
 echo "Actualizando paquetes de python de manera manual"
 pip install -U pyright
 pip install -U black
+echo "Actualizando paquetes de Cargo"
+cargo install $(cargo install --list | grep -E '^[a-z0-9_-]+ v[0-9.]+:$' | cut -f1 -d' ')
+echo "Actualizando Deno"
+deno upgrade
