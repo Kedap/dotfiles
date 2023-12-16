@@ -1,4 +1,4 @@
-;;; $DOOMDIR/config.el -*- lexical-binding: t; -*-
+;; $DOOMDIR/config.el -*- lexical-binding: t; -*-
 
 ;; Place your private configuration here! Remember, you do not need to run 'doom
 ;; sync' after modifying this file!
@@ -25,7 +25,7 @@
 ;;      doom-variable-pitch-font (font-spec :family "Fira Sans")
 ;;      doom-big-font (font-spec :family "Fira Mono" :size 20))
 
-(setq doom-font (font-spec :family "Fira Code" :size 16 :weight 'medium))
+(setq doom-font (font-spec :family "Fira Code" :size 14 :weight 'medium))
 
 ;; If you or Emacs can't find your font, use 'M-x describe-font' to look them
 ;; up, `M-x eval-region' to execute elisp code, and 'M-x doom/reload-font' to
@@ -117,3 +117,10 @@
       :desc "dap breakpoint condition"   "c" #'dap-breakpoint-condition
       :desc "dap breakpoint hit count"   "h" #'dap-breakpoint-hit-condition
       :desc "dap breakpoint log message" "l" #'dap-breakpoint-log-message)
+
+;;Config
+;; (setq company-format-margin-function #'company-vscode-light-icons-margin)
+
+;;Configurando visor para LaTeX
+;; (setq +latex-viewers '(zathura))
+(setq +latex-viewers '(pdf-tools))
