@@ -53,6 +53,7 @@
 (package! lorem-ipsum)
 
 ;; in $DOOMDIR/packages.el
-(package! doom-snippets :ignore t)
+;; (package! doom-snippets :ignore t)
 ;; If you want to replace it with yasnippet's default snippets
 (package! yasnippet-snippets)
+(package! go-impl)
