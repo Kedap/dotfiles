@@ -122,3 +122,7 @@
 ;;Configurando visor para LaTeX
 ;; (setq +latex-viewers '(zathura))
 (setq +latex-viewers '(pdf-tools))
+
+;; Iconos
+(after! company-box
+  (setq company-box-icons-alist 'company-box-icons-all-the-icons))
