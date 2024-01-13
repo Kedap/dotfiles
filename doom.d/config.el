@@ -123,6 +123,6 @@
 ;; (setq +latex-viewers '(zathura))
 (setq +latex-viewers '(pdf-tools))
 
-;; Iconos
+;; Ioconos
 (after! company-box
-  (setq company-box-icons-alist 'company-box-icons-all-the-icons))
+  (setq company-box-icons-alist 'company-box-icons-images))

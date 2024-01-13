@@ -57,3 +57,4 @@
 ;; If you want to replace it with yasnippet's default snippets
 (package! yasnippet-snippets)
 (package! go-impl)
+(package! apheleia)
