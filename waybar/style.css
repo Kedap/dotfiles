@@ -70,7 +70,8 @@ window#waybar.solo {
 #window,
 #workspaces {
     margin: 5px;
-    border-radius: 10;
+    border-radius: 10px;
+    background-color: #373c57;
 }
 
 /* If workspaces is the leftmost module, omit left margin */
