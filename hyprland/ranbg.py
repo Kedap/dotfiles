@@ -19,7 +19,7 @@ def escanear(ruta):
 
 ahora = datetime.now()
 hora = int(ahora.strftime("%H"))
-fondos = "/home/d4n/Wallpapers/"
+fondos = "/home/kedap/Wallpapers/"
 if hora >= 8 and hora <= 18:
     fondos = fondos + "diurno"
 else:
