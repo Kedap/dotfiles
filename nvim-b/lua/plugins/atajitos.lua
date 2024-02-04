@@ -3,12 +3,12 @@ return {
   config = function()
     vim.o.timeout = true
     vim.o.timeoutlen = 300
-    require("which-key").setup {}
+    require("which-key").setup({})
     vim.g.mapleader = " "
     local map = vim.api.nvim_set_keymap
     local opts = { noremap = true, silent = false }
     local wk_opts = { prefix = "<leader>" }
-    local wk = require "which-key"
+    local wk = require("which-key")
 
     -- Atajos naturales
     -- Como el tmux
@@ -42,6 +42,8 @@ return {
         f = { "<cmd>Telescope find_files<CR>", "Encontrar archivos" },
         d = { "<cmd>e ~/.config/nvim<CR>", "Editar dotfiles de NeoGOD" },
         c = { "<cmd>UndotreeToggle<CR>", "Ver arbol de cambios" },
+        k = { "<cmd>Silicon<CR>", "Tomar captura con silicon" },
+        l = { "<cmd>Oil<CR>", "Oil time!" },
       },
       p = {
         name = "Gestor de plugins",
@@ -67,6 +69,7 @@ return {
         l = { "<cmd>TroubleToggle<CR>", "Ver logs de LSP" },
         t = { "<cmd>TodoTrouble<CR>", "Ver todos los comentarios" },
         R = { "<cmd>TroubleRefresh<CR>", "Refrescar los logs de LSP" },
+        k = { "<cmd>lua require('lsp_signature').toggle_float_win()<CR>", "Signature brow" },
       },
       m = {
         name = "Acciones del lenguaje",
@@ -159,18 +162,27 @@ return {
         D = { "<cmd>DiffviewFileHistory %<CR>", "Ver TODOS los cambios de ESTE archivo" },
         -- g = { "<cmd>LazyGit<CR>", "Abrir lazygit" },
         g = { "<cmd>Git<CR>", "Abrir Git" },
-        a = { "<cmd>Git add --all<CR>", "Agregar todos los cambios al commit" },
+        a = { "<cmd>Git add %<CR>", "Agregar este archivo a stage" },
+        A = { "<cmd>Git add --all<CR>", "Agregar TODOS los cambios al stage" },
         -- c = { "<cmd>Neogit commit<CR>", "Realizar commit" },
         c = { "<cmd>Git commit<CR>", "Realizar commit" },
         -- p = { "<cmd>lua require'neogit'.open({'push'})<CR>", "PUSH" },
         p = { "<cmd>Git --paginate push<CR>", "PUSH" },
         -- P = { "<cmd>lua require'neogit'.open({'pull'})<CR>", "PULL" },
         -- b = { "<cmd>lua require'neogit'.open({'branch'})<CR>", "Rama..." },
-        b = { "<cmd>Telescope git_branches<CR>", "Rama..." },
+        b = { "<cmd>Git blame<CR>", "Git blame Bv" },
+        B = { "<cmd>Telescope git_branches<CR>", "Rama..." },
         s = { "<cmd>Telescope git_stash<CR>", "Stashs de git" },
         l = { "<cmd>Git log<CR>", "Ver commits" },
         r = { "<cmd>Git restore %<CR>", "Restaurar el archivo" },
         R = { "<cmd>Git restore .<CR>", "Restaurar TODOS los ARCHIVOS" },
+        q = { "<cmd>Git restore --staged %<CR>", "Quitar este archivo del stage" },
+        h = {
+          name = "Hunk",
+          s = { "<cmd>Gitsigns stage_hunk<CR>", "Agrear hunk" },
+          r = { "<cmd>Gitsigns reset_hunk<CR>", "Restaurar hunk del commit" },
+          u = { "<cmd>Gitsigns undo_stage_hunk<CR>", "Quitar hunk del stage" },
+        },
       },
       h = {
         name = "Http (API rest)",

@@ -10,7 +10,7 @@ return {
     "nvim-treesitter/nvim-treesitter-refactor",
   },
   config = function()
-    require("nvim-treesitter.configs").setup {
+    require("nvim-treesitter.configs").setup({
       -- Lista de lengaujes instalados
       ensure_installed = {
         "markdown",
@@ -97,10 +97,10 @@ return {
         smart_rename = { enable = false },
         navigation = { enable = false },
       },
-    }
+    })
 
     -- Rainbow
-    local rainbow_delimiters = require "rainbow-delimiters"
+    local rainbow_delimiters = require("rainbow-delimiters")
 
     vim.g.rainbow_delimiters = {
       strategy = {

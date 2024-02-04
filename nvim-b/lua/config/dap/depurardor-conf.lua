@@ -1,9 +1,9 @@
 --Configuracon para Python
-require("dap-python").setup "~/.virtualenvs/debugpy/bin/python"
-local dap, dapui = require "dap", require "dapui"
+require("dap-python").setup("~/.virtualenvs/debugpy/bin/python")
+local dap, dapui = require("dap"), require("dapui")
 dap.adapters.python = {
   type = "executable",
-  command = "/home/sno0bwy/.virtualenvs/debugpy/bin/python",
+  command = "/home/kedap/.virtualenvs/debugpy/bin/python",
   args = { "-m", "debugpy.adapter" },
 }
 
@@ -11,7 +11,7 @@ dap.adapters.python = {
 dap.adapters.php = {
   type = "executable",
   command = "node",
-  args = { "/home/sno0bwy/.local/share/nvim/mason/packages/php-debug-adapter/extension/out/phpDebug.js" },
+  args = { "/home/kedap/.local/share/nvim/mason/packages/php-debug-adapter/extension/out/phpDebug.js" },
 }
 dap.configurations.php = {
   {
