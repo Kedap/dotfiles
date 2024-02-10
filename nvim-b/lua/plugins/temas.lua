@@ -8,7 +8,7 @@ return {
   -- "shaunsingh/oxocarbon.nvim",
   -- lazy = true,
   -- priority = 1000,
-  --
+
   -- "rebelot/kanagawa.nvim",
   -- lazy = true,
   -- priority = 1000,
@@ -36,9 +36,9 @@ return {
   -- lazy = true,
   -- priority = 1000,
 
-  -- "ellisonleao/gruvbox.nvim",
-  -- lazy = true,
-  -- priority = 1000,
+  "ellisonleao/gruvbox.nvim",
+  lazy = true,
+  priority = 1000,
 
   -- "morhetz/gruvbox",
   -- lazy = true,
@@ -54,9 +54,9 @@ return {
   -- lazy = true,
   -- priority = 1000,
 
-  "folke/tokyonight.nvim",
-  lazy = true,
-  priority = 1000,
+  -- "folke/tokyonight.nvim",
+  -- lazy = true,
+  -- priority = 1000,
 
   -- "sam4llis/nvim-tundra",
   -- lazy = true,
@@ -96,6 +96,10 @@ return {
   -- priority = 1000,
 
   -- "https://gitlab.com/__tpb/monokai-pro.nvim",
+  -- lazy = true,
+  -- priority = 1000,
+
+  -- "EdenEast/nightfox.nvim",
   -- lazy = true,
   -- priority = 1000,
 }

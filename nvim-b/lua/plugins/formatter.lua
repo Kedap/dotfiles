@@ -2,7 +2,7 @@ return {
   "mhartington/formatter.nvim",
   event = "BufWritePost",
   config = function()
-    require("formatter").setup {
+    require("formatter").setup({
       filetype = {
         javascript = {
           -- prettier
@@ -159,8 +159,11 @@ return {
         jsonc = {
           require("formatter.filetypes.json").prettier,
         },
+        yaml = {
+          require("formatter.filetypes.yaml").prettier,
+        },
       },
-    }
+    })
 
     vim.api.nvim_exec(
       [[
