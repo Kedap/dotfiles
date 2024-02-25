@@ -162,6 +162,9 @@ return {
         yaml = {
           require("formatter.filetypes.yaml").prettier,
         },
+        java = {
+          require("formatter.filetypes.java").google_java_format,
+        },
       },
     })
 

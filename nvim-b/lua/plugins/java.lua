@@ -2,15 +2,15 @@ return {
   "mfussenegger/nvim-jdtls",
   ft = "java",
   config = function()
-    local JDTLS_LOCATION = vim.fn.stdpath "data" .. "mason/packages/jdtls/"
+    local JDTLS_LOCATION = vim.fn.stdpath("data") .. "mason/packages/jdtls/"
     local nombre_proyecto = vim.fn.fnamemodify(vim.fn.getcwd(), ":p:h:t")
-    local workspace = "~/workspace/java/" .. nombre_proyecto
+    local workspace = "~/Documentos/local/java/" .. nombre_proyecto
     -- See `:help vim.lsp.start_client` for an overview of the supported `config` options.
     local bundles = {
-      vim.fn.glob "~/.local/share/nvim/mason/packages/java-debug-adapter/extension/server/com.microsoft.java.debug.plugin-*.jar",
+      vim.fn.glob("~/.local/share/nvim/mason/packages/java-debug-adapter/extension/server/com.microsoft.java.debug.plugin-*.jar"),
     }
     local on_attach = function(client, bufnr)
-      require("jdtls").setup_dap { hotcodereplace = "auto" }
+      require("jdtls").setup_dap({ hotcodereplace = "auto" })
     end
     local config = {
       -- The command that starts the language server
@@ -56,7 +56,7 @@ return {
       -- 💀
       -- This is the default if not provided, you can remove it. Or adjust as needed.
       -- One dedicated LSP server & client will be started per unique root_dir
-      root_dir = require("jdtls.setup").find_root { ".git", "mvnw", "gradlew" },
+      root_dir = require("jdtls.setup").find_root({ ".git", "mvnw", "gradlew" }),
 
       -- Here you can configure eclipse.jdt.ls specific settings
       -- See https://github.com/eclipse/eclipse.jdt.ls/wiki/Running-the-JAVA-LS-server-from-the-command-line#initialize-request
