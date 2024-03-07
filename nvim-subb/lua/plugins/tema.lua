@@ -1,10 +1,9 @@
 return {
-  "folke/tokyonight.nvim",
+  "craftzdog/solarized-osaka.nvim",
   lazy = false,
   priority = 1000,
-  config = function() 
-    vim.g.tokyonight_style = "strom"
-    vim.g.tokyonight_sidebars = { "qf", "vista_kind", "terminal", "packer" }
-    vim.cmd [[colorscheme tokyonight]]
+  opts = {},
+  config = function()
+    vim.cmd([[colorscheme solarized-osaka]])
   end,
 }

@@ -1,11 +1,11 @@
 return {
-    'nvim-lualine/lualine.nvim',
-    dependencies = { 'nvim-tree/nvim-web-devicons' },
-    config = function()
-    require("lualine").setup {
+  "nvim-lualine/lualine.nvim",
+  dependencies = { "nvim-tree/nvim-web-devicons" },
+  config = function()
+    require("lualine").setup({
       options = {
         icons_enabled = true,
-        theme = 'tokyonight',
+        theme = "solarized_dark",
         section_separators = { left = "", right = "" },
         component_separators = { left = "", right = "" },
 
@@ -29,6 +29,6 @@ return {
         lualine_z = {},
       },
       extensions = { "nvim-tree", "toggleterm", "fugitive", "quickfix", "nvim-dap-ui" },
-    }
-    end,
+    })
+  end,
 }
