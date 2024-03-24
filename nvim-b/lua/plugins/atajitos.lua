@@ -196,7 +196,7 @@ return {
       },
       h = {
         name = "Http (API rest)",
-        r = { "<Plug>RestNvim", "Correr la peticion bajo el cursor" },
+        r = { "<cmd>Rest run<CR>", "Correr la peticion bajo el cursor" },
         p = { "<Plug>RestNvimPreview", "Ver la peticion con cURL" },
         l = { "<Plug>RestNvimLast", "Volver a correr la ultima peticion" },
       },

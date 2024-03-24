@@ -3,8 +3,8 @@
 -- return opciones_linea
 
 -- Configuracion para el carbon
--- local opciones_linea = require("config.temas.carbon-conf")
--- return opciones_linea
+local opciones_linea = require("config.temas.carbon-conf")
+return opciones_linea
 
 -- Configuracion para el japanes
 -- local opciones_linea = require("config.temas.tema-japones")
@@ -35,8 +35,8 @@
 -- return opciones_linea
 
 -- Configuracion para gruvbox nvim
-local opciones_linea = require("config.temas.grubocs")
-return opciones_linea
+-- local opciones_linea = require("config.temas.grubocs")
+-- return opciones_linea
 
 -- Configuracion para gruvbox vim
 -- local opciones_linea = require("config.temas.ori_gruvbox")
