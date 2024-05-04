@@ -2,7 +2,7 @@
 -- local opciones_linea = require("config.temas.nightfly-conf")
 -- return opciones_linea
 
--- Configuracion para el carbon
+-- -- Configuracion para el carbon
 -- local opciones_linea = require("config.temas.carbon-conf")
 -- return opciones_linea
 
@@ -92,4 +92,8 @@ return opciones_linea
 
 -- Configuracion eldritch
 -- local opciones_linea = require("config.temas.elded")
+-- return opciones_linea
+
+-- Configuracion monet
+-- local opciones_linea = require("config.temas.moneda")
 -- return opciones_linea

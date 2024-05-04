@@ -105,4 +105,8 @@ return {
   -- "eldritch-theme/eldritch.nvim",
   -- lazy = true,
   -- priority = 1000,
+
+  -- "fynnfluegge/monet.nvim",
+  -- lazy = true,
+  -- priority = 1000,
 }
