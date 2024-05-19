@@ -16,10 +16,12 @@ return {
     "onsails/lspkind-nvim",
     "rafamadriz/friendly-snippets",
     { "petertriho/cmp-git", dependencies = "nvim-lua/plenary.nvim" },
+    { "Exafunction/codeium.nvim", dependencies = "nvim-lua/plenary.nvim" },
     "hrsh7th/cmp-emoji",
   },
   config = function()
     -- Set up nvim-cmp.
+    require("codeium").setup({})
     local cmp = require("cmp")
     local lspkind = require("lspkind")
     local has_words_before = function()
@@ -81,6 +83,7 @@ return {
         { name = "spell" },
         -- { name = "neorg" },
         { name = "emoji" },
+        { name = "codeium" },
         -- { name = 'luasnip' }, -- For luasnip users.
         -- { name = 'ultisnips' }, -- For ultisnips users.
         -- { name = 'snippy' }, -- For snippy users.
