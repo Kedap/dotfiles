@@ -97,3 +97,11 @@ return opciones_linea
 -- Configuracion monet
 -- local opciones_linea = require("config.temas.moneda")
 -- return opciones_linea
+
+-- Configuracion fusion
+-- local opciones_linea = require("config.temas.fusion")
+-- return opciones_linea
+
+-- Configuracion oldword
+-- local opciones_linea = require("config.temas.viejomundo")
+-- return opciones_linea

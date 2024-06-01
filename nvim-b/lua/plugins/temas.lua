@@ -109,4 +109,12 @@ return {
   -- "fynnfluegge/monet.nvim",
   -- lazy = true,
   -- priority = 1000,
+
+  -- "diegoulloao/neofusion.nvim",
+  -- lazy = true,
+  -- priority = 1000,
+
+  -- "dgox16/oldworld.nvim",
+  -- lazy = true,
+  -- priority = 1000,
 }

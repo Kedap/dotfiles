@@ -22,6 +22,7 @@ return {
   config = function()
     -- Set up nvim-cmp.
     require("codeium").setup({})
+
     local cmp = require("cmp")
     local lspkind = require("lspkind")
     local has_words_before = function()

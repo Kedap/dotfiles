@@ -1,4 +1,4 @@
-vim.cmd "filetype plugin indent on"
+vim.cmd("filetype plugin indent on")
 vim.wo.number = true
 vim.o.fileencoding = "utf-8"
 vim.o.mouse = "a"
@@ -18,12 +18,13 @@ vim.o.colorcolumn = "105"
 vim.o.backup = false
 vim.o.spelllang = "es"
 vim.o.lazyredraw = true
+vim.o.conceallevel = 2
 vim.g.mapleader = " "
 vim.wo.signcolumn = "auto:3"
-vim.cmd "highlight ColoColumn ctermbg=0 guibg=lightgrey"
-vim.cmd [[
+vim.cmd("highlight ColoColumn ctermbg=0 guibg=lightgrey")
+vim.cmd([[
 augroup highlight_yank
     autocmd!
     au TextYankPost * silent! lua vim.highlight.on_yank{higroup="IncSearch", timeout=700}
 augroup END
-]]
+]])
