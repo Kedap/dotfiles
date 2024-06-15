@@ -11,7 +11,7 @@
 -- return opciones_linea
 
 -- configuracion para catppuccin
--- local opciones_linea = require "config.temas.catppuccin-tema"
+-- local opciones_linea = require("config.temas.catppuccin-tema")
 -- return opciones_linea
 
 -- configuracion nightfox

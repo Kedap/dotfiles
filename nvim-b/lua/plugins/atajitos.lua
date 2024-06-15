@@ -66,9 +66,9 @@ return {
         r = { "<cmd>Lspsaga rename<CR>", "Renombrar..." },
         a = { "<cmd>Lspsaga code_action<CR>", "Accion del codigo" },
         D = { "<cmd>Lspsaga show_line_diagnostics<CR>", "Ver diagnostico" },
-        l = { "<cmd>TroubleToggle<CR>", "Ver logs de LSP" },
+        l = { "<cmd>Trouble diagnostics toggle focus<CR>", "Ver logs de LSP" },
         t = { "<cmd>TodoTrouble<CR>", "Ver todos los comentarios" },
-        R = { "<cmd>TroubleRefresh<CR>", "Refrescar los logs de LSP" },
+        -- R = { "<cmd>TroubleRefresh<CR>", "Refrescar los logs de LSP" },
         k = { "<cmd>lua require('lsp_signature').toggle_float_win()<CR>", "Signature brow" },
       },
       m = {
