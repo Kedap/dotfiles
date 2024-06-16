@@ -1,4 +1,4 @@
-launch_command: loadpage library ;; flush ;; history clear ;; key Esc 0 ;; key Up 0 ;; key Up 0 ;; key Left 0 ;; key Enter 0;; mpv load-script /etc/mpv/scripts/mpris.so
+launch_command: loadpage library ;; flush ;; history clear ;; key Esc 0 ;; key Up 0 ;; key Up 0 ;; key Left 0 ;; key Enter 0;; mpv load-script /etc/mpv/scripts/mpris.so;; mpv load-script /etc/mpv/scripts/discord.lua
 video:
 - Reload updated video: run rm '~/.cache/youtube-tui/info/${id}.json' ;; video ${id}
 - Play video: parrun ${video-player} '${embed-url}'

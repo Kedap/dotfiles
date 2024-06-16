@@ -20,8 +20,8 @@ shell: sh
 legacy_input_handling: false
 env:
   download-path: ~/Downloads/%(title)s-%(id)s.%(ext)s
-  terminal-emulator: kitty
+  video-player: mpv
   browser: librewolf
   youtube-downloader: yt-dlp
+  terminal-emulator: kitty
   save-path: ~/.local/share/youtube-tui/saved/
-  video-player: mpv
