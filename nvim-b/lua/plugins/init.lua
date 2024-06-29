@@ -14,11 +14,6 @@ return {
     { "cs", mode = "n" },
   } },
   {
-    "vhyrro/luarocks.nvim",
-    priority = 1000,
-    config = true,
-  },
-  {
     "KabbAmine/vCoolor.vim",
     keys = {
       { "<leader>k", mode = "n" },
