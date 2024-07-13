@@ -1,13 +1,14 @@
 return {
   "folke/which-key.nvim",
+  dependencies = { "echasnovski/mini.icons" },
   config = function()
+    require("mini.icons").setup()
     vim.o.timeout = true
     vim.o.timeoutlen = 300
     require("which-key").setup({})
     vim.g.mapleader = " "
     local map = vim.api.nvim_set_keymap
     local opts = { noremap = true, silent = false }
-    local wk_opts = { prefix = "<leader>" }
     local wk = require("which-key")
 
     -- Atajos naturales
@@ -24,183 +25,152 @@ return {
     map("v", "<", "<gv", opts)
     map("v", ">", ">gv", opts)
 
-    local mappings = {
+    wk.add({
       -- De cajon
-      s = { ":x! <cr>", "Escribir y salir" },
-      q = { ":q! <cr>", "Salir" },
-      r = { "o<Esc>", "Agregar linea nueva" },
-      R = { "i<CR><Esc>", "Agregar linea nueva donde estes" },
-    }
+      { "<leader>s", ":x! <cr>", desc = "Escribir y salir", icon = { icon = "󰈆 ", color = "purple" } },
+      { "<leader>q", ":q! <cr>", desc = "Salir", icon = { icon = "󰈆 ", color = "red" } },
+      { "<leader>r", "o<Esc>", desc = "Agregar linea nueva", icon = { icon = " ", color = "green" } },
+      { "<leader>R", "i<CR><Esc>", desc = "Agregar linea nueva donde estes", icon = { icon = " ", color = "red" } },
+    })
 
-    wk.register({
-      -- De cajon
-      f = {
-        name = "Archivo",
-        o = { ":w! <cr>", "Guardar" },
-        s = { ":x! <cr>", "Guardar y salir" },
-        n = { ":NvimTreeToggle<CR>", "Abrir gestor de archivos" },
-        f = { "<cmd>Telescope find_files<CR>", "Encontrar archivos" },
-        d = { "<cmd>e ~/.config/nvim<CR>", "Editar dotfiles de NeoGOD" },
-        c = { "<cmd>UndotreeToggle<CR>", "Ver arbol de cambios" },
-        k = { "<cmd>Silicon<CR>", "Tomar captura con silicon" },
-        l = { "<cmd>Oil<CR>", "Oil time!" },
+    wk.add({
+      { "<leader>b", group = "Buffer" },
+      { "<leader>bc", "<cmd>bd<CR>", desc = "Borrar buffer actual" },
+      { "<leader>bn", "<cmd>BufferLineCycleNext<CR>", desc = "Ir al siguiente buffer" },
+      { "<leader>bp", "<cmd>BufferLineCyclePrev<CR>", desc = "Ir al anterior buffer" },
+      { "<leader>bv", "<cmd>enew<CR>", desc = "Abrir un buffer nuevo y vacio" },
+
+      { "<leader>c", group = "Codigo", icon = { icon = "󱖫 ", color = "green" } },
+      { "<leader>cD", "<cmd>Lspsaga show_line_diagnostics<CR>", desc = "Ver diagnostico" },
+      { "<leader>ca", "<cmd>Lspsaga code_action<CR>", desc = "Accion del codigo" },
+      { "<leader>cd", "<cmd>Lspsaga peek_definition<CR>", desc = "Ver la definición" },
+      { "<leader>cf", "<cmd>Lspsaga lsp_finder<CR>", desc = "Ver referencias" },
+      { "<leader>ck", "<cmd>lua require('lsp_signature').toggle_float_win()<CR>", desc = "Signature brow" },
+      { "<leader>cl", "<cmd>Trouble diagnostics toggle focus<CR>", desc = "Ver logs de LSP" },
+      { "<leader>cm", "<cmd>Lspsaga outline<CR>", desc = "Mapa sobre la referencia" },
+      { "<leader>cr", "<cmd>Lspsaga rename<CR>", desc = "Renombrar..." },
+      { "<leader>ct", "<cmd>TodoTrouble<CR>", desc = "Ver todos los comentarios" },
+
+      { "<leader>d", group = "Depurar", icon = { icon = "󰃤 ", color = "red" } },
+      { "<leader>dC", "<cmd>DapTerminate<CR>", desc = "Quitar el depurador" },
+      { "<leader>dP", "<cmd>lua require'dap'.step_over()<CR>", desc = "Step over" },
+      { "<leader>db", "<cmd>lua require'dap'.toggle_breakpoint()<CR>", desc = "Poner/quitar breakpoint" },
+      { "<leader>dc", "<cmd>lua require'dap'.continue()<CR>", desc = "Continuar con la depuración" },
+      {
+        "<leader>de",
+        "<cmd>lua require'telescope'.extensions.dap.list_breakpoints{}<CR>",
+        desc = "Ver los breakpoints",
       },
-      p = {
-        name = "Gestor de plugins",
-        i = { "<cmd>Lazy install<CR>", "Instalar nuevos plugins" },
-        c = { "<cmd>Lazy clean<CR>", "Limpiar cache" },
-        u = { "<cmd>Lazy update<CR>", "Actualizar plugins" },
+      {
+        "<leader>dk",
+        "<cmd>lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>",
+        desc = "Poner un breakpoint condicional",
       },
-      b = {
-        name = "Buffer",
-        n = { "<cmd>BufferLineCycleNext<CR>", "Ir al siguiente buffer" },
-        p = { "<cmd>BufferLineCyclePrev<CR>", "Ir al anterior buffer" },
-        c = { "<cmd>bd<CR>", "Borrar buffer actual" },
-        v = { "<cmd>enew<CR>", "Abrir un buffer nuevo y vacio" },
+      { "<leader>dl", "<cmd>lua require'dap'.clear_breakpoints()<CR>", desc = "Limpiar los breakpoint" },
+      { "<leader>dp", "<cmd>lua require'dap'.step_into()<CR>", desc = "Step into" },
+
+      { "<leader>f", group = "Archivos", icon = { icon = "󰈔", color = "cyan" } },
+      { "<leader>fc", "<cmd>UndotreeToggle<CR>", desc = "Ver arbol de cambios" },
+      { "<leader>fd", "<cmd>e ~/.config/nvim<CR>", desc = "Editar dotfiles de NeoGOD" },
+      { "<leader>ff", "<cmd>Telescope find_files<CR>", desc = "Encontrar archivos" },
+      { "<leader>fk", "<cmd>Silicon<CR>", desc = "Tomar captura con silicon" },
+      { "<leader>fl", "<cmd>Oil<CR>", desc = "Oil time!" },
+      { "<leader>fn", ":NvimTreeToggle<CR>", desc = "Abrir gestor de archivos" },
+      { "<leader>fo", ":w! <cr>", desc = "Guardar" },
+      { "<leader>fs", ":x! <cr>", desc = "Guardar y salir" },
+
+      { "<leader>g", group = "Git" },
+      { "<leader>gA", "<cmd>Git add --all<CR>", desc = "Agregar TODOS los cambios al stage" },
+      { "<leader>gB", "<cmd>Telescope git_branches<CR>", desc = "Rama..." },
+      { "<leader>gD", "<cmd>DiffviewFileHistory %<CR>", desc = "Ver TODOS los cambios de ESTE archivo" },
+      { "<leader>gP", "<cmd>lua require'neogit'.open({'pull'})<CR>", desc = "PULL" },
+      { "<leader>gR", "<cmd>Git restore .<CR>", desc = "Restaurar TODOS los ARCHIVOS" },
+      { "<leader>ga", "<cmd>Git add %<CR>", desc = "Agregar este archivo a stage" },
+      { "<leader>gb", "<cmd>Git blame<CR>", desc = "Git blame Bv" },
+      { "<leader>gc", "<cmd>Neogit commit<CR>", desc = "Realizar commit" },
+      { "<leader>gd", "<cmd>DiffviewOpen<CR>", desc = "Ver los ultimos cambios" },
+      { "<leader>gg", "<cmd>Neogit<CR>", desc = "Abrir NeoGit" },
+      { "<leader>gh", group = "Hunk" },
+      { "<leader>ghr", "<cmd>Gitsigns reset_hunk<CR>", desc = "Restaurar hunk del commit" },
+      { "<leader>ghs", "<cmd>Gitsigns stage_hunk<CR>", desc = "Agrear hunk" },
+      { "<leader>ghu", "<cmd>Gitsigns undo_stage_hunk<CR>", desc = "Quitar hunk del stage" },
+      { "<leader>gk", group = "Conflict" },
+      { "<leader>gkN", "<cmd>GitConflictChooseNone<CR>", desc = "Elige NIGÚN cambio" },
+      { "<leader>gka", "<cmd>GitConflictChooseBoth<CR>", desc = "Elige ambos" },
+      { "<leader>gkl", "<cmd>GitConflictListQf<CR>", desc = "Logs de los conflictos" },
+      { "<leader>gkn", "<cmd>GitConflictNextConflict<CR>", desc = "Ir al siguiente cambio" },
+      { "<leader>gko", "<cmd>GitConflictChooseOurs<CR>", desc = "Elige el cambio actual" },
+      { "<leader>gkp", "<cmd>GitConflictPrevConflict<CR>", desc = "Ir al anterior cambio" },
+      { "<leader>gkt", "<cmd>GitConflictChooseTheirs<CR>", desc = "Elige el actual entrante" },
+      { "<leader>gl", "<cmd>Git log<CR>", desc = "Ver commits" },
+      { "<leader>gp", "<cmd>lua require'neogit'.open({'push'})<CR>", desc = "PUSH" },
+      { "<leader>gq", "<cmd>Git restore --staged %<CR>", desc = "Quitar este archivo del stage" },
+      { "<leader>gr", "<cmd>Git restore %<CR>", desc = "Restaurar el archivo" },
+      { "<leader>gs", "<cmd>Telescope git_stash<CR>", desc = "Stashs de git" },
+
+      { "<leader>k", group = "Colores", icon = { icon = " ", color = "yellow" } },
+      { "<leader>ka", ":VCoolIns ra<CR>", desc = "Seleccionar color RGBA" },
+      { "<leader>ko", ":VCoolor<CR>", desc = "Seleccionar color" },
+      { "<leader>kr", ":VCoolIns r<CR>", desc = "Seleccionar color RGB" },
+
+      { "<leader>l", group = "Encontrar", icon = { icon = " ", color = "green" } },
+      { "<leader>la", "<cmd>Telescope live_grep<CR>", desc = "Encontrar palabras" },
+      { "<leader>ll", "<cmd>HopChar2<CR>", desc = "Encontrar palabras en tu vista" },
+      { "<leader>lt", "<cmd>TodoTelescope<CR>", desc = "Encontrar los comentarios" },
+
+      { "<leader>m", group = "Acciones de lenguajes", icon = { icon = " ", color = "orange" } },
+      { "<leader>mf", group = "Flutter" },
+      { "<leader>mfh", "<cmd>FlutterHotReload<CR>", desc = "Ejecutar el hot reload" },
+      { "<leader>mfr", "<cmd>FlutterRun<CR>", desc = "Correr la aplicación" },
+      { "<leader>mfs", "<cmd>FlutterVSplit<CR>", desc = "Split?" },
+      { "<leader>mg", group = "Go" },
+      { "<leader>mgc", "<cmd>GoCmt<CR>", desc = "Comentar!" },
+      { "<leader>mge", "<cmd>GoIfErr<CR>", desc = "If err != Zzz" },
+      { "<leader>mgi", "<cmd>GoImpl", desc = "Implementar.interfaz(struct)" },
+      { "<leader>mgt", "<cmd>GoModTidy<CR>", desc = "Limpia las librerias" },
+      { "<leader>ml", group = "LaTeX" },
+      { "<leader>mlc", ":VimtexCompile<CR>", desc = "Compilar y ver el documento LaTeX" },
+      {
+        "<leader>mlp",
+        "<cmd>lua require('nabla').popup({border = rounded})<CR>",
+        desc = "Vista previa de la expresion",
       },
-      c = {
-        name = "Codigo",
-        d = { "<cmd>Lspsaga peek_definition<CR>", "Ver la definición" },
-        m = { "<cmd>Lspsaga outline<CR>", "Mapa sobre la referencia" },
-        f = { "<cmd>Lspsaga lsp_finder<CR>", "Ver referencias" },
-        r = { "<cmd>Lspsaga rename<CR>", "Renombrar..." },
-        a = { "<cmd>Lspsaga code_action<CR>", "Accion del codigo" },
-        D = { "<cmd>Lspsaga show_line_diagnostics<CR>", "Ver diagnostico" },
-        l = { "<cmd>Trouble diagnostics toggle focus<CR>", "Ver logs de LSP" },
-        t = { "<cmd>TodoTrouble<CR>", "Ver todos los comentarios" },
-        -- R = { "<cmd>TroubleRefresh<CR>", "Refrescar los logs de LSP" },
-        k = { "<cmd>lua require('lsp_signature').toggle_float_win()<CR>", "Signature brow" },
-      },
-      m = {
-        name = "Acciones del lenguaje",
-        r = {
-          name = "Rust",
-          l = { "<cmd>lua require('crates').show_popup()<CR>", "Ver mejor los crates" },
-          f = { "<cmd>lua require('crates').show_features_popup()<CR>", "Ver los features" },
-        },
-        m = {
-          name = "Markdown",
-          p = { ":MarkdownPreview<CR>", "Ver vista previa del documento" },
-          s = { ":MarkdownPreviewStop<CR>", "Parar la vista previa" },
-        },
-        l = {
-          name = "LaTeX",
-          c = { ":VimtexCompile<CR>", "Compilar y ver el documento LaTeX" },
-          p = { "<cmd>lua require('nabla').popup({border = rounded})<CR>", "Vista previa de la expresion" },
-        },
-        n = {
-          name = "Neorg",
-          i = { ":Neorg inject-metadata<CR>", "Poner metadatos" },
-          r = { ":Neorg keybind all core.gtd.base.capture<CR>", "Registrar tarea" },
-          e = { ":Neorg keybind all core.gtd.base.edit<CR>", "Editar tareas" },
-          E = { ":Neorg export to-file<CR>", "Exportar a Markdown" },
-          v = { ":Neorg keybind all core.gtd.base.views<CR>", "Ver tareas" },
-          a = { ":e ~/org/norg/agenda.norg<CR>", "Abrir agenda" },
-        },
-        f = {
-          name = "Flutter",
-          r = { "<cmd>FlutterRun<CR>", "Correr la aplicación" },
-          h = { "<cmd>FlutterHotReload<CR>", "Ejecutar el hot reload" },
-          s = { "<cmd>FlutterVSplit<CR>", "Split?" },
-        },
-        g = {
-          name = "Go",
-          c = { "<cmd>GoCmt<CR>", "Comentar!" },
-          t = { "<cmd>GoModTidy<CR>", "Limpia las librerias" },
-          e = { "<cmd>GoIfErr<CR>", "If err != Zzz" },
-          i = { "<cmd>GoImpl", "Implementar.interfaz(struct)" },
-        },
-      },
-      l = {
-        name = "Encontrar",
-        a = { "<cmd>Telescope live_grep<CR>", "Encontrar palabras" },
-        l = { "<cmd>HopChar2<CR>", "Encontrar palabras en tu vista" },
-        t = { "<cmd>TodoTelescope<CR>", "Encontrar los comentarios" },
-      },
-      k = {
-        name = "Colorines",
-        o = { ":VCoolor<CR>", "Seleccionar color" },
-        r = { ":VCoolIns r<CR>", "Seleccionar color RGB" },
-        a = { ":VCoolIns ra<CR>", "Seleccionar color RGBA" },
-      },
-      t = {
-        name = "Terminal",
-        f = { "<cmd>FloatermNew<CR>", "Terminal flotantte" },
-        t = { "<cmd>ToggleTerm<CR>", "Una terminal simple" },
-        s = { "<cmd>split<CR><cmd>term<CR>", "Una terminal AUN MAS SIMPLE" },
-        g = { "<cmd>tabnew<CR><cmd>term<CR>", "Una terminal simple en una tab nueva" },
-        b = { "<cmd>tab DBUI<CR>", "Conectarte con la base de datos..." },
-      },
-      w = {
-        name = "Tabs",
-        n = { "<cmd>tabn<CR>", "Siguiente tab" },
-        p = { "<cmd>tabp<CR>", "Anterior tab" },
-        l = { "<cmd>tabs<CR>", "Lista de tabs" },
-        C = { "<cmd>bd<CR>", "Borrar buffer actual" },
-        c = { "<cmd>tabclose<CR>", "Quitar tab" },
-        N = { "<cmd>tabnew<CR>", "Nuevo tab" },
-        s = { "<cmd>split<CR>", "Split de arriba y abajo" },
-        v = { "<cmd>vsplit<CR>", "Split de derecha a izquierda" },
-      },
-      d = {
-        name = "Depuración moment",
-        b = { "<cmd>lua require'dap'.toggle_breakpoint()<CR>", "Poner/quitar breakpoint" },
-        k = {
-          "<cmd>lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>",
-          "Poner un breakpoint condicional",
-        },
-        l = { "<cmd>lua require'dap'.clear_breakpoints()<CR>", "Limpiar los breakpoint" },
-        c = { "<cmd>lua require'dap'.continue()<CR>", "Continuar con la depuración" },
-        C = { "<cmd>DapTerminate<CR>", "Quitar el depurador" },
-        p = { "<cmd>lua require'dap'.step_into()<CR>", "Step into" },
-        P = { "<cmd>lua require'dap'.step_over()<CR>", "Step over" },
-        e = { "<cmd>lua require'telescope'.extensions.dap.list_breakpoints{}<CR>", "Ver los breakpoints" },
-      },
-      g = {
-        name = "Git",
-        d = { "<cmd>DiffviewOpen<CR>", "Ver los ultimos cambios" },
-        D = { "<cmd>DiffviewFileHistory %<CR>", "Ver TODOS los cambios de ESTE archivo" },
-        -- g = { "<cmd>LazyGit<CR>", "Abrir lazygit" },
-        g = { "<cmd>Neogit<CR>", "Abrir NeoGit" },
-        a = { "<cmd>Git add %<CR>", "Agregar este archivo a stage" },
-        A = { "<cmd>Git add --all<CR>", "Agregar TODOS los cambios al stage" },
-        c = { "<cmd>Neogit commit<CR>", "Realizar commit" },
-        k = {
-          name = "Conflict",
-          o = { "<cmd>GitConflictChooseOurs<CR>", "Elige el cambio actual" },
-          t = { "<cmd>GitConflictChooseTheirs<CR>", "Elige el actual entrante" },
-          a = { "<cmd>GitConflictChooseBoth<CR>", "Elige ambos" },
-          N = { "<cmd>GitConflictChooseNone<CR>", "Elige NIGÚN cambio" },
-          n = { "<cmd>GitConflictNextConflict<CR>", "Ir al siguiente cambio" },
-          p = { "<cmd>GitConflictPrevConflict<CR>", "Ir al anterior cambio" },
-          l = { "<cmd>GitConflictListQf<CR>", "Logs de los conflictos" },
-        },
-        -- c = { "<cmd>Git commit<CR>", "Realizar commit" },
-        p = { "<cmd>lua require'neogit'.open({'push'})<CR>", "PUSH" },
-        -- p = { "<cmd>Git --paginate push<CR>", "PUSH" },
-        P = { "<cmd>lua require'neogit'.open({'pull'})<CR>", "PULL" },
-        -- b = { "<cmd>lua require'neogit'.open({'branch'})<CR>", "Rama..." },
-        b = { "<cmd>Git blame<CR>", "Git blame Bv" },
-        B = { "<cmd>Telescope git_branches<CR>", "Rama..." },
-        s = { "<cmd>Telescope git_stash<CR>", "Stashs de git" },
-        l = { "<cmd>Git log<CR>", "Ver commits" },
-        r = { "<cmd>Git restore %<CR>", "Restaurar el archivo" },
-        R = { "<cmd>Git restore .<CR>", "Restaurar TODOS los ARCHIVOS" },
-        q = { "<cmd>Git restore --staged %<CR>", "Quitar este archivo del stage" },
-        h = {
-          name = "Hunk",
-          s = { "<cmd>Gitsigns stage_hunk<CR>", "Agrear hunk" },
-          r = { "<cmd>Gitsigns reset_hunk<CR>", "Restaurar hunk del commit" },
-          u = { "<cmd>Gitsigns undo_stage_hunk<CR>", "Quitar hunk del stage" },
-        },
-      },
-      h = {
-        name = "Http (API rest)",
-        r = { "<cmd>Rest run<CR>", "Correr la peticion bajo el cursor" },
-        p = { "<Plug>RestNvimPreview", "Ver la peticion con cURL" },
-        l = { "<Plug>RestNvimLast", "Volver a correr la ultima peticion" },
-      },
-    }, wk_opts)
+      { "<leader>mm", group = "Markdown" },
+      { "<leader>mmp", ":MarkdownPreview<CR>", desc = "Ver vista previa del documento" },
+      { "<leader>mms", ":MarkdownPreviewStop<CR>", desc = "Parar la vista previa" },
+      { "<leader>mn", group = "Neorg" },
+      { "<leader>mnE", ":Neorg export to-file<CR>", desc = "Exportar a Markdown" },
+      { "<leader>mna", ":e ~/org/norg/agenda.norg<CR>", desc = "Abrir agenda" },
+      { "<leader>mne", ":Neorg keybind all core.gtd.base.edit<CR>", desc = "Editar tareas" },
+      { "<leader>mni", ":Neorg inject-metadata<CR>", desc = "Poner metadatos" },
+      { "<leader>mnr", ":Neorg keybind all core.gtd.base.capture<CR>", desc = "Registrar tarea" },
+      { "<leader>mnv", ":Neorg keybind all core.gtd.base.views<CR>", desc = "Ver tareas" },
+      { "<leader>mr", group = "Rust" },
+      { "<leader>mrf", "<cmd>lua require('crates').show_features_popup()<CR>", desc = "Ver los features" },
+      { "<leader>mrl", "<cmd>lua require('crates').show_popup()<CR>", desc = "Ver mejor los crates" },
+
+      { "<leader>p", group = "Lazy" },
+      { "<leader>pc", "<cmd>Lazy clean<CR>", desc = "Limpiar cache" },
+      { "<leader>pi", "<cmd>Lazy install<CR>", desc = "Instalar nuevos plugins" },
+      { "<leader>pu", "<cmd>Lazy update<CR>", desc = "Actualizar plugins" },
+
+      { "<leader>t", group = "Terminal" },
+      { "<leader>tb", "<cmd>tab DBUI<CR>", desc = "Conectarte con la base de datos..." },
+      { "<leader>tf", "<cmd>FloatermNew<CR>", desc = "Terminal flotantte" },
+      { "<leader>tg", "<cmd>tabnew<CR><cmd>term<CR>", desc = "Una terminal simple en una tab nueva" },
+      { "<leader>ts", "<cmd>split<CR><cmd>term<CR>", desc = "Una terminal AUN MAS SIMPLE" },
+      { "<leader>tt", "<cmd>ToggleTerm<CR>", desc = "Una terminal simple" },
+
+      { "<leader>w", group = "Tabs" },
+      { "<leader>wC", "<cmd>bd<CR>", desc = "Borrar buffer actual" },
+      { "<leader>wN", "<cmd>tabnew<CR>", desc = "Nuevo tab" },
+      { "<leader>wc", "<cmd>tabclose<CR>", desc = "Quitar tab" },
+      { "<leader>wl", "<cmd>tabs<CR>", desc = "Lista de tabs" },
+      { "<leader>wn", "<cmd>tabn<CR>", desc = "Siguiente tab" },
+      { "<leader>wp", "<cmd>tabp<CR>", desc = "Anterior tab" },
+      { "<leader>ws", "<cmd>split<CR>", desc = "Split de arriba y abajo" },
+      { "<leader>wv", "<cmd>vsplit<CR>", desc = "Split de derecha a izquierda" },
+    })
 
     map("n", "\\", ":noh<CR>", opts)
 
@@ -210,8 +180,5 @@ return {
     map("n", "gn", "<cmd>Lspsaga diagnostic_jump_next<CR>", opts)
     map("n", "gp", "<cmd>Lspsaga diagnostic_jump_prev<CR>", opts)
     map("n", "<F5>", "<cmd>lua require'dap'.continue()<CR>", opts)
-
-    -- Registrando los atajos
-    wk.register(mappings, wk_opts)
   end,
 }

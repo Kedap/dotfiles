@@ -1,7 +1,7 @@
 return {
   "mfussenegger/nvim-dap",
   dependencies = {
-    "rcarriga/nvim-dap-ui",
+    { "rcarriga/nvim-dap-ui", dependencies = { "nvim-neotest/nvim-nio" } },
     { "theHamsta/nvim-dap-virtual-text", config = true },
     "mfussenegger/nvim-dap-python",
     "mxsdev/nvim-dap-vscode-js",
@@ -16,9 +16,9 @@ return {
   },
 
   config = function()
-    require "config.dap"
-    require "config.telescope"
+    require("config.dap")
+    require("config.telescope")
 
-    require("telescope").load_extension "dap"
+    require("telescope").load_extension("dap")
   end,
 }
