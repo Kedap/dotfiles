@@ -41,7 +41,7 @@ fish_add_path ~/bin/
 fish_add_path ~/.yarn/bin/
 
 # Ruta para las gemas de ruby
-#fish_add_path ~/.local/share/gem/ruby/3.0.0/bin/
+fish_add_path ~/.local/share/gem/ruby/3.0.0/bin/
 
 # Ruta de python
 fish_add_path ~/.local/bin/
@@ -55,12 +55,8 @@ fish_add_path ~/.cargo/bin/
 # Ruta de scala
 #fish_add_path ~/.local/share/coursier/bin
 
-# Ruta de deno
-fish_add_path /home/d4n/.deno/bin
-set -x DENO_INSTALL /home/d4n/.deno/
-
 # Ruta de Go
-fish_add_path /home/d4n/go/bin
+# fish_add_path /home/d4n/go/bin
 
 
 # Starshiop
