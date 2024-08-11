@@ -17,8 +17,8 @@ return {
     map("n", "<C-j>", "<C-w>j", opts)
     map("n", "<C-k>", "<C-w>k", opts)
     map("n", "<C-l>", "<C-w>l", opts)
-    map("n", "<C-w><left>", "5<C-w><", opts)
-    map("n", "<C-w><right>", "5<C-w>>", opts)
+    map("n", "<C-w><left>", "5<C-w>>", opts)
+    map("n", "<C-w><right>", "5<C-w><", opts)
     map("n", "<C-w><up>", "5<C-w>+", opts)
     map("n", "<C-w><down>", "5<C-w>-", opts)
     -- Para el indent
