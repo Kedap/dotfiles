@@ -170,6 +170,12 @@ return {
       { "<leader>wp", "<cmd>tabp<CR>", desc = "Anterior tab" },
       { "<leader>ws", "<cmd>split<CR>", desc = "Split de arriba y abajo" },
       { "<leader>wv", "<cmd>vsplit<CR>", desc = "Split de derecha a izquierda" },
+
+      { "<leader>h", group = "Http (API rest)" },
+      { "<leader>hr", "<cmd>lua require('kulala').run()<CR>", desc = "Hacer petición del documento" },
+      { "<leader>hR", "<cmd>lua require('kulala').replay()<CR>", desc = "Volver a ejecutar la petición" },
+      { "<leader>hc", "<cmd>lua require('kulala').close()<CR>", desc = "Quitar la petición" },
+      { "<leader>ht", "<cmd>lua require('kulala').toggle_view()<CR>", desc = "Alternar la vista de la petición" },
     })
 
     map("n", "\\", ":noh<CR>", opts)
