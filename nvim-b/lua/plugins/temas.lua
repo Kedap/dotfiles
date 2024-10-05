@@ -4,9 +4,9 @@ return {
   -- lazy = true,
   -- priority = 1000,
 
-  "shaunsingh/oxocarbon.nvim",
-  lazy = true,
-  priority = 1000,
+  -- "shaunsingh/oxocarbon.nvim",
+  -- lazy = true,
+  -- priority = 1000,
 
   -- "rebelot/kanagawa.nvim",
   -- lazy = true,
@@ -35,9 +35,9 @@ return {
   -- lazy = true,
   -- priority = 1000,
 
-  -- "ellisonleao/gruvbox.nvim",
-  -- lazy = true,
-  -- priority = 1000,
+  "ellisonleao/gruvbox.nvim",
+  lazy = true,
+  priority = 1000,
 
   -- "morhetz/gruvbox",
   -- lazy = true,
