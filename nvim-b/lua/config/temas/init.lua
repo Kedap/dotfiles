@@ -35,8 +35,8 @@
 -- return opciones_linea
 
 -- Configuracion para gruvbox nvim
-local opciones_linea = require("config.temas.grubocs")
-return opciones_linea
+-- local opciones_linea = require("config.temas.grubocs")
+-- return opciones_linea
 
 -- Configuracion para gruvbox vim
 -- local opciones_linea = require("config.temas.ori_gruvbox")
@@ -95,8 +95,8 @@ return opciones_linea
 -- return opciones_linea
 
 -- Configuracion monet
--- local opciones_linea = require("config.temas.moneda")
--- return opciones_linea
+local opciones_linea = require("config.temas.moneda")
+return opciones_linea
 
 -- Configuracion fusion
 -- local opciones_linea = require("config.temas.fusion")

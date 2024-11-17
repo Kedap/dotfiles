@@ -35,9 +35,9 @@ return {
   -- lazy = true,
   -- priority = 1000,
 
-  "ellisonleao/gruvbox.nvim",
-  lazy = true,
-  priority = 1000,
+  -- "ellisonleao/gruvbox.nvim",
+  -- lazy = true,
+  -- priority = 1000,
 
   -- "morhetz/gruvbox",
   -- lazy = true,
@@ -106,9 +106,9 @@ return {
   -- lazy = true,
   -- priority = 1000,
 
-  -- "fynnfluegge/monet.nvim",
-  -- lazy = true,
-  -- priority = 1000,
+  "fynnfluegge/monet.nvim",
+  lazy = true,
+  priority = 1000,
 
   -- "diegoulloao/neofusion.nvim",
   -- lazy = true,
