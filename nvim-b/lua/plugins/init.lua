@@ -31,5 +31,6 @@ return {
     end,
     cmd = "UndotreeToggle",
   },
-  { "mistweaverco/kulala.nvim", opts = {} },
+  -- { "mistweaverco/kulala.nvim", opts = {} },
+  { "rest-nvim/rest.nvim" },
 }

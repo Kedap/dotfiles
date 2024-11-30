@@ -43,7 +43,7 @@
 -- return opciones_linea
 
 -- Configuracion para night
--- local opciones_linea = require "config.temas.night"
+-- local opciones_linea = require("config.temas.night")
 -- return opciones_linea
 
 -- Configuracion para everbluch
