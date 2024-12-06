@@ -14,7 +14,7 @@ alias ll="eza -l -g --git --icons"
 alias lg="eza -l -g --git --icons --tree --level=2 -a --git-ignore"
 alias lt="eza -l -g --icons --tree -a"
 alias lw="eza -l -g --icons --tree -a"
-alias sdkmanager="sdkmanager --sdk_root=~/etc/android-sdk/"
+#alias sdkmanager="sdkmanager --sdk_root=~/etc/android-sdk/"
 alias yarn="yarn --emoji true"
 alias icat="kitty +kitten icat"
 alias dir="eza"
@@ -61,3 +61,10 @@ fish_add_path ~/.cargo/bin/
 
 # Starshiop
 starship init fish | source
+
+# pnpm
+set -gx PNPM_HOME "/home/kedap/.local/share/pnpm"
+if not string match -q -- $PNPM_HOME $PATH
+  set -gx PATH "$PNPM_HOME" $PATH
+end
+# pnpm end
