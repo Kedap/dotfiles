@@ -93,7 +93,7 @@
             }
         ],
         "target_uinput": "keyboard",
-        "output_symbol": "KEY_CALENDAR",
+        "output_symbol": "KEY_YELLOW",
         "mapping_type": "key_macro"
     },
     {

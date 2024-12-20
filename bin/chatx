@@ -1,0 +1,3 @@
+#!/bin/fish
+
+simplex-chat -d ~/.simplex/simplex_v1 -k 'contraseña' $argv
