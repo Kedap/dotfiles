@@ -3,3 +3,15 @@ edit = [
   { run = 'nvim "$@"', block = true, for = "unix" },
   { run = "nvim %*", block = true, for = "windows" },
 ]
+image_feh = [{ run = 'feh "$@"', orphan = true, for = "unix" }]
+pdf_zathura = [{ run = 'zathura "$@"', orphan = true, for = "unix" }]
+
+[open]
+rules = [
+  { mime = "image/*", use = [
+    "image_feh",
+    "open",
+    "reveal",
+  ] },
+  { mime = "application/pdf", use = "pdf_zathura" },
+]
