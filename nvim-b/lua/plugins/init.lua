@@ -4,6 +4,17 @@ return {
   { "jbyuki/nabla.nvim", ft = { "tex", "norg" } },
   { "tpope/vim-fugitive", cmd = "Git" },
   { "voldikss/vim-floaterm", cmd = "FloatermNew" },
+  {
+    "christoomey/vim-tmux-navigator",
+    cmd = {
+      "TmuxNavigateLeft",
+      "TmuxNavigateDown",
+      "TmuxNavigateUp",
+      "TmuxNavigateRight",
+      "TmuxNavigatePrevious",
+      "TmuxNavigatorProcessList",
+    },
+  },
   { "akinsho/toggleterm.nvim", cmd = "ToggleTerm", config = true },
   { "akinsho/git-conflict.nvim", version = "*", config = true },
   { "j-hui/fidget.nvim", event = "BufRead", opts = { window = { blend = 0 } }, tag = "v1.4.3" },
