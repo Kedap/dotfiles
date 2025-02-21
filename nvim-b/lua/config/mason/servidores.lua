@@ -47,6 +47,31 @@ require("mason-lspconfig").setup_handlers({
       end,
     })
   end,
+  ["emmet_ls"] = function()
+    require("lspconfig")["emmet_ls"].setup({
+      capabilities = capabilities,
+      filetypes = {
+        "astro",
+        "css",
+        "eruby",
+        "html",
+        "htmldjango",
+        "javascriptreact",
+        "less",
+        "pug",
+        "sass",
+        "scss",
+        "svelte",
+        "typescriptreact",
+        "vue",
+        "htmlangular",
+        "liquid",
+      },
+      on_attach = function(client, bufnr)
+        require("lsp_signature").on_attach(signature_config, bufnr) -- Note: add in lsp client on-attach
+      end,
+    })
+  end,
 })
 
 vim.api.nvim_command([[ hi def link LspReferenceText CursorLine ]])

@@ -165,6 +165,9 @@ return {
         java = {
           require("formatter.filetypes.java").google_java_format,
         },
+        liquid = {
+          require("formatter.filetypes.javascript").prettier,
+        },
       },
     })
 

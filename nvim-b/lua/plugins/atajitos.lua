@@ -145,6 +145,8 @@ return {
       { "<leader>mm", group = "Markdown" },
       { "<leader>mmp", ":MarkdownPreview<CR>", desc = "Ver vista previa del documento" },
       { "<leader>mms", ":MarkdownPreviewStop<CR>", desc = "Parar la vista previa" },
+      { "<leader>mmP", ":MarpToggle<CR>", desc = "Presentar con Marp" },
+      { "<leader>mmS", ":MarpStatus<CR>", desc = "Estado sobre Marp" },
       { "<leader>mn", group = "Neorg" },
       { "<leader>mnE", ":Neorg export to-file<CR>", desc = "Exportar a Markdown" },
       { "<leader>mna", ":e ~/org/norg/agenda.norg<CR>", desc = "Abrir agenda" },
