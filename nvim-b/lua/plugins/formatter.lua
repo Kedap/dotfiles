@@ -5,18 +5,7 @@ return {
     require("formatter").setup({
       filetype = {
         javascript = {
-          -- prettier
-          function()
-            return {
-              exe = "prettier",
-              args = {
-                "--stdin-filepath",
-                vim.fn.fnameescape(vim.api.nvim_buf_get_name(0)),
-                "--single-quote",
-              },
-              stdin = true,
-            }
-          end,
+          require("formatter.filetypes.javascript").prettier,
         },
         rust = {
           function()
@@ -28,59 +17,16 @@ return {
           end,
         },
         typescript = {
-          -- prettier
-          function()
-            return {
-              exe = "prettier",
-              args = {
-                "--stdin-filepath",
-                vim.fn.fnameescape(vim.api.nvim_buf_get_name(0)),
-                "--single-quote",
-              },
-              stdin = true,
-            }
-          end,
+          require("formatter.filetypes.typescript").prettier,
         },
         typescriptreact = {
-          -- prettier
-          function()
-            return {
-              exe = "prettier",
-              args = {
-                "--stdin-filepath",
-                vim.fn.fnameescape(vim.api.nvim_buf_get_name(0)),
-                "--single-quote",
-              },
-              stdin = true,
-            }
-          end,
+          require("formatter.filetypes.typescriptreact").prettier,
         },
         javascriptreact = {
-          -- prettier
-          function()
-            return {
-              exe = "prettier",
-              args = {
-                "--stdin-filepath",
-                vim.fn.fnameescape(vim.api.nvim_buf_get_name(0)),
-                "--single-quote",
-              },
-              stdin = true,
-            }
-          end,
+          require("formatter.filetypes.javascriptreact").prettier,
         },
         json = {
-          function()
-            return {
-              exe = "prettier",
-              args = {
-                "--stdin-filepath",
-                vim.fn.fnameescape(vim.api.nvim_buf_get_name(0)),
-                "--double-quote",
-              },
-              stdin = true,
-            }
-          end,
+          require("formatter.filetypes.json").prettier,
         },
         dart = {
           function()
