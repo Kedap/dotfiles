@@ -114,17 +114,17 @@ return {
         liquid = {
           require("formatter.filetypes.javascript").prettier,
         },
+        graphql = {
+          require("formatter.filetypes.graphql").prettier,
+        },
       },
     })
 
-    vim.api.nvim_exec(
-      [[
-augroup FormatAutogroup
-  autocmd!
-  autocmd BufWritePost * FormatWrite
-augroup END
-]],
-      true
-    )
+    vim.cmd([[
+      augroup FormatAutogroup
+        autocmd!
+        autocmd BufWritePost * FormatWrite
+      augroup END
+      ]])
   end,
 }
