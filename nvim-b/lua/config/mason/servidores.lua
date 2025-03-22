@@ -5,6 +5,10 @@ require("mason-lspconfig").setup({
   ensure_installed = { "lua_ls" },
 })
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
+capabilities.textDocument.foldingRange = {
+  dynamicRegistration = false,
+  lineFoldingOnly = true,
+}
 local signature_config = {
   hint_enable = true,
   handler_opts = { border = "single" },

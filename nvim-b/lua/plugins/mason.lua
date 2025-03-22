@@ -5,6 +5,7 @@ return {
     "neovim/nvim-lspconfig",
     "hrsh7th/cmp-nvim-lsp",
     "ray-x/lsp_signature.nvim",
+    "kevinhwang91/nvim-ufo",
   },
   config = function()
     require("config.mason")
