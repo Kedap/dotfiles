@@ -20,7 +20,7 @@ vim.o.spelllang = "es"
 vim.o.lazyredraw = true
 vim.o.conceallevel = 2
 vim.g.mapleader = " "
-vim.wo.signcolumn = "auto:3"
+vim.wo.signcolumn = "auto:5"
 vim.lsp.inlay_hint.enable(true)
 vim.cmd("highlight ColoColumn ctermbg=0 guibg=lightgrey")
 vim.cmd([[

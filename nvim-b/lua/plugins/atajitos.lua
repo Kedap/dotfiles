@@ -116,9 +116,8 @@ return {
       { "<leader>gs", "<cmd>Telescope git_stash<CR>", desc = "Stashs de git" },
 
       { "<leader>k", group = "Colores", icon = { icon = " ", color = "yellow" } },
-      { "<leader>ka", ":VCoolIns ra<CR>", desc = "Seleccionar color RGBA" },
-      { "<leader>ko", ":VCoolor<CR>", desc = "Seleccionar color" },
-      { "<leader>kr", ":VCoolIns r<CR>", desc = "Seleccionar color RGB" },
+      { "<leader>ka", ":Shades<CR>", desc = "Seleccionar color" },
+      { "<leader>kh", ":Huefy<CR>", desc = "Seleccionar color hue" },
 
       { "<leader>l", group = "Encontrar", icon = { icon = " ", color = "green" } },
       { "<leader>la", "<cmd>Telescope live_grep<CR>", desc = "Encontrar palabras" },

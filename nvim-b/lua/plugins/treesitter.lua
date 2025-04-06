@@ -41,28 +41,20 @@ return {
         enable = true,
         additional_vim_regex_highlighting = false,
       },
-      -- rainbow = {
-      --   enable = true,
-      --   -- disable = { "jsx", "cpp" }, list of languages you want to disable the plugin for
-      --   extended_mode = true, -- Also highlight non-bracket delimiters like html tags, boolean or table: lang -> boolean
-      --   max_file_lines = nil, -- Do not enable for files with more than n lines, int
-      --   -- colors = {}, -- table of hex strings
-      --   -- termcolors = {} -- table of colour name strings
-      -- },
       autotag = { enable = true },
 
       textobjects = {
         select = {
           enable = true,
-
           -- Automatically jump forward to textobj, similar to targets.vim
           lookahead = true,
-
           keymaps = {
             ["af"] = "@function.outer",
             ["if"] = "@function.inner",
-            ["ac"] = "@class.outer",
-            ["ic"] = "@class.inner",
+            ["ac"] = "@conditional.outer",
+            ["ic"] = "@conditional.inner",
+            ["al"] = "@loop.outer",
+            ["il"] = "@loop.inner",
           },
           -- You can choose the select mode (default is charwise 'v')
           --
@@ -101,7 +93,6 @@ return {
 
     -- Rainbow
     local rainbow_delimiters = require("rainbow-delimiters")
-
     vim.g.rainbow_delimiters = {
       strategy = {
         [""] = rainbow_delimiters.strategy["global"],

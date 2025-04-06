@@ -4,6 +4,11 @@ return {
   { "jbyuki/nabla.nvim", ft = { "tex", "norg" } },
   { "tpope/vim-fugitive", cmd = "Git" },
   { "voldikss/vim-floaterm", cmd = "FloatermNew" },
+  { "nvzone/volt", lazy = true },
+  {
+    "nvzone/minty",
+    cmd = { "Shades", "Huefy" },
+  },
   {
     "christoomey/vim-tmux-navigator",
     cmd = {
@@ -24,15 +29,6 @@ return {
   { "tpope/vim-surround", keys = {
     { "cs", mode = "n" },
   } },
-  {
-    "KabbAmine/vCoolor.vim",
-    keys = {
-      { "<leader>k", mode = "n" },
-    },
-    config = function()
-      vim.g.vcoolor_disable_mappings = 1
-    end,
-  },
   {
     "mbbill/undotree",
     config = function()
