@@ -1,6 +1,7 @@
 return {
   "glepnir/lspsaga.nvim",
   event = "BufRead",
+  dependencies = { "nvim-tree/nvim-web-devicons", name = "neovim-web-devicons" },
   opts = {
     finder = {
       edit = { "o", "<CR>" },
@@ -17,7 +18,8 @@ return {
       virtual_text = true,
     },
     symbol_in_winbar = {
-      enable = false,
+      enable = true,
+      show_file = false,
     },
     ui = {
       -- currently only round theme
@@ -53,5 +55,4 @@ return {
       kind = {},
     },
   },
-  dependencies = { "nvim-tree/nvim-web-devicons", name = "neovim-web-devicons" },
 }

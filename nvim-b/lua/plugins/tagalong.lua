@@ -12,5 +12,6 @@ return {
     "php",
     "typescriptreact",
     "xml",
+    "liquid",
   },
 }

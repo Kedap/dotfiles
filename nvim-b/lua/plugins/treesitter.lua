@@ -3,7 +3,6 @@ return {
   build = ":TSUpdate",
   event = "BufRead",
   dependencies = {
-    -- "p00f/nvim-ts-rainbow",
     "https://gitlab.com/HiPhish/rainbow-delimiters.nvim",
     "windwp/nvim-ts-autotag",
     "nvim-treesitter/nvim-treesitter-textobjects",
@@ -80,15 +79,16 @@ return {
           include_surrounding_whitespace = true,
         },
       },
-      refactor = {
-        highlight_definitions = {
-          enable = true,
-          clear_on_cursor_move = true,
-        },
-        highlight_current_scope = { enable = false },
-        smart_rename = { enable = false },
-        navigation = { enable = false },
-      },
+
+      -- refactor = {
+      --   highlight_definitions = {
+      --     enable = true,
+      --     clear_on_cursor_move = true,
+      --   },
+      --   highlight_current_scope = { enable = false },
+      --   smart_rename = { enable = false },
+      --   navigation = { enable = false },
+      -- },
     })
 
     -- Rainbow

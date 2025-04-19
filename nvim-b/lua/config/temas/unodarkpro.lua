@@ -8,7 +8,7 @@ require("onedarkpro").setup({
     methods = "NONE", -- Style that is applied to methods
     numbers = "NONE", -- Style that is applied to numbers
     strings = "NONE", -- Style that is applied to strings
-    comments = "NONE", -- Style that is applied to comments
+    comments = "italic", -- Style that is applied to comments
     keywords = "NONE", -- Style that is applied to keywords
     constants = "NONE", -- Style that is applied to constants
     functions = "NONE", -- Style that is applied to functions
@@ -55,6 +55,7 @@ require("onedarkpro").setup({
     lsp_semantic_tokens = true,
     marks = true,
     mini_diff = true,
+    diffview = true,
     mini_icons = true,
     mini_indentscope = true,
     neotest = true,
@@ -86,7 +87,7 @@ require("onedarkpro").setup({
   },
 
   options = {
-    cursorline = false, -- Use cursorline highlighting?
+    cursorline = true, -- Use cursorline highlighting?
     transparency = false, -- Use a transparent background?
     terminal_colors = true, -- Use the theme's colors for Neovim's :terminal?
     lualine_transparency = false, -- Center bar transparency?

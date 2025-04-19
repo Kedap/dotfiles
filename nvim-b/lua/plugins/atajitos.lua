@@ -85,6 +85,8 @@ return {
       { "<leader>fn", ":NvimTreeToggle<CR>", desc = "Abrir gestor de archivos" },
       { "<leader>fo", ":w! <cr>", desc = "Guardar" },
       { "<leader>fs", ":x! <cr>", desc = "Guardar y salir" },
+      { "<leader>fh", "<cmd> lua Snacks.scratch()<cr>", desc = "Abrir un archivo de scratch" },
+      { "<leader>fH", "<cmd> lua Snacks.scratch.select()()<cr>", desc = "Seleccionar un archivo de scratch" },
 
       { "<leader>g", group = "Git" },
       { "<leader>gA", "<cmd>Git add --all<CR>", desc = "Agregar TODOS los cambios al stage" },
@@ -113,7 +115,12 @@ return {
       { "<leader>gp", "<cmd>lua require'neogit'.open({'push'})<CR>", desc = "PUSH" },
       { "<leader>gq", "<cmd>Git restore --staged %<CR>", desc = "Quitar este archivo del stage" },
       { "<leader>gr", "<cmd>Git restore %<CR>", desc = "Restaurar el archivo" },
-      { "<leader>gs", "<cmd>Telescope git_stash<CR>", desc = "Stashs de git" },
+      { "<leader>gs", group = "Stash" },
+      { "<leader>gsl", "<cmd>Telescope git_stash<CR>", desc = "Ver los Stash" },
+      { "<leader>gsa", "<cmd>Git stash<CR>", desc = "Agrega un stash" },
+      { "<leader>gsA", "<cmd>Git stash apply<CR>", desc = "Aplica el stash" },
+      { "<leader>gsd", "<cmd>Git stash drop<CR>", desc = "Elimina el stash" },
+      { "<leader>gsp", "<cmd>Git stash pop<CR>", desc = "Aplica y elimina el stash" },
 
       { "<leader>k", group = "Colores", icon = { icon = " ", color = "yellow" } },
       { "<leader>ka", ":Shades<CR>", desc = "Seleccionar color" },

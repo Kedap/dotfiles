@@ -117,6 +117,9 @@ return {
         graphql = {
           require("formatter.filetypes.graphql").prettier,
         },
+        sql = {
+          require("formatter.filetypes.sql").sql_formatter,
+        },
       },
     })
 

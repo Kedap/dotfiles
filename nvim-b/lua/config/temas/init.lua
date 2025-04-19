@@ -18,7 +18,7 @@
 -- local opciones_linea = require("config.temas.nightfox-conf")
 -- return opciones_linea
 
--- configuracion onedark
+-- -- configuracion onedark
 local opciones_linea = require("config.temas.unodarkpro")
 return opciones_linea
 

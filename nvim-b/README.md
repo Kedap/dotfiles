@@ -4,7 +4,11 @@ Aquí se puede ver la configuración escrito en este lenguaje
 
 ## Capturas de pantalla
 
-_Algún ejemplo_
+![Primera captura de pantalla](./assets_doc/primera_ss.png)
+
+![Segunda captura de pantalla](./assets_doc/segunda_ss.png)
+
+![Tercera captura de pantalla](./assets_doc/tercera_ss.png)
 
 ## Plugins
 
@@ -32,13 +36,31 @@ El gestor de plugins que se utiliza es: [Lazy](https://github.com/folke/lazy.nvi
 - [neovim-ayu](https://github.com/Shatur/neovim-ayu)
 - [ayu](https://github.com/ayu-theme/ayu-vim)
 - [palenightfall](https://github.com/JoosepAlviste/palenightfall.nvim)
+- [bluloco](https://github.com/uloco/bluloco.nvim)
+- [sweetie](https://github.com/NTBBloodbath/sweetie.nvim)
+- [monokai-pro](https://gitlab.com/__tpb/monokai-pro.nvim)
+- [nightfox](https://github.com/EdenEast/nightfox.nvim)
+- [eldritch](https://github.com/eldritch-theme/eldritch.nvim)
+- [monet](https://github.com/fynnfluegge/monet.nvim)
+- [neofusion](https://github.com/diegoulloao/neofusion.nvim)
+- [oldworld](https://github.com/dgox16/oldworld.nvim)
 
 ### Cosas **esenciales**
 
 - [nvim-tree](https://github.com/nvim-tree/nvim-tree.lua)
+- [oil](https://github.com/stevearc/oil.nvim)
 - [nvim-web-devicons](https://github.com/nvim-tree/nvim-web-devicons)
 - [bufferline](https://github.com/akinsho/bufferline.nvim)
 - [lualine](https://github.com/nvim-lualine/lualine.nvim)
+- [vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator)
+- [rest.nvim](https://github.com/rest-nvim/rest.nvim)
+
+### Base de datos
+
+- [vim-dadbod](https://github.com/tpope/vim-dadbod)
+- [vim-dadbod-ui](https://github.com/kristijanhusak/vim-dadbod-ui)
+- [vim-dadbod-completion](https://github.com/kristijanhusak/vim-dadbod-completion)
+- [vim-dotenv](https://github.com/tpope/vim-dotenv)
 
 ### Utilidades de código
 
@@ -58,6 +80,8 @@ El gestor de plugins que se utiliza es: [Lazy](https://github.com/folke/lazy.nvi
   - [nvim-dap-virtual-text](https://github.com/theHamsta/nvim-dap-virtual-text)
   - [nvim-dap-python](https://github.com/mfussenegger/nvim-dap-python)
   - [nvim-dap-vscode-js](https://github.com/mxsdev/nvim-dap-vscode-js)
+  - [nvim-dap-ruby](https://github.com/suketa/nvim-dap-ruby)
+  - [nvim-dap-go](https://github.com/leoluz/nvim-dap-go)
 
   - [telescope-dap.nvim](https://github.com/nvim-telescope/telescope-dap.nvim)
   - [cmp-dap](https://github.com/rcarriga/cmp-dap)
@@ -68,10 +92,13 @@ El gestor de plugins que se utiliza es: [Lazy](https://github.com/folke/lazy.nvi
 
   - [mason-lspconfig.nvim](https://github.com/williamboman/mason-lspconfig.nvim)
   - [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
-
   - [cmp-nvim-lsp](https://github.com/hrsh7th/cmp-nvim-lsp)
+  - [lsp_signature.nvim](https://github.com/ray-x/lsp_signature.nvim)
+  - [nvim-ufo](https://github.com/kevinhwang91/nvim-ufo)
 
 - [lspsaga.nvim](https://github.com/glepnir/lspsaga.nvim)
+- [fidget.nvim](https://github.com/j-hui/fidget.nvim)
+- [trouble.nvim](https://github.com/folke/trouble.nvim)
 
 ### Completado
 
@@ -89,35 +116,45 @@ El gestor de plugins que se utiliza es: [Lazy](https://github.com/folke/lazy.nvi
   - [cmp-spell](https://github.com/f3fora/cmp-spell)
   - [lspkind-nvim](https://github.com/onsails/lspkind-nvim)
   - [friendly-snippets](https://github.com/rafamadriz/friendly-snippets)
+  - [cmp-git](https://github.com/petertriho/cmp-git)
+  - [codeium](https://github.com/Exafunction/codeium.nvim)
+  - [cmp-emoji](https://github.com/hrsh7th/cmp-emoji)
 
 ### Herramientas de lenguaje
 
-- [rust-tools](https://github.com/simrat39/rust-tools.nvim)
+- [rustaceanvim](https://github.com/mrcjkb/rustaceanvim)
   - [crates](https://github.com/saecki/crates.nvim)
   - [plenary](https://github.com/nvim-lua/plenary.nvim)
 - [vimtex](https://github.com/lervag/vimtex)
 - [markdown-preview](https://github.com/iamcco/markdown-preview.nvim)
+- [go](https://github.com/ray-x/go.nvim)
+- [nvim-jdtls](https://github.com/mfussenegger/nvim-jdtls)
 
 ### GIT
 
-- [lazygit](https://github.com/kdheepak/lazygit.nvim)
+- [neogit](https://github.com/NeogitOrg/neogit)
 - [diffview](https://github.com/sindrets/diffview.nvim)
 - [gitsigns](https://github.com/lewis6991/gitsigns.nvim)
 - [vim-fugitive](https://github.com/tpope/vim-fugitive)
+- [git-conflict.nvim](https://github.com/akinsho/git-conflict.nvim)
 
 ### Cosas bonitas y **casi** necesarias
 
 - [nvim-autopairs](https://github.com/windwp/nvim-autopairs)
 - [nvim-colorizer.lua](https://github.com/norcalli/nvim-colorizer.lua)
-- [indent-blankline](https://github.com/lukas-reineke/indent-blankline.nvim)
 - [telescope](https://github.com/nvim-telescope/telescope.nvim)
 - [nvim-notify](https://github.com/rcarriga/nvim-notify)
-- [vCoolor.vim](https://github.com/KabbAmine/vCoolor.vim)
+- [volt](https://github.com/nvzone/volt)
+- [minty](https://github.com/nvzone/minty)
 - [hop.nvim](https://github.com/phaazon/hop.nvim)
 - [tagalong.vim](https://github.com/AndrewRadev/tagalong.vim)
 - [vim-repeat](https://github.com/tpope/vim-repeat)
 - [nvim-comment](https://github.com/terrortylor/nvim-comment)
 - [undotree](https://github.com/mbbill/undotree)
+- [nabla](https://github.com/nvim-tree/nvim-web-devicons)
+- [nvim-silicon](https://github.com/michaelrommel/nvim-silicon)
+- [snacks](https://github.com/folke/snacks.nvim)
+- [todo-comments.nvim](https://github.com/folke/todo-comments.nvim)
 
 ### Atajos
 
@@ -141,32 +178,31 @@ configuración o el archivo [Lazy](#lazy-lockjson)
 **NECESARIO**:
 
 - [kitty](https://github.com/kovidgoyal/kitty), no es necesario pero es para
-  que se vea bonito, el concepto es que tenga soporte para ligaduras o
-  mostrar pictogramas como las NerdFonts. se puede consultar mi
-  [config](https://github.com/Kedap/dotfiles/blob/main/kitty.conf) con
-  soporte para ligaturas.
+  que se vea bonito, el concepto es que tenga soporte para ligaduras, imagenes
+  o mostrar pictogramas como las NerdFonts. se puede consultar mi
+  [config](https://github.com/Kedap/dotfiles/blob/main/kitty.conf) con soporte
+  para ligaturas.
   - [Cascadia code](https://github.com/microsoft/cascadia-code) Es la fuente
-    que utilizo, puede utilizar otra o una NerdFont, también lo utilizo junto
-    a
+    que utilizo, puede utilizar otra o una NerdFont, también lo utilizo junto a
   - [Victor Mono](https://rubjo.github.io/victor-mono/)
-  - [noto-emoji](https://github.com/googlefonts/noto-emoji) Para soportar los emojis
+  - [noto-emoji](https://github.com/googlefonts/noto-emoji) Para soportar los
+    emojis
 - Rust
 - Yarn y NPM
 - Ripgrep
 - [Mis
-  splashes](https://github.com/Kedap/dotfiles/blob/main/wallpapers/splashes), Deben de estar justo en `~/Wallpapers/splashes` (se puede
-  modificar después la ruta)
+  splashes](https://github.com/Kedap/dotfiles/blob/main/wallpapers/splashes),
+  Deben de estar justo en `~/Wallpapers/splashes` (se puede modificar después
+  la ruta)
 - Git :)
 
 **No necesarios a menos que lo utilices**
 
-- Zenity
-- Programas de formatear que no se encuentran en [mason](https://github.com/williamboman/mason.nvim)
-  - Latexindent
-    configuración de depurador
+- Programas de formatear que no se encuentran en
+  [mason](https://github.com/williamboman/mason.nvim)
+  - Latexindent configuración de depurador
     - [nvim-dap-python](https://github.com/mfussenegger/nvim-dap-python) haga
       click para mas información (la configuración esta hecha para ser que el
-      directorio sea `~/.virtualenvs/debugpy/bin/python`)
-      Algo que instale LaTeX (`pdflatex`)
+      directorio sea `~/.virtualenvs/debugpy/bin/python`) Algo que instale
+      LaTeX (`pdflatex`)
 - Firefox
-- [ascii-image-converter](https://github.com/TheZoraiz/ascii-image-converter) para ver imágenes en ASCII
