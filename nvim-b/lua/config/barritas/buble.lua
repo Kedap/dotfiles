@@ -1,6 +1,6 @@
-local opciones = require "config.temas"
+local opciones = require("config.temas")
 
-require("lualine").setup {
+require("lualine").setup({
   options = {
     icons_enabled = true,
     theme = opciones.tema,
@@ -21,10 +21,11 @@ require("lualine").setup {
       "fileformat",
 
       {
+        -- Lsp server name .
         function()
           local msg = "Sin LSP"
-          local buf_ft = vim.api.nvim_buf_get_option(0, "filetype")
-          local clients = vim.lsp.get_active_clients()
+          local buf_ft = vim.api.nvim_get_option_value("filetype", { buf = 0 })
+          local clients = vim.lsp.get_clients()
           if next(clients) == nil then
             return msg
           end
@@ -36,8 +37,8 @@ require("lualine").setup {
           end
           return msg
         end,
-        icon = "",
-        color = { fg = "#bbc2cf" },
+        icon = " ",
+        color = { fg = "#ffffff" },
       },
 
       "filetype",
@@ -54,4 +55,4 @@ require("lualine").setup {
     lualine_z = {},
   },
   extensions = { "nvim-tree", "toggleterm", "fugitive", "quickfix", "nvim-dap-ui" },
-}
+})

@@ -4,7 +4,7 @@ local opciones_lualine = {
 }
 
 --- Default configuration
-require("sweetie").setup {
+require("sweetie").setup({
   pumblend = {
     enable = true,
     transparency_amount = 20,
@@ -12,13 +12,11 @@ require("sweetie").setup {
   overrides = {},
   integrations = {
     lazy = true,
-    -- neorg = true,
-    neogit = true,
     telescope = true,
   },
   cursor_color = true,
   terminal_colors = true,
-}
-vim.cmd.colorscheme "sweetie"
+})
+vim.cmd.colorscheme("sweetie")
 
 return opciones_lualine

@@ -186,11 +186,13 @@ return {
       { "<leader>ws", "<cmd>split<CR>", desc = "Split de arriba y abajo" },
       { "<leader>wv", "<cmd>vsplit<CR>", desc = "Split de derecha a izquierda" },
 
-      { "<leader>h", group = "Http (API rest)" },
+      { "<leader>h", group = "Http (API rest)", icon = { icon = " ", color = "blue" } },
       { "<leader>hr", "<cmd>Rest run<CR>", desc = "Hacer petición del documento" },
       { "<leader>hR", "<cmd>Rest last<CR>", desc = "Volver a ejecutar la petición" },
       -- { "<leader>hc", "<cmd>lua require('kulala').close()<CR>", desc = "Quitar la petición" },
       { "<leader>ho", "<cmd>Rest open<CR>", desc = "Abrir el panel de resultados" },
+
+      { "<leader>a", group = "Avante", icon = { icon = " ", color = "green" }},
     })
 
     map("n", "\\", ":noh<CR>", opts)

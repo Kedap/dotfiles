@@ -83,7 +83,7 @@ return opciones_linea
 -- return opciones_linea
 
 -- Configuracion dulce
--- local opciones_linea = require "config.temas.dulcesito"
+-- local opciones_linea = require("config.temas.dulcesito")
 -- return opciones_linea
 
 -- Configuracion monosai
