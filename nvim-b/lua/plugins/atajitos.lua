@@ -130,6 +130,7 @@ return {
       { "<leader>la", "<cmd>Telescope live_grep<CR>", desc = "Encontrar palabras" },
       { "<leader>ll", "<cmd>HopChar2<CR>", desc = "Encontrar palabras en tu vista" },
       { "<leader>lt", "<cmd>TodoTelescope<CR>", desc = "Encontrar los comentarios" },
+      { "<leader>lb", "<cmd>Telescope buffers<CR>", desc = "Encontrar en los buffers" },
 
       { "<leader>m", group = "Acciones de lenguajes", icon = { icon = " ", color = "orange" } },
       { "<leader>mf", group = "Flutter" },
@@ -192,7 +193,7 @@ return {
       -- { "<leader>hc", "<cmd>lua require('kulala').close()<CR>", desc = "Quitar la petición" },
       { "<leader>ho", "<cmd>Rest open<CR>", desc = "Abrir el panel de resultados" },
 
-      { "<leader>a", group = "Avante", icon = { icon = " ", color = "green" }},
+      { "<leader>a", group = "Avante", icon = { icon = " ", color = "green" } },
     })
 
     map("n", "\\", ":noh<CR>", opts)

@@ -92,7 +92,10 @@ return {
         { name = "buffer" },
       }),
       formatting = {
-        format = lspkind.cmp_format({ with_text = true, maxwidth = 50 }),
+        format = lspkind.cmp_format({
+          maxwidth = 50,
+          symbol_map = { Codeium = "" },
+        }),
       },
       experimental = {
         ghost_text = true,

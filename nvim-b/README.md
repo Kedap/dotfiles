@@ -117,8 +117,12 @@ El gestor de plugins que se utiliza es: [Lazy](https://github.com/folke/lazy.nvi
   - [lspkind-nvim](https://github.com/onsails/lspkind-nvim)
   - [friendly-snippets](https://github.com/rafamadriz/friendly-snippets)
   - [cmp-git](https://github.com/petertriho/cmp-git)
-  - [codeium](https://github.com/Exafunction/codeium.nvim)
   - [cmp-emoji](https://github.com/hrsh7th/cmp-emoji)
+
+### IA
+
+- [codeium](https://github.com/Exafunction/codeium.nvim)
+- [avante](https://github.com/yetone/avante.nvim)
 
 ### Herramientas de lenguaje
 
@@ -167,7 +171,6 @@ El gestor de plugins que se utiliza es: [Lazy](https://github.com/folke/lazy.nvi
 
 ### Cosas no necesarias pero bonitas
 
-- [neorg](https://github.com/nvim-neorg/neorg)
 - [dashboard](https://github.com/glepnir/dashboard-nvim)
 
 Si alguno de los plugins no esta puedes consultar los archivos de la
