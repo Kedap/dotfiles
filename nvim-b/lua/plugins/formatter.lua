@@ -93,6 +93,9 @@ return {
         cpp = {
           require("formatter.filetypes.cpp").clangformat,
         },
+        arduino = {
+          require("formatter.filetypes.cpp").clangformat,
+        },
         cmake = {
           require("formatter.filetypes.cmake").cmakeformat,
         },
@@ -107,6 +110,9 @@ return {
         },
         yaml = {
           require("formatter.filetypes.yaml").prettier,
+        },
+        css = {
+          require("formatter.filetypes.css").prettier,
         },
         java = {
           require("formatter.filetypes.java").google_java_format,

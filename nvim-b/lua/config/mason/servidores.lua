@@ -76,6 +76,20 @@ require("mason-lspconfig").setup_handlers({
       end,
     })
   end,
+  ["clangd"] = function()
+    local cmd = { "clangd" }
+    if vim.env.IDF_PATH then
+      cmd = { "/home/kedap/.espressif/tools/esp-clang/esp-18.1.2_20240912/esp-clang/bin/clangd" }
+    end
+
+    require("lspconfig")["clangd"].setup({
+      cmd = cmd,
+      capabilities = capabilities,
+      on_attach = function(client, bufnr)
+        require("lsp_signature").on_attach(signature_config, bufnr)
+      end,
+    })
+  end,
 })
 
 vim.api.nvim_command([[ hi def link LspReferenceText CursorLine ]])
