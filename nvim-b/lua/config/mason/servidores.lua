@@ -1,9 +1,17 @@
 local lspconfig = require("lspconfig")
 require("mason").setup()
+
 require("mason-lspconfig").setup({
-  -- ensure_installed = { "lua_ls", "typescript-language-server" },
   ensure_installed = { "lua_ls" },
+  automatic_enable = {
+    exclude = {
+      "denols",
+      "emmet_ls",
+      "clangd",
+    },
+  },
 })
+
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 capabilities.textDocument.foldingRange = {
   dynamicRegistration = false,
@@ -15,80 +23,52 @@ local signature_config = {
   max_width = 80,
 }
 
-require("mason-lspconfig").setup_handlers({
-  function(server_name)
-    lspconfig[server_name].setup({
-      capabilities = capabilities,
-      on_attach = function(client, bufnr)
-        require("lsp_signature").on_attach(signature_config, bufnr) -- Note: add in lsp client on-attach
-      end,
-    })
+vim.lsp.config("*", {
+  capabilities = capabilities,
+  on_attach = function(client, bufnr)
+    require("lsp_signature").on_attach(signature_config, bufnr)
   end,
-  ["lua_ls"] = function()
-    require("lspconfig")["lua_ls"].setup({
-      capabilities = capabilities,
-      settings = {
-        Lua = {
-          diagnostics = {
-            globals = { "vim" },
-          },
-          workspace = {
-            library = {
-              [vim.fn.expand("$VIMRUNTIME/lua")] = true,
-              [vim.fn.stdpath("config") .. "/lua"] = true,
-            },
-          },
-        },
-      },
-    })
+})
+vim.lsp.config("denols", {
+  capabilities = capabilities,
+  root_dir = lspconfig.util.root_pattern("deno.json", "deno.jsonc"),
+  on_attach = function(client, bufnr)
+    require("lsp_signature").on_attach(signature_config, bufnr) -- Note: add in lsp client on-attach
   end,
-  ["denols"] = function()
-    require("lspconfig")["denols"].setup({
-      capabilities = capabilities,
-      root_dir = lspconfig.util.root_pattern("deno.json", "deno.jsonc"),
-      on_attach = function(client, bufnr)
-        require("lsp_signature").on_attach(signature_config, bufnr) -- Note: add in lsp client on-attach
-      end,
-    })
+})
+vim.lsp.config("emmet_ls", {
+  capabilities = capabilities,
+  filetypes = {
+    "astro",
+    "css",
+    "eruby",
+    "html",
+    "htmldjango",
+    "javascriptreact",
+    "less",
+    "pug",
+    "sass",
+    "scss",
+    "svelte",
+    "typescriptreact",
+    "vue",
+    "htmlangular",
+    "liquid",
+  },
+  on_attach = function(client, bufnr)
+    require("lsp_signature").on_attach(signature_config, bufnr) -- Note: add in lsp client on-attach
   end,
-  ["emmet_ls"] = function()
-    require("lspconfig")["emmet_ls"].setup({
-      capabilities = capabilities,
-      filetypes = {
-        "astro",
-        "css",
-        "eruby",
-        "html",
-        "htmldjango",
-        "javascriptreact",
-        "less",
-        "pug",
-        "sass",
-        "scss",
-        "svelte",
-        "typescriptreact",
-        "vue",
-        "htmlangular",
-        "liquid",
-      },
-      on_attach = function(client, bufnr)
-        require("lsp_signature").on_attach(signature_config, bufnr) -- Note: add in lsp client on-attach
-      end,
-    })
-  end,
-  ["clangd"] = function()
-    local cmd = { "clangd" }
-    if vim.env.IDF_PATH then
-      cmd = { "/home/kedap/.espressif/tools/esp-clang/esp-18.1.2_20240912/esp-clang/bin/clangd" }
-    end
+})
 
-    require("lspconfig")["clangd"].setup({
-      cmd = cmd,
-      capabilities = capabilities,
-      on_attach = function(client, bufnr)
-        require("lsp_signature").on_attach(signature_config, bufnr)
-      end,
-    })
+local cmd = { "clangd" }
+if vim.env.IDF_PATH then
+  cmd = { "/home/kedap/.espressif/tools/esp-clang/esp-18.1.2_20240912/esp-clang/bin/clangd" }
+end
+vim.lsp.config("clangd", {
+  cmd = cmd,
+  capabilities = capabilities,
+  on_attach = function(client, bufnr)
+    require("lsp_signature").on_attach(signature_config, bufnr)
   end,
 })
 

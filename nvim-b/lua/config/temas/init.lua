@@ -2,7 +2,7 @@
 -- local opciones_linea = require("config.temas.nightfly-conf")
 -- return opciones_linea
 
--- -- Configuracion para el carbon
+-- Configuracion para el carbon
 -- local opciones_linea = require("config.temas.carbon-conf")
 -- return opciones_linea
 

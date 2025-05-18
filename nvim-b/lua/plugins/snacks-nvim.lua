@@ -7,6 +7,7 @@ return {
     image = { enabled = true },
     scratch = { enabled = true },
     statuscolumn = { enabled = true },
+    bigfile = { enabled = true },
     words = { enabled = true },
     indent = {
       enabled = true,

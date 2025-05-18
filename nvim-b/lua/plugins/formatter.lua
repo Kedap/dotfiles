@@ -11,7 +11,7 @@ return {
           function()
             return {
               exe = "rustfmt",
-              args = { "--emit=stdout", "--edition 2021" },
+              args = { "--emit=stdout", "--edition 2024" },
               stdin = true,
             }
           end,
