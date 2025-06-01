@@ -1,6 +1,6 @@
 return {
   "mrcjkb/rustaceanvim",
   ft = "rust",
-  version = "^5",
+  version = "^6",
   dependencies = "neovim/nvim-lspconfig",
 }

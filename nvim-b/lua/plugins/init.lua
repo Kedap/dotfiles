@@ -22,7 +22,7 @@ return {
   },
   { "akinsho/toggleterm.nvim", cmd = "ToggleTerm", config = true },
   { "akinsho/git-conflict.nvim", version = "*", config = true },
-  { "j-hui/fidget.nvim", event = "BufRead", opts = { window = { blend = 0 } }, tag = "v1.4.3" },
+  { "j-hui/fidget.nvim", event = "BufRead", opts = { window = { blend = 0 } }, tag = "v1.6.1" },
   { "terrortylor/nvim-comment", name = "nvim_comment", config = true, keys = {
     { "gc", mode = "n" },
   } },
