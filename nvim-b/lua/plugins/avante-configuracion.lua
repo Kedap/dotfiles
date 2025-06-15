@@ -6,16 +6,17 @@ return {
     -- add any opts here
     -- for example
     provider = "openai",
-    openai = {
-      endpoint = "https://api.openai.com/v1",
-      model = "gpt-4.1-nano", -- your desired model (or use gpt-4o, etc.)
-      timeout = 100000, -- Timeout in milliseconds, increase this for reasoning models
-      temperature = 0,
-      max_completion_tokens = 8192, -- Increase this to include reasoning tokens (for reasoning models)
-      --reasoning_effort = "medium", -- low|medium|high, only used for reasoning models
-    },
-    ollama = {
-      model = "deepseek-r1:8b-llama-distill-q8_0",
+    providers = {
+      openai = {
+        endpoint = "https://api.openai.com/v1",
+        model = "gpt-4.1-nano", -- your desired model (or use gpt-4o, etc.)
+        extra_request_body = {
+          timeout = 100000, -- Timeout in milliseconds, increase this for reasoning models
+          temperature = 0,
+          max_completion_tokens = 8192, -- Increase this to include reasoning tokens (for reasoning models)
+          --reasoning_effort = "medium", -- low|medium|high, only used for reasoning models
+        },
+      },
     },
     hints = { enabled = false },
   },
