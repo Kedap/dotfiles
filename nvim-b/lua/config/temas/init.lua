@@ -19,11 +19,11 @@
 -- return opciones_linea
 
 -- -- configuracion onedark
-local opciones_linea = require("config.temas.unodarkpro")
-return opciones_linea
+-- local opciones_linea = require("config.temas.unodarkpro")
+-- return opciones_linea
 
 -- configuracion para rose pine
--- local opciones_linea = require "config.temas.rosame-esta"
+-- local opciones_linea = require("config.temas.rosame-esta")
 -- return opciones_linea
 
 -- Configuracion para enfocado
@@ -91,8 +91,8 @@ return opciones_linea
 -- return opciones_linea
 
 -- Configuracion eldritch
--- local opciones_linea = require("config.temas.elded")
--- return opciones_linea
+local opciones_linea = require("config.temas.elded")
+return opciones_linea
 
 -- Configuracion monet
 -- local opciones_linea = require("config.temas.moneda")

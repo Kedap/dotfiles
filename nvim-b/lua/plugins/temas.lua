@@ -17,9 +17,9 @@ return {
   -- lazy = true,
   -- priority = 1000,
 
-  "olimorris/onedarkpro.nvim",
-  lazy = true,
-  priority = 1000,
+  -- "olimorris/onedarkpro.nvim",
+  -- lazy = true,
+  -- priority = 1000,
 
   -- "rose-pine/neovim",
   -- name = "rose-pine",
@@ -102,9 +102,9 @@ return {
   -- lazy = true,
   -- priority = 1000,
 
-  -- "eldritch-theme/eldritch.nvim",
-  -- lazy = true,
-  -- priority = 1000,
+  "eldritch-theme/eldritch.nvim",
+  lazy = true,
+  priority = 1000,
 
   -- "fynnfluegge/monet.nvim",
   -- lazy = true,

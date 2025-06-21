@@ -41,7 +41,7 @@ require("rose-pine").setup({
 vim.cmd("colorscheme rose-pine")
 
 local opciones_lualine = {
-  tema = "rose-pine",
+  tema = "jellybeans",
   estilo = "buble",
 }
 return opciones_lualine

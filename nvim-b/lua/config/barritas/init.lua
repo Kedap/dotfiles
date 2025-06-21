@@ -1,13 +1,16 @@
 local opciones = require("config.temas")
 
-if opciones.estilo == "novoline" then
-  require("config.barritas.novoline")
-elseif opciones.estilo == "eviline" then
-  require("config.barritas.malvado")
-elseif opciones.estilo == "burbuja" then
-  require("config.barritas.burbuja")
-elseif opciones.estilo == "buble" then
-  require("config.barritas.buble")
+local themes = {
+  novoline = "config.barritas.novoline",
+  eviline = "config.barritas.malvado",
+  burbuja = "config.barritas.burbuja",
+  buble = "config.barritas.buble",
+}
+
+local theme_to_load = themes[opciones.estilo]
+
+if theme_to_load then
+  require(theme_to_load)
 else
   require("lualine").setup({})
 end

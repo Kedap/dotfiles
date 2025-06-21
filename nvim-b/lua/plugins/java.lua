@@ -2,12 +2,14 @@ return {
   "mfussenegger/nvim-jdtls",
   ft = "java",
   config = function()
+    local home = vim.fn.expand("~")
     local JDTLS_LOCATION = vim.fn.stdpath("data") .. "mason/packages/jdtls/"
-    local nombre_proyecto = vim.fn.fnamemodify(vim.fn.getcwd(), ":p:h:t")
-    local workspace = "~/Documentos/local/java/" .. nombre_proyecto
-    -- See `:help vim.lsp.start_client` for an overview of the supported `config` options.
+    local workspace = home .. "/Documentos/local/java/" .. nombre_proyecto
     local bundles = {
-      vim.fn.glob("~/.local/share/nvim/mason/packages/java-debug-adapter/extension/server/com.microsoft.java.debug.plugin-*.jar"),
+      vim.fn.glob(
+        home
+          .. "/.local/share/nvim/mason/packages/java-debug-adapter/extension/server/com.microsoft.java.debug.plugin-*.jar"
+      ),
     }
     local on_attach = function(client, bufnr)
       require("jdtls").setup_dap({ hotcodereplace = "auto" })
