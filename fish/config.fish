@@ -1,4 +1,5 @@
 set -U fish_greeting
+set -Ux EDITOR nvim
 
 # alias para los comandos
 alias v="nvim"
@@ -25,13 +26,21 @@ alias openemm="emacsclient -n"
 fish_add_path ~/bin/
 
 # Android sdk
+#export ANDROID_HOME=/opt/android-sdk/
+export ANDROID_HOME=/home/kedap/Android/Sdk/
 #fish_add_path ~/etc/android-sdk/cmdline-tools/
+fish_add_path /home/kedap/Android/Sdk/cmdline-tools/latest/bin/
 #fish_add_path ~/etc/android-sdk/cmdline-tools/bin/
 #fish_add_path ~/etc/android-sdk/tools/
 #fish_add_path ~/etc/android-sdk/tools/bin/
+#fish_add_path /opt/android-sdk/tools/bin/
 #fish_add_path ~/etc/android-sdk/build-tools/
 #fish_add_path ~/etc/android-sdk/build-tools/28.0.3
+#fish_add_path /opt/android-sdk/build-tools/35.0.1/
+fish_add_path /home/kedap/Android/Sdk/build-tools/35.0.1/
 #fish_add_path ~/etc/android-sdk/platform-tools/
+#fish_add_path /opt/android-sdk/platform-tools/
+fish_add_path /home/kedap/Android/Sdk/platform-tools/
 
 # flutter
 #fish_add_path ~/etc/flutter/bin/
@@ -56,11 +65,13 @@ fish_add_path ~/.cargo/bin/
 #fish_add_path ~/.local/share/coursier/bin
 
 # Ruta de Go
-# fish_add_path /home/d4n/go/bin
+fish_add_path /home/kedap/go/bin
 
 
 # Starshiop
 starship init fish | source
+
+zoxide init fish | source
 
 # pnpm
 set -gx PNPM_HOME "/home/kedap/.local/share/pnpm"
@@ -69,5 +80,12 @@ if not string match -q -- $PNPM_HOME $PATH
 end
 # pnpm end
 
-# zoxide
-zoxide init fish | source
+# Yazi
+function y
+	set tmp (mktemp -t "yazi-cwd.XXXXXX")
+	yazi $argv --cwd-file="$tmp"
+	if set cwd (command cat -- "$tmp"); and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
+		builtin cd -- "$cwd"
+	end
+	rm -f -- "$tmp"
+end
