@@ -551,7 +551,7 @@
     }
     {
       __unkeyed-1 = "<leader>la";
-      __unkeyed-2 = "<cmd>Telescope grep_string<CR>";
+      __unkeyed-2 = "<cmd>Telescope live_grep<CR>";
       desc = "Encontrar palabras";
     }
     {

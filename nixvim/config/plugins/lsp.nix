@@ -73,6 +73,7 @@ in {
         jdtls = {enable = true;};
         shopify_theme_ls = {enable = true;};
         arduino_language_server = {enable = true;};
+        solargraph = {enable = true;};
 
         lua_ls = {
           enable = true;
