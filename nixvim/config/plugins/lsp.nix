@@ -71,6 +71,7 @@ in {
         clangd = {enable = true;};
         csharp_ls = {enable = true;};
         jdtls = {enable = true;};
+        shopify_theme_ls = {enable = true;};
 
         lua_ls = {
           enable = true;
