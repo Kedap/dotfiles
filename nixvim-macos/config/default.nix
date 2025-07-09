@@ -1,8 +1,4 @@
-{
-  pkgs,
-  lib,
-  ...
-}: {
+{pkgs, ...}: {
   imports = [
     ./options.nix
     ./keymaps.nix
@@ -14,5 +10,6 @@
     fd
     trash-cli
     jq
+    curl
   ];
 }

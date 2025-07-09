@@ -551,7 +551,7 @@
     }
     {
       __unkeyed-1 = "<leader>la";
-      __unkeyed-2 = "<cmd>Telescope grep_string<CR>";
+      __unkeyed-2 = "<cmd>Telescope live_grep<CR>";
       desc = "Encontrar palabras";
     }
     {
@@ -621,20 +621,6 @@
       __unkeyed-1 = "<leader>mgt";
       __unkeyed-2 = "<cmd>GoModTidy<CR>";
       desc = "Limpia las librerias";
-    }
-    {
-      __unkeyed-1 = "<leader>ml";
-      group = "LaTeX";
-    }
-    {
-      __unkeyed-1 = "<leader>mlc";
-      __unkeyed-2 = ":VimtexCompile<CR>";
-      desc = "Compilar y ver el documento LaTeX";
-    }
-    {
-      __unkeyed-1 = "<leader>mlp";
-      __unkeyed-2 = "<cmd>lua require('nabla').popup({border = 'rounded'})<CR>";
-      desc = "Vista previa de la expresion";
     }
     {
       __unkeyed-1 = "<leader>mm";

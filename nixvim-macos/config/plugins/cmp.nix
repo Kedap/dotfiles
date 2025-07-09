@@ -50,7 +50,6 @@ in {
     cmp-git.enable = true;
     windsurf-nvim.enable = true;
     luasnip.enable = true;
-    # cmp-luasnip.enable = true;
     friendly-snippets.enable = true;
     lspkind.enable = true;
     cmp-dap.enable = true;

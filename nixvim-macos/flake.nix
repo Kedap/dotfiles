@@ -1,5 +1,5 @@
 {
-  description = "Kedap's Neovim kit Macos Version";
+  description = "Kedap's Neovim kit Work";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
@@ -36,9 +36,7 @@
         pkgs = import nixpkgs {
           inherit system;
           overlays = [
-            # (final: prev: {nodejs = prev.nodejs_24;})
             (final: prev: {nodejs = prev.nodejs_22;})
-            # (final: prev: { prettier = prev.nodePackages.prettier; })
           ];
           config = {
             allowUnfreePredicate = pkg:
@@ -49,11 +47,10 @@
         _module.args.pkgs = pkgs;
 
         packages.default = (import nixvim).legacyPackages.${system}.makeNixvimWithModule {
-          inherit pkgs system; # <-- clave
+          inherit pkgs system;
           module = import ./config;
         };
 
-        # ▸ dev-shell con las mismas herramientas ya binarizadas
         devShells.default = pkgs.mkShell {
           packages = with pkgs; [ripgrep fd jq nodejs];
         };

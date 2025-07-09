@@ -46,8 +46,8 @@ in {
 
       postConfig = ''
         -- Iconos personalizados para los signos de diagnóstico
-        local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
-        -- local signs = { Error = " ", Warn = " ", Hint = "󰌵 ", Info = "󰋼 " }
+        -- local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
+        local signs = { Error = " ", Warn = " ", Hint = "󰌵 ", Info = "󰋼 " }
         for type, icon in pairs(signs) do
           local hl = "DiagnosticSign" .. type
           -- Define el signo con su icono y grupo de resaltado
@@ -69,8 +69,8 @@ in {
         taplo = {enable = true;};
         ts_ls = {enable = true;};
         clangd = {enable = true;};
-        csharp_ls = {enable = true;};
-        jdtls = {enable = true;};
+        shopify_theme_ls = {enable = true;};
+        solargraph = {enable = true;};
 
         lua_ls = {
           enable = true;

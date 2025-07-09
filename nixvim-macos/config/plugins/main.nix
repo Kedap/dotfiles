@@ -10,7 +10,6 @@
     ./formatter.nix
     ./minty.nix
     ./treesitter.nix
-    ./java.nix
     ./lspsaga.nix
     ./lualine.nix
     ./ufo.nix
@@ -47,9 +46,5 @@
     rustaceanvim.enable = true;
     todo-comments.enable = true;
     trouble.enable = true;
-    vimtex = {
-      enable = true;
-      settings.view_method = "zathura";
-    };
   };
 }
