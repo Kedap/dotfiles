@@ -1,8 +1,8 @@
 {
   # Carbon
-  # colorschemes.oxocarbon.enable = true;
-  # my.lualine.style = "burbuja";
-  # my.lualine.theme = "iceberg_dark";
+  colorschemes.oxocarbon.enable = true;
+  my.lualine.style = "burbuja";
+  my.lualine.theme = "iceberg_dark";
 
   # Kanagawa
   # colorschemes.kanagawa = {
@@ -44,9 +44,9 @@
   # my.lualine.theme = "tokyonight";
 
   # Nord
-  colorschemes.nord.enable = true;
-  my.lualine.style = "burbuja";
-  my.lualine.theme = "nord";
+  # colorschemes.nord.enable = true;
+  # my.lualine.style = "burbuja";
+  # my.lualine.theme = "nord";
 
   # Ayu
   # colorschemes.ayu.enable = true;
