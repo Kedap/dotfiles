@@ -1,16 +1,16 @@
 {
   # Carbon
-  colorschemes.oxocarbon.enable = true;
-  my.lualine.style = "burbuja";
-  my.lualine.theme = "iceberg_dark";
+  # colorschemes.oxocarbon.enable = true;
+  # my.lualine.style = "burbuja";
+  # my.lualine.theme = "iceberg_dark";
 
   # Kanagawa
-  # colorschemes.kanagawa = {
-  #   enable = true;
-  #   settings.undercurl = false;
-  # };
-  # my.lualine.style = "burbuja";
-  # my.lualine.theme = "codedark";
+  colorschemes.kanagawa = {
+    enable = true;
+    settings.undercurl = false;
+  };
+  my.lualine.style = "burbuja";
+  my.lualine.theme = "codedark";
 
   # Catppuccin
   # colorschemes.catppuccin = {

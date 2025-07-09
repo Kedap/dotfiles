@@ -101,6 +101,28 @@ in {
             };
           };
         };
+
+        emmet_language_server = {
+          enable = true;
+          filetypes = [
+            "astro"
+            "css"
+            "eruby"
+            "html"
+            "htmlangular"
+            "htmldjango"
+            "javascriptreact"
+            "less"
+            "pug"
+            "sass"
+            "scss"
+            "svelte"
+            "templ"
+            "typescriptreact"
+            "vue"
+            "liquid"
+          ];
+        };
       };
     };
   };

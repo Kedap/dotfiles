@@ -2,6 +2,7 @@
   extraPackages = with pkgs; [
     alejandra
     shfmt
+    prettierd
     nodePackages.prettier
     nodePackages.sql-formatter
     black
@@ -22,7 +23,7 @@
     enable = true;
     settings = {
       format_on_save = {
-        timeout_ms = 500;
+        timeout_ms = 1000;
         lsp_fallback = true;
       };
       log_level = "warn";
@@ -72,7 +73,7 @@
         yaml = ["prettier"];
         css = ["prettier"];
         java = ["google-java-format"];
-        liquid = ["prettier"];
+        liquid = ["prettierd"];
         graphql = ["prettier"];
         sql = ["sql-formatter"];
         nix = ["alejandra"];
