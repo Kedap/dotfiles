@@ -20,6 +20,7 @@
     ./lsp.nix
     ./nvim-tree.nix
     ./temas.nix
+    ./oil.nix
   ];
 
   plugins = {
@@ -49,10 +50,6 @@
     vimtex = {
       enable = true;
       settings.view_method = "zathura";
-    };
-    oil = {
-      enable = true;
-      settings.default_file_explorer = false;
     };
   };
 }
