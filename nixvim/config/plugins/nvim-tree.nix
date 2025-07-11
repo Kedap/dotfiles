@@ -7,7 +7,6 @@
         return { desc = "nvim-tree: " .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
       end
 
-      -- DEFAULT MAPPINGS FROM NVIM-TREE DOCUMENTATION (o tus personalizaciones)
       vim.keymap.set("n", "<C-]>", api.tree.change_root_to_node, opts "CD")
       vim.keymap.set("n", "<C-e>", api.node.open.replace_tree_buffer, opts "Open: In Place")
       vim.keymap.set("n", "<C-k>", api.node.show_info_popup, opts "Info")
@@ -51,7 +50,7 @@
       vim.keymap.set("n", "q", api.tree.close, opts "Close")
       vim.keymap.set("n", "r", api.fs.rename, opts "Rename")
       vim.keymap.set("n", "R", api.tree.reload, opts "Refresh")
-      -- vim.keymap.set("n", "s", api.node.run.system, opts "Run System") -- 's' está duplicado
+      vim.keymap.set("n", "s", api.node.run.system, opts "Run System")
       vim.keymap.set("n", "S", api.tree.search_node, opts "Search")
       vim.keymap.set("n", "U", api.tree.toggle_custom_filter, opts "Toggle Hidden")
       vim.keymap.set("n", "W", api.tree.collapse_all, opts "Collapse")
@@ -61,11 +60,8 @@
       vim.keymap.set("n", "<2-LeftMouse>", api.node.open.edit, opts "Open")
       vim.keymap.set("n", "<2-RightMouse>", api.tree.change_root_to_node, opts "CD")
 
-      -- Tus mapeos adicionales que estaban bajo "Mappings migrated from view.mappings.list"
-      -- El mapeo 's' para system ya está arriba, así que he comentado el de vertical.
-      -- Si prefieres 's' para vertical split, descomenta este y comenta/cambia el de system.
       vim.keymap.set("n", "v", api.node.open.horizontal, opts "Open: Horizontal Split")
-      -- vim.keymap.set("n", "s", api.node.open.vertical, opts "Open: Vertical Split")
+      vim.keymap.set("n", "s", api.node.open.vertical, opts "Open: Vertical Split")
     end
   '';
 in {

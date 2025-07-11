@@ -41,7 +41,6 @@
     markdown-preview.enable = true;
     neogit.enable = true;
     notify.enable = true;
-    oil.enable = true;
     web-devicons.enable = true;
     mini.enable = true;
     rustaceanvim.enable = true;
@@ -50,6 +49,10 @@
     vimtex = {
       enable = true;
       settings.view_method = "zathura";
+    };
+    oil = {
+      enable = true;
+      settings.default_file_explorer = false;
     };
   };
 }
