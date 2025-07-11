@@ -4,7 +4,7 @@ set -Ux EDITOR nvim
 # alias para los comandos
 alias v="nvim"
 alias edit="nvim"
-alias open="nvim ."
+alias open="nvim . +NvimTreeOpen"
 alias abrir="nvim ."
 alias editar="nvim ."
 alias oilvim="nvim . +Oil"
