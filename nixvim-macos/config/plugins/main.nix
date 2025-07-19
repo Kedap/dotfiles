@@ -19,6 +19,7 @@
     ./lsp.nix
     ./nvim-tree.nix
     ./temas.nix
+    ./oil.nix
   ];
 
   plugins = {
@@ -40,7 +41,6 @@
     markdown-preview.enable = true;
     neogit.enable = true;
     notify.enable = true;
-    oil.enable = true;
     web-devicons.enable = true;
     mini.enable = true;
     rustaceanvim.enable = true;

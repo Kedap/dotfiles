@@ -555,6 +555,11 @@
       desc = "Encontrar palabras";
     }
     {
+      __unkeyed-1 = "<leader>la";
+      __unkeyed-2 = "<cmd>Telescope grep_string<CR>";
+      desc = "Encontrar palabra sobre el cursor";
+    }
+    {
       __unkeyed-1 = "<leader>ll";
       __unkeyed-2 = "<cmd>HopChar2<CR>";
       desc = "Encontrar palabras en tu vista";

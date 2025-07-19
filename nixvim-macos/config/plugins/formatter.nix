@@ -25,11 +25,6 @@
       log_level = "warn";
       notify_on_error = false;
       formatters = {
-        rustfmt_custom = {
-          command = "rustfmt";
-          args = ["--emit=stdout" "--edition" "2024"];
-          stdin = true;
-        };
         stylua_custom = {
           command = "stylua";
           args = ["--config-path" "~/.config/stylua/stylua.toml" "-"];
@@ -44,12 +39,12 @@
 
       formatters_by_ft = {
         # Formateadores preconfigurados
-        javascript = ["prettier"];
-        typescript = ["prettier"];
-        typescriptreact = ["prettier"];
-        javascriptreact = ["prettier"];
-        json = ["prettier"];
-        jsonc = ["prettier"];
+        javascript = ["prettierd"];
+        typescript = ["prettierd"];
+        typescriptreact = ["prettierd"];
+        javascriptreact = ["prettierd"];
+        json = ["prettierd"];
+        jsonc = ["prettierd"];
         python = ["black"];
         markdown = ["prettier"];
         toml = ["taplo"];
@@ -59,15 +54,15 @@
         cmake = ["cmake-format"];
         go = ["gofmt"];
         php = ["phpcbf"];
-        yaml = ["prettier"];
-        css = ["prettier"];
+        yaml = ["prettierd"];
+        css = ["prettierd"];
         liquid = ["prettierd"];
         graphql = ["prettier"];
         sql = ["sql-formatter"];
+        rust = ["rustfmt"];
         nix = ["alejandra"];
 
         # Formateadores personalizados (definidos arriba)
-        rust = ["rustfmt_custom"];
         lua = ["stylua_custom"];
         sh = ["shfmt_custom"];
       };
