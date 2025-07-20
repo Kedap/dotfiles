@@ -7,6 +7,7 @@
       statuscolumn = {enabled = true;};
       bigfile = {enabled = true;};
       words = {enabled = true;};
+      scroll = {enabled = true;};
       indent = {
         enabled = true;
         animate = {
