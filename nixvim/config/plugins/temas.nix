@@ -51,7 +51,7 @@
   # Ayu
   # colorschemes.ayu.enable = true;
   # my.lualine.style = "buble";
-  # my.lualine.theme = "ayu_dark";
+  # my.lualine.theme = "modus-vivendi";
 
   # Monokai
   # colorschemes.monokai-pro = {
