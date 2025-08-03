@@ -555,7 +555,7 @@
       desc = "Encontrar palabras";
     }
     {
-      __unkeyed-1 = "<leader>la";
+      __unkeyed-1 = "<leader>lw";
       __unkeyed-2 = "<cmd>Telescope grep_string<CR>";
       desc = "Encontrar palabra sobre el cursor";
     }
