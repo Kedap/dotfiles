@@ -70,35 +70,35 @@ in {
       enable = true;
 
       settings = {
-        sortBy = "name";
-        disableNetrw = false; # Si quieres que nvim-tree reemplace netrw completamente, pon true
-        hijackNetrw = true; # Para que nvim-tree maneje directorios
-        autoReloadOnWrite = true;
-        hijackUnnamedBufferWhenOpening = false;
-        hijackCursor = false;
-        syncRootWithCwd = true;
-        respectBufCwd = true;
+        sort_by = "name";
+        disable_netrw = false; # Si quieres que nvim-tree reemplace netrw completamente, pon true
+        hijack_netrw = true; # Para que nvim-tree maneje directorios
+        auto_reload_on_write = true;
+        hijack_unnamed_buffer_when_opening = false;
+        hijack_cursor = false;
+        sync_root_with_cwd = true;
+        respect_buf_cwd = true;
         log = {
           enable = false;
           truncate = false;
           types = {
             all = false;
             config = false;
-            copyPaste = false;
+            copy_paste = false;
             git = false;
             profile = false;
           };
         };
 
         actions = {
-          useSystemClipboard = true;
-          changeDir = {
+          use_system_clipboard = true;
+          change_dir = {
             enable = true;
             global = false;
           };
-          openFile = {
-            quitOnOpen = true;
-            resizeWindow = false;
+          open_file = {
+            quit_on_open = true;
+            resize_window = false;
           };
         };
         trash.cmd = "trash";
@@ -110,7 +110,7 @@ in {
         };
 
         renderer = {
-          indentMarkers = {
+          indent_markers = {
             enable = true;
             icons = {
               corner = "└ ";
@@ -118,19 +118,19 @@ in {
               none = "  ";
             };
           };
-          rootFolderLabel = false; # No mostrar el nombre de la carpeta raíz si es redundante
+          root_folder_label = false; # No mostrar el nombre de la carpeta raíz si es redundante
         };
 
         view = {
           width = 30;
           side = "left";
-          preserveWindowProportions = false;
+          preserve_window_proportions = false;
           number = false;
           relativenumber = false;
           signcolumn = "yes"; # Muestra la columna de signos (para git, diagnósticos)
         };
 
-        onAttach = {__raw = nvimTreeOnAttach;};
+        on_attach = {__raw = nvimTreeOnAttach;};
 
         git = {
           enable = true;
@@ -140,7 +140,7 @@ in {
 
         diagnostics = {
           enable = true;
-          showOnDirs = true;
+          show_on_dirs = true;
           icons = {
             hint = "";
             info = "";
@@ -149,20 +149,21 @@ in {
           };
         };
 
-        systemOpen = {
-          cmd = "thunar"; # O "xdg-open", "open", etc., según tu sistema
+        system_open = {
+          # cmd = "thunar"; # O "xdg-open", "open", etc., según tu sistema
+          cmd = "dolphin"; # O "xdg-open", "open", etc., según tu sistema
           args = [];
         };
 
-        updateFocusedFile = {
+        update_focused_file = {
           enable = true;
           ignoreList = [];
-          updateRoot = true;
+          update_root = true;
         };
 
-        hijackDirectories = {
+        hijack_directories = {
           enable = true;
-          autoOpen = true;
+          auto_open = true;
         };
       };
     };
