@@ -68,100 +68,101 @@ in {
   plugins = {
     nvim-tree = {
       enable = true;
-      syncRootWithCwd = true;
-      respectBufCwd = true;
-      autoReloadOnWrite = true;
-      disableNetrw = false; # Si quieres que nvim-tree reemplace netrw completamente, pon true
-      hijackCursor = false;
-      hijackNetrw = true; # Para que nvim-tree maneje directorios
-      hijackUnnamedBufferWhenOpening = false;
-      sortBy = "name";
 
-      onAttach = {__raw = nvimTreeOnAttach;};
-
-      view = {
-        width = 30;
-        side = "left";
-        preserveWindowProportions = false;
-        number = false;
-        relativenumber = false;
-        signcolumn = "yes"; # Muestra la columna de signos (para git, diagnósticos)
-      };
-
-      renderer = {
-        indentMarkers = {
-          enable = true;
-          icons = {
-            corner = "└ ";
-            edge = "│ ";
-            none = "  ";
+      settings = {
+        sortBy = "name";
+        disableNetrw = false; # Si quieres que nvim-tree reemplace netrw completamente, pon true
+        hijackNetrw = true; # Para que nvim-tree maneje directorios
+        autoReloadOnWrite = true;
+        hijackUnnamedBufferWhenOpening = false;
+        hijackCursor = false;
+        syncRootWithCwd = true;
+        respectBufCwd = true;
+        log = {
+          enable = false;
+          truncate = false;
+          types = {
+            all = false;
+            config = false;
+            copyPaste = false;
+            git = false;
+            profile = false;
           };
         };
-        rootFolderLabel = false; # No mostrar el nombre de la carpeta raíz si es redundante
-      };
 
-      hijackDirectories = {
-        enable = true;
-        autoOpen = true;
-      };
-
-      updateFocusedFile = {
-        enable = true;
-        ignoreList = [];
-        updateRoot = true;
-      };
-
-      systemOpen = {
-        cmd = "thunar"; # O "xdg-open", "open", etc., según tu sistema
-        args = [];
-      };
-
-      diagnostics = {
-        enable = true;
-        showOnDirs = true;
-        icons = {
-          hint = "";
-          info = "";
-          warning = "";
-          error = "";
+        actions = {
+          useSystemClipboard = true;
+          changeDir = {
+            enable = true;
+            global = false;
+          };
+          openFile = {
+            quitOnOpen = true;
+            resizeWindow = false;
+          };
         };
-      };
+        trash.cmd = "trash";
 
-      filters = {
-        dotfiles = false;
-        custom = [];
-        exclude = [];
-      };
+        filters = {
+          dotfiles = false;
+          custom = [];
+          exclude = [];
+        };
 
-      git = {
-        enable = true;
-        ignore = true;
-        timeout = 400;
-      };
+        renderer = {
+          indentMarkers = {
+            enable = true;
+            icons = {
+              corner = "└ ";
+              edge = "│ ";
+              none = "  ";
+            };
+          };
+          rootFolderLabel = false; # No mostrar el nombre de la carpeta raíz si es redundante
+        };
 
-      actions = {
-        useSystemClipboard = true;
-        changeDir = {
+        view = {
+          width = 30;
+          side = "left";
+          preserveWindowProportions = false;
+          number = false;
+          relativenumber = false;
+          signcolumn = "yes"; # Muestra la columna de signos (para git, diagnósticos)
+        };
+
+        onAttach = {__raw = nvimTreeOnAttach;};
+
+        git = {
           enable = true;
-          global = false;
+          ignore = true;
+          timeout = 400;
         };
-        openFile = {
-          quitOnOpen = true;
-          resizeWindow = false;
+
+        diagnostics = {
+          enable = true;
+          showOnDirs = true;
+          icons = {
+            hint = "";
+            info = "";
+            warning = "";
+            error = "";
+          };
         };
-      };
 
-      trash.cmd = "trash";
+        systemOpen = {
+          cmd = "thunar"; # O "xdg-open", "open", etc., según tu sistema
+          args = [];
+        };
 
-      log = {
-        enable = false;
-        truncate = false;
-        types = {
-          all = false;
-          config = false;
-          copyPaste = false;
-          git = false;
-          profile = false;
+        updateFocusedFile = {
+          enable = true;
+          ignoreList = [];
+          updateRoot = true;
+        };
+
+        hijackDirectories = {
+          enable = true;
+          autoOpen = true;
         };
       };
     };
