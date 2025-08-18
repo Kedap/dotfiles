@@ -44,8 +44,7 @@
     notify.enable = true;
     web-devicons.enable = true;
     mini.enable = true;
-    # TODO: enable when package are stable
-    # rustaceanvim.enable = true;
+    rustaceanvim.enable = true;
     todo-comments.enable = true;
     trouble.enable = true;
     vimtex = {
