@@ -1,4 +1,4 @@
-{...}: let
+{pkgs, ...}: let
 in {
   plugins = {
     lsp = {
@@ -74,6 +74,11 @@ in {
         shopify_theme_ls = {enable = true;};
         arduino_language_server = {enable = true;};
         solargraph = {enable = true;};
+
+        graphql = {
+          enable = true;
+          package = pkgs.nodePackages.graphql-language-service-cli;
+        };
 
         lua_ls = {
           enable = true;

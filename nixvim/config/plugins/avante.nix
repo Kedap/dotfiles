@@ -26,18 +26,17 @@
           theirs = "ct";
         };
       };
-      provider = "openai";
-      providers = {
-        openai = {
-          endpoint = "https://api.openai.com/v1";
-          model = "gpt-4.1-nano";
-          extra_request_body = {
-            timeout = 100000;
-            temperature = 0;
-            max_completion_tokens = 8192;
-          };
-        };
-      };
+      # provider = "gemini-cli";
+      # acp_providers = {
+      #   gemini-cli = {
+      #     command = "gemini";
+      #     args = ["--experimental-acp"];
+      #     env = {
+      #       NODE_NO_WARNINGS = "1";
+      #       # GEMINI_API_KEY = os.getenv("GEMINI_API_KEY");
+      #     };
+      #   };
+      # };
       windows = {
         sidebar_header = {
           align = "center";
