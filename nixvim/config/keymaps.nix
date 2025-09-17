@@ -479,6 +479,11 @@
       desc = "Elige el cambio actual";
     }
     {
+      __unkeyed-1 = "<leader>gkO";
+      __unkeyed-2 = "<cmd>Git checkout --ours %<CR>";
+      desc = "Eligir todos los cambios actuales para este arhcivo";
+    }
+    {
       __unkeyed-1 = "<leader>gkp";
       __unkeyed-2 = "<cmd>GitConflictPrevConflict<CR>";
       desc = "Ir al anterior cambio";
@@ -487,6 +492,11 @@
       __unkeyed-1 = "<leader>gkt";
       __unkeyed-2 = "<cmd>GitConflictChooseTheirs<CR>";
       desc = "Elige el actual entrante";
+    }
+    {
+      __unkeyed-1 = "<leader>gkT";
+      __unkeyed-2 = "<cmd>Git checkout --theirs %<CR>";
+      desc = "Elegir todos los cambios actuales entrantes";
     }
 
     # Sub-grupo Stash

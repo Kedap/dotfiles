@@ -27,16 +27,16 @@
         };
       };
       # provider = "gemini-cli";
-      # acp_providers = {
-      #   gemini-cli = {
-      #     command = "gemini";
-      #     args = ["--experimental-acp"];
-      #     env = {
-      #       NODE_NO_WARNINGS = "1";
-      #       # GEMINI_API_KEY = os.getenv("GEMINI_API_KEY");
-      #     };
-      #   };
-      # };
+      acp_providers = {
+        gemini-cli = {
+          command = "gemini";
+          args = ["--experimental-acp"];
+          env = {
+            NODE_NO_WARNINGS = "1";
+            # GEMINI_API_KEY = os.getenv("GEMINI_API_KEY");
+          };
+        };
+      };
       windows = {
         sidebar_header = {
           align = "center";
