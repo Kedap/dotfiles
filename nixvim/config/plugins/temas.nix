@@ -1,8 +1,8 @@
 {
   # Carbon
-  # colorschemes.oxocarbon.enable = true;
-  # my.lualine.style = "burbuja";
-  # my.lualine.theme = "iceberg_dark";
+  colorschemes.oxocarbon.enable = true;
+  my.lualine.style = "burbuja";
+  my.lualine.theme = "iceberg_dark";
 
   # Kanagawa
   # colorschemes.kanagawa = {
@@ -34,9 +34,9 @@
   # my.lualine.theme = "jellybeans";
 
   # Gruvbox
-  colorschemes.gruvbox.enable = true;
-  my.lualine.style = "buble";
-  my.lualine.theme = "gruvbox-material";
+  # colorschemes.gruvbox.enable = true;
+  # my.lualine.style = "buble";
+  # my.lualine.theme = "gruvbox-material";
 
   # Tokyonight
   # colorschemes.tokyonight.enable = true;
