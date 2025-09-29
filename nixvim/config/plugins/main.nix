@@ -21,6 +21,8 @@
     ./nvim-tree.nix
     ./temas.nix
     ./oil.nix
+    ./mcphub.nix
+    ./marker-groups.nix
   ];
 
   plugins = {
