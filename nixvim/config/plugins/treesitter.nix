@@ -34,6 +34,8 @@
           "yaml"
           "http"
           "nix"
+          "java"
+          "javadoc"
         ];
       };
     };
