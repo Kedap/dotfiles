@@ -99,6 +99,7 @@ in {
           args = {"--experimental-acp"},
           env = {
             NODE_NO_WARNINGS = "1",
+            GEMINI_API_KEY = os.getenv("GEMINI_API_KEY"),
           },
         },
       },
