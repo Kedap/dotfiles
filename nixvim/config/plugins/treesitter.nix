@@ -46,19 +46,21 @@
         "" = "global";
         "vim" = "local";
       };
-      query = {
-        "" = "rainbow-delimiters";
-        "lua" = "rainbow-blocks";
+      settings = {
+        highlight = [
+          "RainbowDelimiterRed"
+          "RainbowDelimiterYellow"
+          "RainbowDelimiterBlue"
+          "RainbowDelimiterOrange"
+          "RainbowDelimiterGreen"
+          "RainbowDelimiterViolet"
+          "RainbowDelimiterCyan"
+        ];
+        query = {
+          "" = "rainbow-delimiters";
+          "lua" = "rainbow-blocks";
+        };
       };
-      highlight = [
-        "RainbowDelimiterRed"
-        "RainbowDelimiterYellow"
-        "RainbowDelimiterBlue"
-        "RainbowDelimiterOrange"
-        "RainbowDelimiterGreen"
-        "RainbowDelimiterViolet"
-        "RainbowDelimiterCyan"
-      ];
     };
     ts-autotag.enable = true;
     treesitter-refactor.enable = true;
