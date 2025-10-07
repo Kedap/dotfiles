@@ -350,6 +350,16 @@
       __unkeyed-2 = "<cmd> lua Snacks.scratch.select()()<cr>";
       desc = "Seleccionar un archivo de scratch";
     }
+    {
+      __unkeyed-1 = "<leader>fy";
+      __unkeyed-2 = "<cmd>let @+=expand(\"%:.\")<cr>";
+      desc = "Copiar la ruta relativa";
+    }
+    {
+      __unkeyed-1 = "<leader>fY";
+      __unkeyed-2 = "<cmd>let @+ = expand('%:p')<cr>";
+      desc = "Copiar la ruta absoluta";
+    }
 
     # -- Grupo Git --
     {
@@ -824,16 +834,6 @@
       __unkeyed-1 = "<leader>ho";
       __unkeyed-2 = "<cmd>Rest open<CR>";
       desc = "Abrir el panel de resultados";
-    }
-
-    # -- Grupo Avante --
-    {
-      __unkeyed-1 = "<leader>a";
-      group = "Avante";
-      icon = {
-        icon = " ";
-        color = "green";
-      };
     }
   ];
 }

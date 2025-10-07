@@ -1,6 +1,5 @@
 {...}: {
   imports = [
-    ./avante.nix
     ./bufferline.nix
     ./cmp.nix
     ./dap.nix
@@ -21,7 +20,6 @@
     ./nvim-tree.nix
     ./temas.nix
     ./oil.nix
-    ./mcphub.nix
     ./marker-groups.nix
   ];
 
