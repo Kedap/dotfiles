@@ -119,19 +119,15 @@
       key = "<F5>";
       action = "<cmd>lua require'dap'.continue()<CR>";
     }
+    {
+      mode = "t";
+      key = "<C-x>";
+      action = "<C-\\><C-N>";
+    }
   ];
 
   plugins.which-key.settings.spec = [
     # -- Core --
-    {
-      __unkeyed-1 = "<leader>s";
-      __unkeyed-2 = ":x! <cr>";
-      desc = "Escribir y salir";
-      icon = {
-        icon = "󰈆 ";
-        color = "purple";
-      };
-    }
     {
       __unkeyed-1 = "<leader>q";
       __unkeyed-2 = ":q! <cr>";
@@ -316,6 +312,21 @@
       desc = "Encontrar archivos";
     }
     {
+      __unkeyed-1 = "<leader>fF";
+      __unkeyed-2 = "<cmd>Telescope find_files follow=true no_ignore=true hidden=true<CR>";
+      desc = "Encontrar archivos";
+    }
+    {
+      __unkeyed-1 = "<leader>fL";
+      __unkeyed-2 = "<cmd>Telescope oldfiles<CR>";
+      desc = "Abiertos recientemente";
+    }
+    {
+      __unkeyed-1 = "<leader>fm";
+      __unkeyed-2 = "<cmd>Telescope marks<CR>";
+      desc = "Buscar en marcas";
+    }
+    {
       __unkeyed-1 = "<leader>fk";
       __unkeyed-2 = "<cmd>lua require('nvim-silicon').shoot()<CR>";
       desc = "Tomar captura con silicon";
@@ -377,6 +388,11 @@
       desc = "Rama...";
     }
     {
+      __unkeyed-1 = "<leader>gs";
+      __unkeyed-2 = "<cmd>Telescope git_status<CR>";
+      desc = "Ir a archivos cambiados";
+    }
+    {
       __unkeyed-1 = "<leader>gD";
       __unkeyed-2 = "<cmd>DiffviewFileHistory %<CR>";
       desc = "Ver TODOS los cambios de ESTE archivo";
@@ -405,6 +421,11 @@
       __unkeyed-1 = "<leader>gc";
       __unkeyed-2 = "<cmd>Neogit commit<CR>";
       desc = "Realizar commit";
+    }
+    {
+      __unkeyed-1 = "<leader>gC";
+      __unkeyed-2 = "<cmd>Telescope git_commits<CR>";
+      desc = "Checkout a un commit";
     }
     {
       __unkeyed-1 = "<leader>gd";
@@ -511,31 +532,31 @@
 
     # Sub-grupo Stash
     {
-      __unkeyed-1 = "<leader>gs";
+      __unkeyed-1 = "<leader>gS";
       group = "Stash";
     }
     {
-      __unkeyed-1 = "<leader>gsl";
+      __unkeyed-1 = "<leader>gSl";
       __unkeyed-2 = "<cmd>Telescope git_stash<CR>";
       desc = "Ver los Stash";
     }
     {
-      __unkeyed-1 = "<leader>gsa";
+      __unkeyed-1 = "<leader>gSa";
       __unkeyed-2 = "<cmd>Git stash<CR>";
       desc = "Agrega un stash";
     }
     {
-      __unkeyed-1 = "<leader>gsA";
+      __unkeyed-1 = "<leader>gSA";
       __unkeyed-2 = "<cmd>Git stash apply<CR>";
       desc = "Aplica el stash";
     }
     {
-      __unkeyed-1 = "<leader>gsd";
+      __unkeyed-1 = "<leader>gSd";
       __unkeyed-2 = "<cmd>Git stash drop<CR>";
       desc = "Elimina el stash";
     }
     {
-      __unkeyed-1 = "<leader>gsp";
+      __unkeyed-1 = "<leader>gSp";
       __unkeyed-2 = "<cmd>Git stash pop<CR>";
       desc = "Aplica y elimina el stash";
     }
