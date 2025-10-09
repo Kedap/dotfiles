@@ -371,6 +371,11 @@
       __unkeyed-2 = "<cmd>let @+ = expand('%:p')<cr>";
       desc = "Copiar la ruta absoluta";
     }
+    {
+      __unkeyed-1 = "<leader>fw";
+      __unkeyed-2 = "<cmd>set wrap!<cr>";
+      desc = "Toggle wrap";
+    }
 
     # -- Grupo Git --
     {
