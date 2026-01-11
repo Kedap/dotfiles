@@ -6,4 +6,8 @@ append_keymap = [
     "g",
     "D",
   ], run = "cd ~/Documentos/", desc = "Go Documentos" },
+  { on = [
+    "g",
+    "O",
+  ], run = "cd ~/Descargas", desc = "Go Descargas" },
 ]
