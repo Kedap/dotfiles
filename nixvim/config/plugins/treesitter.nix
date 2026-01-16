@@ -1,42 +1,45 @@
-{
+{pkgs, ...}: {
   plugins = {
     treesitter = {
       enable = true;
+      grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
+        bash
+        json
+        lua
+        make
+        markdown
+        nix
+        regex
+        toml
+        vim
+        vimdoc
+        xml
+        yaml
+        git_config
+        git_rebase
+        gitattributes
+        gitcommit
+        gitignore
+        comment
+        dart
+        fish
+        go
+        haskell
+        html
+        http
+        javascript
+        jsonc
+        latex
+        lua
+        python
+        ruby
+        rust
+        sql
+        tsx
+        typescript
+      ];
       settings = {
         highlight.enable = true;
-        auto_install = false;
-        ensure_installed = [
-          "git_config"
-          "git_rebase"
-          "gitattributes"
-          "gitcommit"
-          "gitignore"
-          "bash"
-          "comment"
-          "dart"
-          "fish"
-          "go"
-          "haskell"
-          "html"
-          "http"
-          "javascript"
-          "json"
-          "jsonc"
-          "latex"
-          "lua"
-          "markdown"
-          "python"
-          "ruby"
-          "rust"
-          "sql"
-          "tsx"
-          "typescript"
-          "yaml"
-          "http"
-          "nix"
-          "java"
-          "javadoc"
-        ];
       };
     };
 
