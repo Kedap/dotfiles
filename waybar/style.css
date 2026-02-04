@@ -64,7 +64,7 @@ window#waybar.solo {
 #idle_inhibitor,
 #mpd {
   padding: 0 10px;
-  margin: 6px 3px;
+  margin: 9px 3px;
   color: #333333;
 }
 
@@ -222,7 +222,7 @@ label:focus {
   background: #00b093;
   color: #333333;
   padding: 0 5px;
-  margin: 6px 3px;
+  margin: 9px 3px;
   min-width: 16px;
 }
 
