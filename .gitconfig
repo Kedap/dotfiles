@@ -1,5 +1,5 @@
 [user]
-	signingkey = 78F005204C3C195B52DFE95920AD5720119E485E
+	signingkey = 113F7E64517E152D9BD18392D0889D258673F8CD
 	email = kedap.dev@protonmail.com
 	name = Kedap
 
@@ -9,6 +9,7 @@
 
 [alias]
 	lg = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+	lgl = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)'
         primero = rev-list --max-parents=0 HEAD
 	hub = !hub
 
