@@ -48,3 +48,4 @@ theme = "Duskfox"
 cursor-color = "#d3d3d3"
 cursor-style = underline
 shell-integration-features = no-cursor, sudo, title, ssh-env
+background-opacity = 0.85
