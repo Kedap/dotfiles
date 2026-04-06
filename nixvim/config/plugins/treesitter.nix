@@ -28,7 +28,6 @@
         html
         http
         javascript
-        jsonc
         latex
         lua
         python
@@ -66,7 +65,6 @@
       };
     };
     ts-autotag.enable = true;
-    treesitter-refactor.enable = true;
 
     treesitter-textobjects = {
       enable = true;

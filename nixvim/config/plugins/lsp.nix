@@ -71,7 +71,10 @@ in {
         clangd = {enable = true;};
         csharp_ls = {enable = true;};
         jdtls = {enable = true;};
-        shopify_theme_ls = {enable = true;};
+        shopify_theme_ls = {
+          enable = true;
+          package = null;
+        };
         arduino_language_server = {enable = true;};
         solargraph = {enable = true;};
         ruff = {enable = true;};
