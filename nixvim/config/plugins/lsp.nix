@@ -78,6 +78,7 @@ in {
         arduino_language_server = {enable = true;};
         solargraph = {enable = true;};
         ruff = {enable = true;};
+        dartls = {enable = true;};
 
         graphql = {
           enable = true;
