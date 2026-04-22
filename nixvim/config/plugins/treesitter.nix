@@ -36,6 +36,8 @@
         sql
         tsx
         typescript
+        php
+        blade
       ];
       settings = {
         highlight.enable = true;
