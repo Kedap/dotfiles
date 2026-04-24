@@ -1,4 +1,4 @@
-# 🚀 NixVim Kit de Kedap
+# 🚀 NixVim Config
 
 ¡Bienvenido! Estás ante una configuración de **Neovim** potenciada por **Nix**, diseñada para ser robusta, elegante y, sobre todo, productiva.
 
