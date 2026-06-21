@@ -3,8 +3,8 @@
     alejandra
     shfmt
     prettierd
-    nodePackages.prettier
-    nodePackages.sql-formatter
+    prettier
+    sql-formatter
     black
     cmake-format
     go

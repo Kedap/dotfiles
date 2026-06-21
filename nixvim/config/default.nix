@@ -19,5 +19,9 @@
   nixpkgs.config.allowUnfreePredicate = pkg:
     builtins.elem (lib.getName pkg) [
       "codeium"
+      "cmp-spell"
+      "cmp-emoji"
+      "cmp-calc"
+      "git-conflict.nvim"
     ];
 }

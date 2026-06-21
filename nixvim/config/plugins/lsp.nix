@@ -30,15 +30,13 @@ in {
           },
         })
 
-        vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(
-          vim.lsp.handlers.hover,
-          { border = 'rounded' }
-        )
+        vim.lsp.handlers['textDocument/hover'] = function(err, result, ctx, config)
+          return vim.lsp.handlers.hover(err, result, ctx, vim.tbl_extend('force', config or {}, { border = 'rounded' }))
+        end
 
-        vim.lsp.handlers['textDocument/signatureHelp'] = vim.lsp.with(
-          vim.lsp.handlers.signature_help,
-          { border = 'rounded' }
-        )
+        vim.lsp.handlers['textDocument/signatureHelp'] = function(err, result, ctx, config)
+          return vim.lsp.handlers.signature_help(err, result, ctx, vim.tbl_extend('force', config or {}, { border = 'rounded' }))
+        end
 
         -- Opcional: Estilo por defecto para todas las ventanas de lspconfig
         -- require('lspconfig.ui.windows').default_options.border = 'rounded'
@@ -70,7 +68,6 @@ in {
         ts_ls = {enable = true;};
         clangd = {enable = true;};
         csharp_ls = {enable = true;};
-        jdtls = {enable = true;};
         shopify_theme_ls = {
           enable = true;
           package = null;
@@ -82,7 +79,7 @@ in {
 
         graphql = {
           enable = true;
-          package = pkgs.nodePackages.graphql-language-service-cli;
+          package = pkgs.graphql-language-service-cli;
         };
 
         lua_ls = {

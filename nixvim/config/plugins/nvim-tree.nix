@@ -149,12 +149,6 @@ in {
           };
         };
 
-        system_open = {
-          # cmd = "thunar"; # O "xdg-open", "open", etc., según tu sistema
-          cmd = "dolphin"; # O "xdg-open", "open", etc., según tu sistema
-          args = [];
-        };
-
         update_focused_file = {
           enable = true;
           ignoreList = [];
