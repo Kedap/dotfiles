@@ -9,9 +9,9 @@ upstream), listos para copiar tal cual.
 
 ## Capturas
 
-![Editor](../img/code.png)
-![Paneles](../img/showpanels.png)
-![Fondo](../img/wallpaper.png)
+![Editor](./img/code.png)
+![Paneles](./img/showpanels.png)
+![Fondo](./img/wallpaper.png)
 
 ## Mapeo overwrites/ -> destino real
 
