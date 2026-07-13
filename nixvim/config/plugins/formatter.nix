@@ -15,7 +15,7 @@
     rubocop
     php83Packages.php-cs-fixer
     google-java-format
-    (texlive.combined.scheme-small.withPackages (texPackages: [
+    (texliveSmall.withPackages (texPackages: [
       texPackages.latexindent
     ]))
   ];

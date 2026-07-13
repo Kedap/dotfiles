@@ -124,6 +124,12 @@
           # icons_enabled = true; # Podrías añadirlo si es relevante
         };
         sections = {
+          # Empty lists are omitted by Nixvim's Lua serializer; emit explicit
+          # Lua tables so Lualine replaces these default sections.
+          lualine_a = {__raw = "{}";};
+          lualine_b = {__raw = "{}";};
+          lualine_y = {__raw = "{}";};
+          lualine_z = {__raw = "{}";};
           lualine_c = [
             {
               __unkeyed-1 = {__raw = "function() return '▊' end";};
@@ -196,7 +202,7 @@
             }
             {
               __unkeyed-1 = "branch";
-              icon = "";
+              icon = "";
               color = {
                 fg = "#a9a1e1";
                 gui = "bold";
