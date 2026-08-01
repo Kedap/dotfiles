@@ -23,5 +23,6 @@
       "cmp-emoji"
       "cmp-calc"
       "git-conflict.nvim"
+      "tree-sitter-http"
     ];
 }
