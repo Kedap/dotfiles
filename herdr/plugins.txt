@@ -1,0 +1,3 @@
+aimdevlee/herdr-nvim-nav
+https://github.com/thanhdat77/herdr-navigator
+rmarganti/herdr-pluck

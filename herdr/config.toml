@@ -1,0 +1,61 @@
+onboarding = false
+[keys]
+prefix = "ctrl+space"
+# focus_pane_left = ["prefix+h", "ctrl+h"]
+# focus_pane_down = ["prefix+j", "ctrl+j"]
+# focus_pane_up = ["prefix+k", "ctrl+k"]
+# focus_pane_right = ["prefix+l", "ctrl+l"]
+
+[[keys.command]]
+key = "ctrl+h"
+type = "plugin_action"
+command = "herdr-nvim-nav.left"
+
+[[keys.command]]
+key = "ctrl+j"
+type = "plugin_action"
+command = "herdr-nvim-nav.down"
+
+[[keys.command]]
+key = "ctrl+k"
+type = "plugin_action"
+command = "herdr-nvim-nav.up"
+
+[[keys.command]]
+key = "ctrl+l"
+type = "plugin_action"
+command = "herdr-nvim-nav.right"
+
+[[keys.command]]
+key = "prefix+t"
+type = "plugin_action"
+command = "herdr-navigator.open"
+description = "jump to anything"
+
+[[keys.command]]
+key = "prefix+q"
+type = "plugin_action"
+command = "rmarganti.herdr-pluck.pluck"
+description = "pluck visible token"
+
+[[keys.command]]
+key = "prefix+u"
+type = "plugin_action"
+command = "rmarganti.herdr-pluck.open-url"
+description = "open visible URL"
+
+[theme]
+name = "catppuccin"
+auto_switch = true
+light_name = "catppuccin-latte"
+dark_name = "catppuccin"
+
+[ui]
+pane_gaps = false
+sidebar_start_collapsed = true
+
+[ui.sound]
+enabled = true
+
+[ui.toast]
+delivery = "system"
