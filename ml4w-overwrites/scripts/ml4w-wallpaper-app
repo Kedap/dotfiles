@@ -74,9 +74,19 @@ elif [ "$1" == "--random" ]; then
     error "Wallpaper App $WALLPAPER_APP not supported."
   fi
   exit
+elif [ "$1" == "--cycle" ]; then
+  info "Starting wallpaper cycle every ${2:-10800}s from $WALLPAPER_FOLDER"
+  cycle_wallpaper "$2"
+  exit
 fi
 
-# Default behavior: cycle the wallpaper on an interval
-info "Starting wallpaper cycle every ${1:-10800}s from $WALLPAPER_FOLDER"
-cycle_wallpaper "$1"
-
+# Launch wallpaper app
+if [ "$WALLPAPER_APP" == "quickshell" ]; then
+  info "Toggle Quickshell Wallpaper App"
+  qs ipc call wallpaper toggle
+elif [ "$WALLPAPER_APP" == "waypaper" ]; then
+  info "Launch Waypaper"
+  waypaper --folder $WALLPAPER_FOLDER
+else
+  error "Wallpaper App $WALLPAPER_APP not supported."
+fi
