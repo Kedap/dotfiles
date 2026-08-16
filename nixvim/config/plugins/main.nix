@@ -7,6 +7,7 @@
     ./db.nix
     ./diffview.nix
     ./formatter.nix
+    ./herdr-nvim-nav.nix
     ./minty.nix
     ./treesitter.nix
     ./java.nix

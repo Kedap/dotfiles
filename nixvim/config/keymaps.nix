@@ -59,26 +59,6 @@
 
   keymaps = [
     {
-      mode = "n";
-      key = "<C-h>";
-      action = "<cmd>TmuxNavigateLeft<cr>";
-    }
-    {
-      mode = "n";
-      key = "<C-j>";
-      action = "<cmd>TmuxNavigateDown<cr>";
-    }
-    {
-      mode = "n";
-      key = "<C-k>";
-      action = "<cmd>TmuxNavigateUp<cr>";
-    }
-    {
-      mode = "n";
-      key = "<C-l>";
-      action = "<cmd>TmuxNavigateRight<cr>";
-    }
-    {
       mode = "v";
       key = "<";
       action = "<gv";
