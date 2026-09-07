@@ -48,6 +48,7 @@
     rustaceanvim.enable = true;
     todo-comments.enable = true;
     trouble.enable = true;
+    aw-watcher.enable = true;
     vimtex = {
       enable = true;
       settings.view_method = "zathura";
