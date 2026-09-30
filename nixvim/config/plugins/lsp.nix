@@ -61,7 +61,21 @@ in {
         html = {enable = true;};
         jsonls = {enable = true;};
         marksman = {enable = true;};
-        phpactor = {enable = true;};
+        phpactor = {
+          enable = true;
+          # herd-lite exporta PHP_INI_SCAN_DIR en el entorno (.profile), lo que
+          # rompe la carga de extensiones del PHP empaquetado de Nix (entre ellas
+          # `tokenizer`). Sin `tokenizer`, tolerant-php-parser falla con
+          # `Undefined constant "...\T_CLASS_C"`. Arrancamos phpactor con esa
+          # variable limpia para que use su propio php.ini.
+          cmd = [
+            "${pkgs.coreutils}/bin/env"
+            "-u"
+            "PHP_INI_SCAN_DIR"
+            "${pkgs.phpactor}/bin/phpactor"
+            "language-server"
+          ];
+        };
         pyright = {enable = true;};
         tailwindcss = {enable = true;};
         taplo = {enable = true;};
