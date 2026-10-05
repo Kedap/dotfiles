@@ -57,6 +57,7 @@ Configurables en `config/plugins/temas.nix`.
 - **nvim-ufo**: Folds (plegado de código) inteligentes.
 - **conform.nvim**: Formateo de código ultra rápido.
 - **treesitter**: Resaltado de sintaxis avanzado.
+- **micropython.nvim**: Ejecución, subida de archivos y REPL en placas MicroPython mediante `mpremote`.
 
 ### 🐞 Depuración (DAP)
 
@@ -101,6 +102,44 @@ Usa el **Espacio** como tecla líder (`<Leader>`).
 | `<Leader> t` | **Terminal** (flotante, dividida, DBUI)                 |
 | `<Leader> b` | **Buffers** (navegar y cerrar)                          |
 | `<Leader> h` | **HTTP** (Rest client para APIs)                        |
+| `<Leader> mp` | **MicroPython** (ejecutar, subir archivos, REPL)       |
+
+### MicroPython
+
+`config/plugins/micropython.nix` instala el plugin con un commit y hash fijos
+mediante `extraPlugins`. Las herramientas `mpremote`, `uv` y Python se incluyen
+mediante `extraPackages`; no requieren un módulo específico en Nixvim.
+
+1. Abre Neovim desde la raíz de un proyecto MicroPython nuevo.
+2. Ejecuta `:MPInit`, selecciona la placa y acepta instalar las dependencias con
+   `uv sync`. Esto instala los stubs de la placa en la `.venv` del proyecto y
+   genera la configuración de Pyright para usar ese entorno.
+3. Conecta una placa con firmware MicroPython y ejecuta `:MPSetPort` para elegir
+   el puerto; `auto` sirve para detección automática.
+4. Usa `:MPRun` para ejecutar el archivo o `:MPRepl` para abrir el REPL.
+
+| Atajo | Acción |
+| :--- | :--- |
+| `<Leader> mpi` | Inicializar proyecto |
+| `<Leader> mpp` | Seleccionar puerto |
+| `<Leader> mpd` | Listar placas |
+| `<Leader> mpr` | Ejecutar archivo |
+| `<Leader> mpu` | Subir archivo |
+| `<Leader> mpa` | Subir proyecto |
+| `<Leader> mpe` | Abrir REPL |
+| `<Leader> mps` | Montar directorio local |
+
+Para cambiar de placa usa `:MPSetStubs` y después `:MPInstall`. Ajusta la versión
+del paquete de stubs en `pyproject.toml` para que corresponda al firmware.
+Si Pyright ya estaba activo antes de instalar los stubs, reinícialo con
+`:LspRestart`.
+
+En proyectos existentes, configura `venvPath = "."` y `venv = ".venv"` en
+`pyrightconfig.json`. Para que los módulos estándar como `time` también usen
+las definiciones de MicroPython, añade `typeshedPath` con la ruta del directorio
+`site-packages` de esa `.venv` (por ejemplo,
+`.venv/lib/python3.13/site-packages`, según la versión de Python del entorno).
+Consulta la [configuración de los stubs](https://micropython-stubs.readthedocs.io/en/main/pyproject.html).
 
 ---
 

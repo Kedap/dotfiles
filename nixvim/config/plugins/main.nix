@@ -22,6 +22,7 @@
     ./temas.nix
     ./oil.nix
     ./marker-groups.nix
+    ./micropython.nix
   ];
 
   plugins = {
